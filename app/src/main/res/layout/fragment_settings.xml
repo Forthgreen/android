@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivUserImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_avatar"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.27" />
+
+        <TextView
+            android:id="@+id/tvUser"
+            style="@style/StyleSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/guest"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/ivUserImage" />
+
+        <TextView
+            android:id="@+id/tvUserAccount"
+            style="@style/StyleRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:drawableStart="@drawable/ic_guest_icon"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="16dp"
+            android:gravity="center|start"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="@string/account"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tvUser" />
+
+        <View
+            android:id="@+id/viewUserAccount"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorGrayBg"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tvUserAccount" />
+
+        <TextView
+            android:id="@+id/tvLogin"
+            style="@style/StyleRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_guest_icon"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="16dp"
+            android:gravity="center|start"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="@string/text_register_guest"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/viewUserAccount"
+            app:layout_goneMarginTop="32dp" />
+
+        <View
+            android:id="@+id/viewLogin"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorGrayBg"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tvLogin" />
+
+        <TextView
+            android:id="@+id/tvReviews"
+            style="@style/StyleRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_reviews"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="16dp"
+            android:gravity="center|start"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="@string/my_reviews"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/viewLogin" />
+
+        <View
+            android:id="@+id/viewReviews"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorGrayBg"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tvReviews" />
+
+        <TextView
+            android:id="@+id/tvContact"
+            style="@style/StyleRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_email"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="16dp"
+            android:gravity="center|start"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="@string/contact_us"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tvReviews" />
+
+        <View
+            android:id="@+id/viewContact"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorGrayBg"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tvContact" />
+
+        <TextView
+            android:id="@+id/tvTermsConditions"
+            style="@style/StyleRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:gravity="center|start"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="@string/text_terms"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tvContact" />
+
+        <View
+            android:id="@+id/viewTermsConditions"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorGrayBg"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tvTermsConditions" />
+
+        <TextView
+            android:id="@+id/tvPrivacyPolicy"
+            style="@style/StyleRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:gravity="center|start"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="@string/text_privacy"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tvTermsConditions" />
+
+        <View
+            android:id="@+id/viewPrivacyPolicy"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorGrayBg"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tvPrivacyPolicy" />
+
+        <TextView
+            android:id="@+id/tvLogout"
+            style="@style/StyleRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center|start"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="@string/logout"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tvPrivacyPolicy" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupLoggedIn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:constraint_referenced_ids="tvUserAccount,viewUserAccount,tvReviews,viewReviews,tvContact,viewContact,tvLogout" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupGuest"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tvLogin,viewLogin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.04" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.96" />
+
+            <ImageView
+                android:id="@+id/ivRestaurantImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@color/colorGrayBg"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toStartOf="@+id/tvRestaurantName"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.24" />
+
+            <TextView
+                android:id="@+id/tvRestaurantName"
+                style="@style/StyleSemiBold"
+                android:layout_marginStart="16dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/rattingBar"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toEndOf="@+id/ivRestaurantImage"
+                app:layout_constraintTop_toTopOf="@+id/ivRestaurantImage"
+                app:layout_constraintVertical_chainStyle="spread"
+                tools:text="Restaurant name" />
+
+            <RatingBar
+                android:id="@+id/rattingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:max="5"
+                android:progressBackgroundTint="@color/colorRatingStars"
+                android:progressTint="@color/colorRatingStars"
+                android:rating="0"
+                android:secondaryProgressTint="@color/colorRatingStars"
+                android:stepSize="1"
+                app:layout_constraintBottom_toTopOf="@+id/tvCuisine"
+                app:layout_constraintStart_toStartOf="@+id/tvRestaurantName"
+                app:layout_constraintTop_toBottomOf="@+id/tvRestaurantName" />
+
+            <TextView
+                android:id="@+id/tvRatingCount"
+                style="@style/StyleRegular"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/colorDisabledText"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/rattingBar"
+                app:layout_constraintStart_toEndOf="@+id/rattingBar"
+                app:layout_constraintTop_toTopOf="@+id/rattingBar"
+                tools:text="32" />
+
+            <TextView
+                android:id="@+id/tvCuisine"
+                style="@style/StyleRegular"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/colorDisabledText"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvDistance"
+                app:layout_constraintStart_toStartOf="@+id/tvRestaurantName"
+                app:layout_constraintTop_toBottomOf="@+id/tvRatingCount"
+                tools:text="Italian • Pizza • Pasta • Salads" />
+
+            <TextView
+                android:id="@+id/tvPriceRange"
+                style="@style/StyleSemiBold"
+                android:layout_width="wrap_content"
+                android:textColor="@color/colorDisabledText"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvDistance"
+                app:layout_constraintStart_toStartOf="@+id/tvRestaurantName"
+                app:layout_constraintTop_toTopOf="@id/tvDistance"
+                tools:text="$$$" />
+
+            <TextView
+                android:id="@+id/tvDistance"
+                style="@style/StyleRegular"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/colorDisabledText"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivRestaurantImage"
+                app:layout_constraintStart_toEndOf="@+id/tvPriceRange"
+                app:layout_constraintTop_toBottomOf="@+id/tvCuisine"
+                tools:text="1.9 miles" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorGrayBg"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivRestaurantImage" />
+
+            <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                android:id="@+id/dotIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:dampingRatio="0.5"
+                app:dotsColor="@color/colorBlack"
+                app:dotsCornerRadius="8dp"
+                app:dotsSize="7dp"
+                app:dotsSpacing="2dp"
+                app:dotsStrokeColor="@color/colorWhite"
+                app:dotsStrokeWidth="0.5dp"
+                app:layout_constraintBottom_toBottomOf="@id/viewPager"
+                app:layout_constraintEnd_toEndOf="@id/viewPager"
+                app:layout_constraintStart_toStartOf="@id/viewPager"
+                app:layout_constraintVertical_bias="0.06" />
+
+            <TextView
+                android:id="@+id/tvOpenNow"
+                style="@style/StyleRegular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:text="@string/restaurant_detail_opening_closing"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:drawableStartCompat="@drawable/ic_clock"
+                app:layout_constraintBottom_toBottomOf="@id/cbBookmark"
+                app:layout_constraintEnd_toStartOf="@id/cbBookmark"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toTopOf="@id/cbBookmark" />
+
+            <CheckBox
+                android:id="@+id/cbBookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:button="@drawable/drawable_navigation_bookmark_selector"
+                android:padding="4dp"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintTop_toBottomOf="@id/viewPager" />
+
+            <Button
+                android:id="@+id/btnWebsite"
+                style="@style/StyleSubmitButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/drawable_button_following_brand_detail"
+                android:gravity="center"
+                android:text="@string/website_btn"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="12sp"
+                app:layout_constraintDimensionRatio="8.2"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/cbBookmark" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                style="@style/StyleRegular"
+                android:layout_marginTop="32dp"
+                android:ellipsize="end"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/btnWebsite"
+                tools:text="Introducing the Stubble &amp; Co Commuter. Style and practicality meet extreme comfort. This backpack features a direct access padded laptop compartment and a generous interior to hold everything you need for the day ahead. Handcrafted with premium waterproofed canvas for long-lasting quality.\nT-shirts in bulk. Picked up later by the likes of Chanel in the 1920s, it soon became." />
+
+            <View
+                android:id="@+id/viewDividerPhn"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="28dp"
+                android:background="@color/colorTabGreyBG"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+            <TextView
+                android:id="@+id/tvPhoneNo"
+                style="@style/StyleSemiBold"
+                android:gravity="start|center"
+                android:paddingTop="24dp"
+                android:paddingEnd="7dp"
+                android:paddingBottom="24dp"
+                android:textSize="14sp"
+                app:drawableEndCompat="@drawable/ic_call"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/viewDividerPhn"
+                tools:text="0044 32827 2291" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="tvPhoneNo,viewDividerAddress" />
+
+            <View
+                android:id="@+id/viewDividerAddress"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorTabGreyBG"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/tvPhoneNo" />
+
+            <TextView
+                android:id="@+id/tvAddress"
+                style="@style/StyleSemiBold"
+                android:gravity="start|center"
+                android:paddingTop="24dp"
+                android:paddingEnd="7dp"
+                android:paddingBottom="24dp"
+                android:textSize="14sp"
+                app:drawableEndCompat="@drawable/ic_location"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/viewDividerAddress"
+                tools:text="13 Morrison Road" />
+
+            <View
+                android:id="@+id/viewDividerAddressDesc"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorTabGreyBG"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/tvAddress" />
+
+            <TextView
+                android:id="@+id/tvAddressDesc"
+                style="@style/StyleSemiBold"
+                android:gravity="start|center"
+                android:paddingTop="24dp"
+                android:paddingEnd="7dp"
+                android:paddingBottom="24dp"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:drawableEndCompat="@drawable/ic_location"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/viewDividerAddressDesc"
+                tools:text="NW10 3DT" />
+
+            <ImageView
+                android:id="@+id/ivMapView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="1dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="2.4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddressDesc" />
+
+            <View
+                android:id="@+id/viewDividerMapView"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorTabGreyBG"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/ivMapView" />
+
+            <TextView
+                android:id="@+id/tvWriteReview"
+                style="@style/StyleRegular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/write_a_review"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerMapView" />
+
+            <View
+                android:id="@+id/viewDividerWriteReview"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorTabGreyBG"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/tvWriteReview" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewDividerWriteReview" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>

@@ -1,0 +1,429 @@
+<resources>
+    <string name="app_name" translatable="false">Forthgreen</string>
+    <!-- Miscellaneous Strings -->
+    <string name="dialog" translatable="false">dialog</string>
+    <string name="auto_fill_key_name" translatable="false">name</string>
+    <string name="auto_fill_key_password" translatable="false">password</string>
+    <string name="auto_fill_key_phone" translatable="false">phone</string>
+    <string name="auto_fill_key_dob" translatable="false">dob</string>
+    <string name="firestore_conversation_key" translatable="false">conversations</string>
+    <string name="google_web_client_id" translatable="false">700251019899-e0n4tj7115psn1vumbufh1aftc2mtk54.apps.googleusercontent.com</string>
+    <string name="facebook_app_id" translatable="false">265398044612544</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb265398044612544</string>
+    <string name="contact_us_email" translatable="false">info@forthgreen.com</string>
+    <string name="restaurant_suggest_email" translatable="false">restaurants@forthgreen.com</string>
+    <string name="google_maps_key" translatable="false">AIzaSyBCb3dhtBh7DTZbN2hZIq2CaZBUXvuOKds</string>
+    <string name="google_places_key" translatable="false">AIzaSyDFJT7LvKJQQrwBOm0tTPHrasgy2TOY40U</string>
+
+    <string name="date_picker">Date Picker</string>
+
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="action_okay">Okay</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_internet">Please check your internet connection.</string>
+    <string name="retrofit_failure">There might be some problem please try again later.</string>
+    <string name="hint_search">Search…</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_from_gallery">Choose From Gallery</string>
+    <string name="storage_permission_needed">You need to grant read/write external         storage permission in order to access media.</string>
+    <string name="camera_permission_needed">You need to allow camera permission
+        in order to capture photos.</string>
+    <string name="contacts_permission_needed">You need to grant read contacts permission in order to Sync all your contacts.</string>
+    <string name="record_audio_permission_needed">You need to allow record audio permission
+        in order to record dialogs.</string>
+    <string name="enable_storage_permission">You should enable your storage permission         in the settings for better experience.</string>
+    <string name="enable_read_contacts_permission">You should enable your read contacts permission         in the settings for better experience.</string>
+    <string name="no_more_data">No more data found.</string>
+    <string name="location_permission_needed">You need to grant location permission in order to get your present location</string>
+    <string name="launch_activity" translatable="false">Launch Activity</string>
+    <string name="take_video">Video</string>
+    <string name="pick_video">Take Video</string>
+    <string name="take_still_photo">Photo</string>
+    <string name="open_image_gallery">Image Gallery</string>
+    <string name="open_video_gallery">Video Gallery</string>
+
+    <!--Common Checks Strings-->
+    <string name="invalid_mobile_error">Please enter your Mobile Number.</string>
+    <string name="invalid_password_error">Please make sure the password is valid.</string>
+    <string name="empty_field_error">This field cannot be empty.</string>
+    <string name="invalid_username_email_error">Please enter a valid Username/Email.</string>
+    <string name="invalid_email_error">Please enter a valid Email.</string>
+    <string name="signup_password_error">Please enter a valid password with minimum 6 characters.</string>
+    <string name="try_again_later_error">Please try again later.</string>
+    <string name="password_match_error">The Password entered must match the Confirm Password entered.</string>
+    <string name="no_data_to_show">Nothing to show here.</string>
+    <string name="no_data_to_show_other_users">Follow other users\nand see their updates here.</string>
+    <string name="data_update_success">Data updated successfully.</string>
+    <string name="grant_permissions_error">You need to grant the permission to continue.</string>
+    <string name="website_not_available_error">Website not available.</string>
+    <string name="no_products_found_message">There is no results. Please try another search.</string>
+
+    <!--country code dialog fragment-->
+    <string name="select_country_code">Code</string>
+    <string name="select_country">Country</string>
+    <string name="fragment_title_country_code">Select Country Code</string>
+    <string name="empty_country_code">Please Select country code.</string>
+    <string name="empty_phone_no">Please enter your phone number.</string>
+    <string name="empty_otp">Please enter OTP code.</string>
+
+    <!--Change password dialogFragment-->
+    <string name="change_password">Change Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm new Password</string>
+    <string name="empty_old_password">Please enter your old password.</string>
+    <string name="empty_new_password">Please enter your new password.</string>
+    <string name="invalid_new_password">Your new password should contain 6–15 characters.</string>
+    <string name="password_not_matched">Your password didn\'t match.</string>
+    <string name="password_updated">Password Updated</string>
+    <string name="update_success">Update Successfully</string>
+    <string name="add">Add</string>
+    <string name="search">Search</string>
+    <string name="search_restaurants">Search restaurants</string>
+
+    <!-- Welcome Fragment-->
+    <string name="join_forthgreen_label">Join Forthgreen</string>
+    <string name="join_desc_label">Create an account, join the community and discover hundreds of brands and restaurants all Vegan &amp; Cruelty-Free.</string>
+    <string name="facebook_sign_up">Sign Up with Facebook</string>
+    <string name="google_sign_up">Sign up with Google</string>
+    <string name="email_sign_up">Sign up with Email</string>
+    <string name="have_an_account">Do you have an account?</string>
+    <string name="login_spannable">LOGIN</string>
+    <string name="login">Login</string>
+    <string name="login_as_guest">CONTINUE AS A GUEST</string>
+    <string name="terms">By signing up you agree our \nTerms &amp; Conditions and Private Policy</string>
+    <string name="term_spannable">Terms &amp; Conditions</string>
+    <string name="privacy_spannable">Private Policy</string>
+    <string name="or">Or</string>
+    <string name="continue_with_facebook_btn">Continue with Facebook</string>
+    <string name="continue_with_google_btn">Continue with Google</string>
+    <string name="continue_with_email_btn">Continue with email</string>
+
+    <!--Continue With email Fragment-->
+    <string name="continue_with_email_label">Continue with email</string>
+
+
+    <!-- Login fragment-->
+    <string name="login_fragment">Login</string>
+    <string name="email">Email</string>
+    <string name="pass">Password</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="create_password_label">Create Password</string>
+    <string name="forget">Forgotten password?</string>
+
+    <!--Forgot Password fragment-->
+    <string name="forgot">We\'ll email you a link to reset your password </string>
+    <string name="hint_email">Email</string>
+    <string name="request_new">Request new password</string>
+    <string name="forgot_password">Forgot Password</string>
+
+    <!-- New Password fragment -->
+    <string name="toolbar_new_password">New password</string>
+    <string name="new_tag">New Password</string>
+    <string name="confirm">Confirm Password</string>
+    <string name="btn_save">Save</string>
+
+    <!--SignUp fragment-->
+    <string name="sign_up_label">Sign up</string>
+    <string name="full_name">Full Name</string>
+    <string name="email_tag">Email</string>
+    <string name="password_tag">Password</string>
+    <string name="user_name_optional">User name (optional)</string>
+    <string name="confirm_tag">Confirm password</string>
+    <string name="gender_tag">Gender</string>
+    <string name="dob_tag">Date of birth</string>
+    <string name="terms_tag">By signing up you agree our \nTerms \u0026 Conditions and Private Policy</string>
+    <string name="btn_signUp">Sign Up</string>
+    <string name="male_label">Male</string>
+    <string name="female_label">Female</string>
+    <string name="other_label">Other</string>
+    <string name="verification_title_dialog">Verification</string>
+    <string name="verify_message_dialog">An email has been sent to your inbox for verification.</string>
+
+    <!-- OnBoarding fragment-->
+    <string name="skip_label">Skip</string>
+    <string name="next_label">Next</string>
+    <string name="boarding_title_one_label">Vegan Community</string>
+    <string name="boarding_desc_one">Join the Forthgreen community to share and connect with others, follow, post and much more!</string>
+    <string name="boarding_title_two_label">Vegan Brands</string>
+    <string name="boarding_desc_two">Cruelty-free foods, cosmetics, fashion, we’ve got it all. Simply browse, select, and shop on the brand’s website.</string>
+    <string name="boarding_title_three_label">Vegan Restaurants</string>
+    <string name="boarding_desc_three">Discover the best vegan restaurants in your location. You can follow, rate and share Restaurants with friends.</string>
+    <string name="boarding_title_four_label">Good for the Animals</string>
+    <string name="boarding_desc_four">Our carefully curated list showcases companies that are truly devoted to the ethos of veganism and cruelty-free.</string>
+
+    <!--Home fragment-->
+    <string name="toolbar_title">forthgreen</string>
+    <string name="brand_view_more">ALL</string>
+
+    <!-- More brands fragment -->
+    <string name="tool_title">Brands</string>
+
+    <!--Home filter fragment -->
+    <string name="frag_filter_title">Categories</string>
+    <string name="btn_view_products">View Products</string>
+    <string name="btn_view_restaurants">View Restaurants</string>
+    <string name="btn_view_brands">View Brands</string>
+
+    <!-- Home search fragment -->
+    <string name="search_hint">Search…</string>
+    <string name="search_cancel">Cancel</string>
+    <string name="no_query_result">Nothing matches your search. Please try again.</string>
+
+    <string name="no_data_text">Nothing matches your search.\nPlease try again</string>
+
+    <!-- Brand detail fragment -->
+    <string name="save">SAVE</string>
+    <string name="saved">UNSAVE</string>
+    <string name="follow">Follow</string>
+    <string name="follow_brand">Following</string>
+    <string name="website">Website</string>
+    <string name="view_more">View More</string>
+    <string name="see_more">…see more</string>
+    <string name="load_more_label">Load More</string>
+
+    <!-- Dialog brand detail -->
+    <string name="report_brand">Report</string>
+    <string name="share_brand">Share to…</string>
+    <string name="ok_label">Ok</string>
+    <string name="cancel_menu">Cancel</string>
+    <string name="signUp_to_follow">Sign up to follow brands</string>
+
+    <!-- Report review fragment -->
+    <string name="report_review">Report</string>
+    <string name="review_abuse">If you find this content inappropriate and think it should be removed from the Forthgreen app, let us know by clicking the button below.</string>
+
+    <!--Review Report sent fragment-->
+    <string name="btn_back_product">Back to Product</string>
+    <string name="btn_back_restaurant">Back to Restaurant</string>
+    <string name="report_review_sent">Thank you for your feedback.\nWe appreciate your vote. </string>
+
+    <!-- My Brands fragment -->
+    <string name="my_brands_title">My Brands</string>
+    <string name="no_brands_followed_message">You haven\'t saved any brands yet.</string>
+
+    <!-- Report Profile Fragment-->
+    <string name="btn_report">Report</string>
+    <string name="report_profile_toolbar_title">Report Profile</string>
+    <string name="report_ques">Why do you wish to report this profile?</string>
+    <string name="report_description">Your report will be kept anonymous</string>
+    <string name="report_reason_1">It\'s posting non-vegan products</string>
+    <string name="report_reason_2">It\'s pretending to be someone else</string>
+    <string name="report_reason_3">It\'s prohibited content</string>
+    <string name="report_reason_4">Other</string>
+    <string name="write_report_reason">Please mention the reason for reporting this profile.</string>
+    <string name="select_report_reason_message">Select any of the reasons before continuing.</string>
+
+    <!--Report sent fragment-->
+    <string name="btn_back">Back</string>
+    <string name="report_sent">Thank you for your feedback. We will review as soon as possible.</string>
+
+    <!--Guest settings fragment-->
+    <string name="text_guest">Guest</string>
+    <string name="text_register_guest">Login / Sign up</string>
+    <string name="text_terms">Terms &amp; Conditions</string>
+    <string name="text_privacy">Privacy and Policy</string>
+
+    <!-- User settings fragment-->
+    <string name="account">Account</string>
+    <string name="my_reviews">My reviews</string>
+    <string name="contact_us">Contact us</string>
+    <string name="guest">Guest</string>
+    <string name="terms_conditions">Terms &amp; Conditions</string>
+    <string name="privacy">Privacy and Policy</string>
+    <string name="logout">Logout</string>
+
+    <!--Change account fragment-->
+    <string name="change">Change</string>
+    <string name="update">update</string>
+
+    <!--Change password fragment-->
+    <string name="current_password">Current password</string>
+
+    <!--Brand Detail Fragment-->
+    <string name="brand_name">Brand name</string>
+    <string name="product_name">Product name</string>
+    <string name="user_name">User name</string>
+
+    <!--Product Detail Fragment-->
+    <string name="review_btn">Review</string>
+    <string name="website_btn">Visit Website</string>
+    <string name="shop_now_btn">Visit on website</string>
+    <string name="visit_website_btn">Visit Website</string>
+    <string name="report_abuse_label">Report Abuse</string>
+    <string name="you_might_also_like_label">You might also like</string>
+    <string name="sign_up_to_review_products_label">Sign up to review products.</string>
+    <string name="write_a_review">Write a review..</string>
+
+    <!--My Reviews Fragment-->
+    <string name="my_reviews_toolbar_title">My Reviews</string>
+
+    <!-- Review fragment-->
+    <string name="review_title">Title</string>
+    <string name="review_label">Review</string>
+    <string name="review_submit">Submit</string>
+    <string name="no_rating_error">Please provide rating before continuing.</string>
+
+    <!-- Review Sent fragment-->
+    <string name="review_sent">Your review has been published. Thanks!</string>
+    <string name="restaurant_review_sent">Your review has been sent. Thanks!</string>
+    <string name="btn_back_to_product">Back to product</string>
+    <string name="btn_back_to_restaurant">Back to restaurant</string>
+
+    <!--Static Data Labels-->
+    <string name="terms_amp_conditions_label"><![CDATA[Terms & Conditions]]></string>
+    <string name="privacy_label">Privacy Policy</string>
+    <string name="about_us_label">About Us</string>
+    <string name="leave_feedback_label">Leave Feedback</string>
+
+    <!--Restaurant listing fragment-->
+    <string name="suggest_a_restaurant">Want to suggest a restaurant? Click here.</string>
+    <string name="map_restaurant_label">MAP</string>
+    <string name="list_restaurant_label">LIST</string>
+    <string name="restaurant_toolbar_title">Restaurants</string>
+    <string name="no_restaurant_text">There are no results in this location.\nWant to suggest a restaurant? Let us know.</string>
+    <string name="let_us_know_spannable">Let us know.</string>
+    <string name="no_restaurant_hyper_link">https://forms.gle/viF3XvmzHrjkFC9XA</string>
+    <string name="saved_status_updated">Save status updated.</string>
+    <string name="address_copied_success_message">Copied successfully</string>
+    <string name="restaurant_detail_opening_closing">Opens at 9:00am - Closes at 23:00pm</string>
+    <string name="search_here_label">Search here</string>
+    <string name="show_more_label">Show more</string>
+
+    <!--Brands and Restaurants Listing Fragment -->
+    <string name="products_tab_title">Products</string>
+    <string name="brands_tab_title">Brands</string>
+    <string name="restaurant_tab_title">Restaurants</string>
+    <string name="my_stuff_toolbar_title">My Stuff</string>
+
+    <!-- Followed Restaurants fragment -->
+    <string name="no_restaurants_followed_message">You haven\'t saved any restaurants yet.</string>
+
+    <!-- My Products fragment -->
+    <string name="no_products_followed_message">You haven\'t saved any products yet.</string>
+
+    <!--Home Feed Fragment -->
+    <string name="default_comments_and_likes">0</string>
+    <string name="comments_label">Comments</string>
+    <string name="empty_comment_message">Kindly add your comment.</string>
+    <string name="empty_reply_message">Kindly add your reply.</string>
+    <string name="likes_label">Likes</string>
+    <string name="no_likes_label">No likes yet.</string>
+    <string name="no_comments_label">No comments yet.</string>
+    <string name="following_label">Following</string>
+
+    <!--Category Products Fragment-->
+    <string name="shop_toolbar_title">Shop</string>
+    <string name="no_filter_results">Nothing matches your filter.</string>
+    <string name="sort_label">Sort</string>
+    <string name="filter_products_label">Filter</string>
+    <string name="sort_by_label">Sort by</string>
+    <string name="newest_first_label">Newest first</string>
+    <string name="price_low_to_high_label">Price low to high</string>
+    <string name="price_high_to_low_label">Price high to low</string>
+
+    <!--Notifications Fragment-->
+    <string name="notifications_toolbar_title">Notifications</string>
+    <string name="no_notifications_label">No Notifications</string>
+
+    <!--Edit Profile Fragment-->
+    <string name="edit_profile_toolbar_title">Edit Profile</string>
+    <string name="name_label">Name</string>
+    <string name="user_name_label">Username</string>
+    <string name="bio_label">Bio</string>
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
+    <string name="update_password_label">Update Password</string>
+    <string name="change_label">Change</string>
+    <string name="update_btn_label">Update</string>
+
+    <!--Search Users Fragment-->
+    <string name="search_user_hint">Search</string>
+
+    <!--Followers Following Tab Fragment-->
+    <string name="followers_label">Followers</string>
+
+
+    <!--Profile Nav Drawer-->
+    <string name="edit_profile_label">Edit Profile</string>
+    <string name="my_stuff_label">My Stuff</string>
+    <string name="contact_us_label">Contact Us</string>
+    <string name="terms_label">Terms &amp; Conditions</string>
+    <string name="privacy_and_policy_label">Privacy and Policy</string>
+    <string name="logout_label">Logout</string>
+    <string name="delete_account_label">Delete Account</string>
+    <string name="link_not_available_error">Currently not available.</string>
+
+    <!--Comments Fragment-->
+    <string name="write_comment_hint_label">Write a comment here</string>
+    <string name="comment_post_label">Post</string>
+    <string name="remove_success">Removed Successfully</string>
+
+    <!--Self Profile Fragment-->
+    <string name="profile_toolbar_title">Profile</string>
+
+    <!--Options Bottom Sheet Labels-->
+    <string name="remove_post_label">Remove post</string>
+    <string name="cancel_label">Cancel</string>
+    <string name="report_label">Report</string>
+    <string name="report_abuse">Report abuse</string>
+    <string name="report_post_label">Report post</string>
+    <string name="remove_comment_label">Remove Comment</string>
+    <string name="report_comment_label">Report comment</string>
+    <string name="remove_reply_label">Remove Reply</string>
+
+    <!--Replies Fragment-->
+    <string name="replies_toolbar_title">Replies</string>
+    <string name="write_reply_hint_label">Write a reply here</string>
+    <string name="loading_label">Loading…</string>
+    <string name="report_reply_label">Report reply</string>
+    <string name="no_replies_label">No replies yet.</string>
+
+    <!--Post Details Fragment-->
+    <string name="post_toolbar_title">Post</string>
+    <string name="post_deleted_message">Post deleted by user.</string>
+    <string name="comment_deleted_message">Comment deleted by user.</string>
+    <string name="reply_deleted_message">Reply deleted by user.</string>
+
+    <!--Create Post Fragment-->
+    <string name="create_post_hint">What do you want to share?</string>
+    <string name="post_btn">Post</string>
+    <string name="add_pictures_btn">ADD MEDIA</string>
+    <string name="image_selection_error">You can select up to 10 images only.</string>
+    <string name="intent_gallery_picker_title">Select Image(s)</string>
+    <string name="creating_post_notification">Creating your post…</string>
+    <string name="create_post_success_notification">Your post has been created successfully.</string>
+    <string name="create_post_empty_error">Please enter or add something before proceeding.</string>
+    <string name="create_post">Create a Post</string>
+
+    <!--Shop Categories Fragment-->
+    <string name="search_products_brands_hint">Search products and brands</string>
+    <string name="view_all_label">View all</string>
+
+    <!--Categories Filter Fragment-->
+    <string name="filter_toolbar_title">Filter</string>
+    <string name="men_label">Men</string>
+    <string name="clear_filter_label">Clear</string>
+    <string name="all_label">All</string>
+    <string name="woman_label">Women</string>
+    <string name="create_post_file_size_error">Please make sure the attached file is no more than %1$d MB.</string>
+    <string name="create_post_file_length_error">Please make sure the attached file is not more than %1$d secs.</string>
+
+    <!-- Dialog delete account user -->
+    <string name="do_you_want_to_delete_your_account_permanently">Do you want to delete your account permanently</string>
+    <string name="yes_delete">Yes, delete</string>
+
+    <string name="new_lable">NEW</string>
+
+    <string name="contact_permission_rationale">Need contacts read permission for fetching and displaying contacts</string>
+    <string name="find_users">Find users</string>
+    <string name="invites_friends">Invites Friends</string>
+    <string name="suggested_users">Suggested users</string>
+    <string name="invite">Invite</string>
+    <string name="invited">INVITED</string>
+
+
+
+</resources>

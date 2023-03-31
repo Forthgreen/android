@@ -1,0 +1,238 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="BaseAppTheme" />
+
+    <style name="BaseAppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="android:windowBackground">@drawable/drawable_splash</item>
+        <item name="android:textColorPrimary">@color/colorPrimaryText</item>
+        <item name="cardViewStyle">@style/CardView</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:actionOverflowButtonStyle">@style/MenuOverFlow</item>
+        <item name="android:itemBackground">@color/colorWhite</item>
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextAppearance</item>
+        <item name="popupMenuStyle">@style/StylePopupMenu</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="md_color_button_text">@color/colorAccent</item>
+        <item name="android:listDivider">@drawable/drawable_item_divider</item>
+    </style>
+
+    <!-- SearchView Style for light theme -->
+    <style name="LightSearchViewTheme" parent="Theme.AppCompat.Light">
+        <item name="searchViewStyle">@style/LightSearchViewStyle</item>
+        <item name="autoCompleteTextViewStyle">@style/LightThemeCursorColor</item>
+    </style>
+
+    <style name="LightSearchViewStyle" parent="@style/Widget.AppCompat.Light.SearchView">
+        <item name="searchIcon">@null</item>
+        <item name="iconifiedByDefault">false</item>
+        <item name="queryHint">@string/hint_search</item>
+        <item name="queryBackground">@null</item>
+    </style>
+
+    <!-- SearchView Style for dark theme -->
+    <style name="DarkSearchViewTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="searchIcon">@null</item>
+        <item name="iconifiedByDefault">false</item>
+        <item name="searchHintIcon">@null</item>
+        <item name="android:editTextColor">@color/colorPrimaryTextDarkGreen</item>
+        <item name="android:textColorHint">@color/colorPrimaryTextGreen</item>
+        <item name="queryHint">@string/hint_search</item>
+        <item name="queryBackground">@null</item>
+    </style>
+
+    <style name="LightThemeCursorColor" parent="Widget.AppCompat.AutoCompleteTextView">
+        <!--<item name="android:textCursorDrawable">@drawable/drawable_light_theme_searchview_cursor-->
+        <!--</item>-->
+    </style>
+
+    <!-- Text Styles -->
+    <style name="StyleRegular" parent="StyleText">
+        <item name="android:fontFamily">@font/font_regular</item>
+    </style>
+
+    <style name="StyleSemiBold" parent="StyleText">
+        <item name="android:fontFamily">@font/font_semi_bold</item>
+    </style>
+
+    <style name="StyleTabLayout" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/font_semi_bold</item>
+    </style>
+
+    <!--<style name="StyleBold" parent="StyleText">-->
+    <!--<item name="android:fontFamily">@font/font_bold</item>-->
+    <!--</style>-->
+
+    <style name="StyleText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+    </style>
+
+    <!-- Input EditText Style -->
+    <style name="StyleInputEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@font/font_regular</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/default_edit_text_height</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textColorHint">@color/colorDisabledText</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="StyleInputEditTextSemiBold" parent="StyleInputEditText">
+        <item name="android:fontFamily">@font/font_semi_bold</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/default_edit_text_height</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textColorHint">@color/colorPrimaryText</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <!-- TextView Styles -->
+    <style name="StyleToolbarTitle" parent="StyleText">
+        <item name="android:fontFamily">@font/font_semi_bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:maxLength">25</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="StyleToolbarActionEnd" parent="StyleText">
+        <item name="android:fontFamily">@font/font_semi_bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:maxLength">25</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!--// font family missing-->
+    <style name="StyleTextViewNoData" parent="StyleText">
+        <item name="android:fontFamily">@font/font_regular</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+        <item name="android:padding">@dimen/activity_horizontal_margin</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <!-- Submit Button Style -->
+    <style name="StyleSubmitButton" parent="@style/Widget.AppCompat.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/default_button_height</item>
+        <item name="android:fontFamily">@font/font_semi_bold</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingStart">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingEnd">@dimen/activity_horizontal_margin</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:background">@drawable/drawable_color_green_default_button_filled</item>
+    </style>
+
+    <!--Shapeable Service Image View Style-->
+    <style name="ShapeableRoundedPostImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/corner_radius_post_image</item>
+    </style>
+
+    <!--DialogFragment Animations-->
+    <style name="DialogFragmentAnimations">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+
+    <!--DialogFragment Animations-->
+    <style name="StylePopupMenu">
+        <item name="android:background">@color/colorBlack</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <!--Alert dialog theme-->
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColorPrimary">@color/colorPrimaryText</item>
+    </style>
+
+    <style name="CustomAppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <!-- Drawer -->
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <!-- Action bar -->
+        <item name="actionModeBackground">?attr/colorPrimary</item>
+        <item name="windowActionModeOverlay">true</item>
+        <!--If using non-NoActionBar theme as parent, uncomment below-->
+        <!--Disable action bar start-->
+        <!--<item name="windowActionBar">false</item>-->
+        <!--<item name="windowNoTitle">true</item>-->
+        <!--Disable action bar end-->
+    </style>
+
+    <!-- editText Theme -->
+    <style name="Theme.App.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorGreenDefaultButton</item>
+        <item name="colorControlHighlight">@color/colorGreenDefaultButton</item>
+    </style>
+
+    <!-- CheckBox Theme -->
+    <style name="CheckBoxBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/colorPrimaryTextGreen</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--menu themes -->
+    <style name="MenuOverFlow">
+        <item name="android:src">@drawable/ic_menu</item>
+    </style>
+
+    <style name="myCustomMenuTextAppearance" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textColor">@color/colorPrimaryTextDarkGreen</item>
+    </style>
+
+    <!--Shapeable Image View Style-->
+    <style name="StyleShapeableRoundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/shapeable_image_view_radius</item>
+    </style>
+
+</resources>

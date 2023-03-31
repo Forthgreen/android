@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryBackground">
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <com.forthgreen.app.views.utils.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/etLinear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <EditText
+                            android:id="@+id/etSearchUsers"
+                            style="@style/StyleInputEditText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/drawable_color_grey_rounded_corners_stroke"
+                            android:drawableStart="@drawable/ic_search_icon"
+                            android:drawablePadding="12dp"
+                            android:hint="@string/search"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:paddingBottom="10dp"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvCancelSearch"
+                            style="@style/StyleSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:gravity="center"
+                            android:text="@string/search_cancel"
+                            android:textAllCaps="true"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/viewDividerSearch"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/etLinear"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/colorNotificationBG"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvInvitesFriends"
+                        style="@style/StyleSemiBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/etLinear"
+                        android:drawablePadding="16dp"
+                        android:gravity="start|center"
+                        android:paddingStart="16dp"
+                        android:paddingTop="20dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="22dp"
+                        android:text="@string/invites_friends"
+                        android:textSize="14sp"
+                        app:drawableEndCompat="@drawable/ic_right_arrow_black" />
+
+                    <View
+                        android:id="@+id/viewDividerInvitesFriends"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/tvInvitesFriends"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@color/colorNotificationBG" />
+
+                    <TextView
+                        android:id="@+id/tvSuggestedUsers"
+                        style="@style/StyleRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/viewDividerInvitesFriends"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingBottom="18dp"
+                        android:text="@string/suggested_users"
+                        android:textColor="#3E4B4D"
+                        android:textSize="12sp" />
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/flShimmer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvSuggestedUsers"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/llUsers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="vertical">
+
+                            <include layout="@layout/shimmer_home_users" />
+
+                            <include layout="@layout/shimmer_home_users" />
+
+                            <include layout="@layout/shimmer_home_users" />
+
+                            <include layout="@layout/shimmer_home_users" />
+
+                            <include layout="@layout/shimmer_home_users" />
+
+                            <include layout="@layout/shimmer_home_users" />
+
+                            <include layout="@layout/shimmer_home_users" />
+
+                            <include layout="@layout/shimmer_home_users" />
+
+                        </LinearLayout>
+
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <TextView
+                        android:id="@+id/tvNoData"
+                        style="@style/StyleTextViewNoData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvSuggestedUsers"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false" />
+
+                </RelativeLayout>
+
+            </com.forthgreen.app.views.utils.NestedScrollView>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+

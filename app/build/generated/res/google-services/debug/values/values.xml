@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">700251019899-e0n4tj7115psn1vumbufh1aftc2mtk54.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://forthgreen-ios.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">700251019899</string>
+    <string name="google_api_key" translatable="false">AIzaSyBCb3dhtBh7DTZbN2hZIq2CaZBUXvuOKds</string>
+    <string name="google_app_id" translatable="false">1:700251019899:android:eb47147a92c753b95fe0de</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBCb3dhtBh7DTZbN2hZIq2CaZBUXvuOKds</string>
+    <string name="google_storage_bucket" translatable="false">forthgreen-ios.appspot.com</string>
+    <string name="project_id" translatable="false">forthgreen-ios</string>
+</resources>

@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryBackground">
+
+    <!--To redirect the focus to top -->
+    <View
+        android:id="@+id/viewFocus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.038" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.962" />
+
+    <TextView
+        android:id="@+id/tvUserLiked"
+        style="@style/StyleRegular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Elisabeth Ramonel likes this" />
+
+    <View
+        android:id="@+id/viewUserDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorGrayBg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserLiked" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civPostUserImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_placeholder_broken_img"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/viewUserDivider"
+        app:layout_constraintWidth_percent="0.14" />
+
+    <TextView
+        android:id="@+id/tvUserFullName"
+        style="@style/StyleSemiBold"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTimeStamp"
+        app:layout_constraintEnd_toStartOf="@+id/ivPostMenuOptions"
+        app:layout_constraintStart_toEndOf="@+id/civPostUserImage"
+        app:layout_constraintTop_toTopOf="@+id/civPostUserImage"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Lula Obrien" />
+
+    <TextView
+        android:id="@+id/tvTimeStamp"
+        style="@style/StyleRegular"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/civPostUserImage"
+        app:layout_constraintEnd_toEndOf="@+id/tvUserFullName"
+        app:layout_constraintStart_toStartOf="@+id/tvUserFullName"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserFullName"
+        tools:text="2h" />
+
+    <View
+        android:id="@+id/viewProfile"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/civPostUserImage"
+        app:layout_constraintEnd_toEndOf="@+id/tvUserFullName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/civPostUserImage" />
+
+    <ImageView
+        android:id="@+id/ivPostMenuOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_post_menu_icon"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintTop_toTopOf="@+id/civPostUserImage" />
+
+    <TextView
+        android:id="@+id/tvPostDesc"
+        style="@style/StyleRegular"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/civPostUserImage"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. " />
+
+    <TextView
+        android:id="@+id/tvSeeMore"
+        style="@style/StyleRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/see_more"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+        app:layout_constraintTop_toBottomOf="@+id/tvPostDesc" />
+
+    <View
+        android:id="@+id/viewPictureDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorGrayBg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSeeMore" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorGrayBg"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPictureDivider" />
+
+    <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+        android:id="@+id/dotIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:visibility="gone"
+        app:dampingRatio="0.5"
+        app:dotsColor="@color/colorWhite"
+        app:dotsCornerRadius="8dp"
+        app:dotsSize="8dp"
+        app:dotsSpacing="2dp"
+        app:dotsStrokeColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+        app:layout_constraintEnd_toEndOf="@+id/viewPager"
+        app:layout_constraintStart_toStartOf="@+id/viewPager"
+        app:selectedDotColor="@color/colorWhite" />
+
+    <ImageView
+        android:id="@+id/itemVideoPlayerThumbnail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:elevation="1dp"
+        app:layout_constraintEnd_toEndOf="@id/itemVideoPlayer"
+        app:layout_constraintStart_toStartOf="@id/itemVideoPlayer"
+        app:layout_constraintTop_toTopOf="@id/itemVideoPlayer"
+        app:layout_constraintBottom_toBottomOf="@id/itemVideoPlayer" />
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/itemVideoPlayer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:auto_show="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewPager"
+        app:repeat_toggle_modes="all"
+        app:resize_mode="fill"
+        app:surface_type="texture_view"
+        app:use_controller="false" />
+
+    <View
+        android:id="@+id/viewVideoPlayer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/itemVideoPlayer"
+        app:layout_constraintEnd_toEndOf="@id/itemVideoPlayer"
+        app:layout_constraintStart_toStartOf="@id/itemVideoPlayer"
+        app:layout_constraintTop_toTopOf="@id/itemVideoPlayer" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupVideoPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="itemVideoPlayer, cbMute, viewVideoPlayer" />
+
+    <CheckBox
+        android:id="@+id/cbMute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:button="@drawable/drawable_mute_unmute_video_selector"
+        android:padding="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@id/itemVideoPlayer"
+        app:layout_constraintEnd_toEndOf="@id/itemVideoPlayer" />
+
+    <ProgressBar
+        android:id="@+id/pbVideo"
+        style="?android:progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/colorTabGreyBG"
+        android:visibility="gone"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/itemVideoPlayer"
+        app:layout_constraintEnd_toEndOf="@id/itemVideoPlayer"
+        app:layout_constraintStart_toStartOf="@id/itemVideoPlayer"
+        app:layout_constraintTop_toTopOf="@id/itemVideoPlayer" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/flexBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        app:alignItems="flex_start"
+        app:flexDirection="row"
+        app:flexWrap="nowrap"
+        app:layout_constraintEnd_toStartOf="@id/ivMessage"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/itemVideoPlayer">
+
+        <TextView
+            android:id="@+id/tvComments"
+            style="@style/StyleRegular"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/comments_label"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/tvLikes"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/itemVideoPlayer" />
+
+        <TextView
+            android:id="@+id/tvLikes"
+            style="@style/StyleRegular"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/likes_label"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvComments"
+            app:layout_constraintEnd_toStartOf="@+id/ivMessage"
+            app:layout_constraintStart_toEndOf="@+id/tvComments"
+            app:layout_constraintTop_toTopOf="@+id/tvComments" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <CheckBox
+        android:id="@+id/cbLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:button="@drawable/drawable_post_like_button_selector"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/flexBox"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintTop_toTopOf="@+id/flexBox" />
+
+    <ImageView
+        android:id="@+id/ivMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_message"
+        app:layout_constraintBottom_toBottomOf="@+id/cbLike"
+        app:layout_constraintEnd_toStartOf="@+id/cbLike"
+        app:layout_constraintTop_toTopOf="@id/cbLike" />
+
+    <View
+        android:id="@+id/viewBottomDivider"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorGrayBg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flexBox" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupMultiPictures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="viewPager" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupUserLiked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="tvUserLiked,viewUserDivider" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/flShimmer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <include layout="@layout/shimmer_restaurants_list" />
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <ImageView
+        android:id="@+id/ivCross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:src="@drawable/ic_cross"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivRestaurantImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:scaleType="centerCrop"
+        android:src="@color/colorGrayBg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.24" />
+
+    <TextView
+        android:id="@+id/tvRestaurantName"
+        style="@style/StyleSemiBold"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/rbRating"
+        app:layout_constraintEnd_toStartOf="@id/ivCross"
+        app:layout_constraintStart_toEndOf="@+id/ivRestaurantImage"
+        app:layout_constraintTop_toTopOf="@+id/ivRestaurantImage"
+        tools:text="Restaurant name" />
+
+    <RatingBar
+        android:id="@+id/rbRating"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:max="5"
+        android:progressBackgroundTint="@color/colorRatingStars"
+        android:progressTint="@color/colorRatingStars"
+        android:rating="0"
+        android:secondaryProgressTint="@color/colorRatingStars"
+        android:stepSize="1"
+        app:layout_constraintBottom_toTopOf="@+id/tvCuisineInfo"
+        app:layout_constraintStart_toStartOf="@+id/tvRestaurantName"
+        app:layout_constraintTop_toBottomOf="@+id/tvRestaurantName" />
+
+    <TextView
+        android:id="@+id/tvRatingCounts"
+        style="@style/StyleRegular"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/colorDisabledText"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rbRating"
+        app:layout_constraintStart_toEndOf="@+id/rbRating"
+        app:layout_constraintTop_toTopOf="@+id/rbRating"
+        tools:text="32" />
+
+    <TextView
+        android:id="@+id/tvCuisineInfo"
+        style="@style/StyleRegular"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/colorDisabledText"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvDistanceInfo"
+        app:layout_constraintEnd_toEndOf="@id/tvRestaurantName"
+        app:layout_constraintStart_toStartOf="@+id/tvRestaurantName"
+        app:layout_constraintTop_toBottomOf="@+id/tvRatingCounts"
+        tools:text="Italian • Pizza • Pasta • Salads" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        style="@style/StyleSemiBold"
+        android:layout_width="wrap_content"
+        android:text="$$$"
+        android:textColor="@color/colorDisabledText"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvDistanceInfo"
+        app:layout_constraintStart_toStartOf="@+id/tvRestaurantName"
+        app:layout_constraintTop_toTopOf="@id/tvDistanceInfo" />
+
+    <TextView
+        android:id="@+id/tvDistanceInfo"
+        style="@style/StyleRegular"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/colorDisabledText"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivRestaurantImage"
+        app:layout_constraintStart_toEndOf="@+id/tvPrice"
+        app:layout_constraintTop_toBottomOf="@+id/tvCuisineInfo"
+        tools:text="1.9 miles" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupRestaurant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="ivCross,rbRating,ivRestaurantImage,tvCuisineInfo,tvDistanceInfo,tvPrice,tvRatingCounts,tvRestaurantName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

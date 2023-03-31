@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:paddingTop="22dp"
+    android:paddingBottom="22dp">
+
+    <ImageView
+        android:id="@+id/ivProductIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_shirt_filter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvHomeFilter"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHomeFilter"
+        style="@style/StyleRegular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:ellipsize="end"
+        android:gravity="center|start"
+        android:maxLines="1"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="Clothing"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivProductIcon"
+        app:layout_constraintEnd_toStartOf="@+id/ivChecked"
+        app:layout_constraintStart_toEndOf="@id/ivProductIcon"
+        app:layout_constraintTop_toTopOf="@id/ivProductIcon" />
+
+    <ImageView
+        android:id="@+id/ivChecked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_filter_checked"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    <CheckBox-->
+    <!--        android:id="@+id/cbFilter"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:button="@drawable/drawable_filter_checkbox_selector"-->
+    <!--        android:checked="true"-->
+    <!--        android:clickable="false"-->
+    <!--        android:layout_marginEnd="12dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

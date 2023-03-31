@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".views.fragments.PostFeedFilterTabFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryBackground"
+        android:elevation="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        app:theme="@style/DarkSearchViewTheme">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvToolbarTitle"
+                style="@style/StyleToolbarTitle"
+                android:layout_width="0dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivCreatePost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:paddingStart="8dp"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingEnd="8dp"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_create_post"
+                app:layout_constraintBottom_toBottomOf="@+id/tvToolbarTitle"
+                app:layout_constraintEnd_toStartOf="@+id/ivNotifications"
+                app:layout_constraintTop_toTopOf="@+id/tvToolbarTitle" />
+
+            <ImageView
+                android:id="@+id/ivNotifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:paddingStart="8dp"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_notification"
+                app:layout_constraintBottom_toBottomOf="@+id/tvToolbarTitle"
+                app:layout_constraintEnd_toStartOf="@id/ivSearchUsers"
+                app:layout_constraintTop_toTopOf="@+id/tvToolbarTitle" />
+
+            <ImageView
+                android:id="@+id/ivNotifDot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_notification_dot"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/ivSearchUsers"
+                app:layout_constraintTop_toTopOf="@+id/ivNotifications" />
+
+            <ImageView
+                android:id="@+id/ivSearchUsers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:paddingStart="16dp"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingEnd="16dp"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_search_post_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/tvToolbarTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvToolbarTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTransparent"
+            android:elevation="0dp"
+            app:elevation="0dp">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="bottom"
+                android:elevation="0dp"
+                android:textSize="14sp"
+                app:layout_collapseMode="pin"
+                app:tabMode="fixed"
+                app:tabIndicator="@android:color/transparent"
+                app:tabBackground="@drawable/selector_tab_indicator"
+                app:tabIndicatorColor="@color/colorGreenDefaultButton"
+                app:tabIndicatorHeight="2dp"
+                app:tabRippleColor="@null"
+                app:tabSelectedTextColor="@color/colorBlack"
+                app:tabTextAppearance="@style/StyleTabLayout"
+                app:tabTextColor="@color/colorBlack" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".views.fragments.PostsFeedFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryBackground"
+        android:elevation="@dimen/toolbar_elevation"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:visibility="gone"
+        app:contentInsetStartWithNavigation="0dp"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        app:theme="@style/DarkSearchViewTheme">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvToolbarTitle"
+                style="@style/StyleToolbarTitle"
+                android:layout_width="0dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivCreatePost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:paddingStart="8dp"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingEnd="8dp"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_create_post"
+                app:layout_constraintBottom_toBottomOf="@+id/tvToolbarTitle"
+                app:layout_constraintEnd_toStartOf="@+id/ivNotifications"
+                app:layout_constraintTop_toTopOf="@+id/tvToolbarTitle" />
+
+            <ImageView
+                android:id="@+id/ivNotifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:paddingStart="8dp"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_notification"
+                app:layout_constraintBottom_toBottomOf="@+id/tvToolbarTitle"
+                app:layout_constraintEnd_toStartOf="@id/ivSearchUsers"
+                app:layout_constraintTop_toTopOf="@+id/tvToolbarTitle" />
+
+            <ImageView
+                android:id="@+id/ivNotifDot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_notification_dot"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/ivSearchUsers"
+                app:layout_constraintTop_toTopOf="@+id/ivNotifications" />
+
+            <ImageView
+                android:id="@+id/ivSearchUsers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:paddingStart="16dp"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingEnd="16dp"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_search_post_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/tvToolbarTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvToolbarTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/flShimmerPosts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:id="@+id/llPosts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_home_posts" />
+
+            <include layout="@layout/shimmer_home_posts" />
+
+            <include layout="@layout/shimmer_home_posts" />
+
+            <include layout="@layout/shimmer_home_posts" />
+
+            <include layout="@layout/shimmer_home_posts" />
+
+            <include layout="@layout/shimmer_home_posts" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <!--To redirect the focus to top -->
+    <View
+        android:id="@+id/viewFocus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pbVideoUpload"
+        style="?android:progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimaryBackground"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="0"
+        android:progressTint="@color/colorGreenDefaultButton"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pbVideoUpload">
+
+        <im.ene.toro.widget.Container
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tvNoData"
+        style="@style/StyleTextViewNoData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>

@@ -1,0 +1,154 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'com.google.gms.google-services'
+
+apply plugin: 'com.google.firebase.crashlytics'
+
+apply plugin: 'com.jakewharton.butterknife'
+
+def configuration = rootProject.ext.configuration
+def libraries = rootProject.ext.dependencies
+
+android {
+    signingConfigs {
+        release {
+            storeFile file('/home/admin123/rootandroid/rootandroidproject/forthgreenapk/forthgreen_key.jks')
+            storePassword 'forthgreen2020'
+            keyPassword 'forthgreen2020'
+            keyAlias 'Forthgreen'
+        }
+    }
+    compileSdkVersion configuration.targetSdkVersion
+    defaultConfig {
+        applicationId configuration.packageName
+        minSdkVersion configuration.minSdkVersion
+        targetSdkVersion configuration.targetSdkVersion
+        versionCode configuration.versionCode
+        versionName configuration.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+           // proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        // Flag to enable support for the new language APIs
+        coreLibraryDesugaringEnabled true
+
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    // For Kotlin projects
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    aaptOptions {
+        noCompress "tflite"
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        pickFirst 'META-INF/core.kotlin_module'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:${libraries.jdkLibs}"
+
+    implementation "androidx.appcompat:appcompat:${libraries.appcompat}"
+    implementation "androidx.constraintlayout:constraintlayout:${libraries.constraintLayout}"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation "androidx.lifecycle:lifecycle-extensions:${libraries.architectureComponentsVersion}"
+    implementation "androidx.lifecycle:lifecycle-common-java8:${libraries.architectureComponentsVersion}"
+    implementation "androidx.legacy:legacy-support-v13:${libraries.legacySupport}"
+    implementation("com.google.android.material:material:${libraries.material}") {
+        exclude module: 'appcompat-v7'
+        exclude module: 'support-v4'
+    }
+    implementation("androidx.cardview:cardview:${libraries.cardView}") {
+        exclude module: 'support-v4'
+    }
+    implementation("androidx.recyclerview:recyclerview:${libraries.recyclerview}") {
+        exclude module: 'support-v4'
+    }
+    implementation "com.squareup.retrofit2:retrofit:${libraries.retrofit}"
+    implementation "com.squareup.retrofit2:${libraries.retrofitConvertor}"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${libraries.retrofitAdapter}"
+    implementation "io.reactivex.rxjava2:rxjava:${libraries.rxJava}"
+    implementation "io.reactivex.rxjava2:rxandroid:${libraries.rxAndroid}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${libraries.okHttpLoginInterceptor}"
+    implementation "com.squareup.moshi:moshi:${libraries.moshi}"
+    implementation "com.squareup.retrofit2:converter-moshi:${libraries.moshiConvert}"
+    implementation "com.squareup.moshi:moshi-kotlin:${libraries.moshi}"
+    implementation "com.facebook.shimmer:shimmer:${libraries.facebookShimmer}"
+    implementation "com.github.bumptech.glide:glide:${libraries.glide}"
+    annotationProcessor "com.github.bumptech.glide:compiler:${libraries.glide}"
+    implementation("com.github.thekhaeng:pushdown-anim-click:${libraries.pushdownAnimClick}") {
+        exclude group: 'com.android.support'
+    }
+    implementation "me.jessyan:autosize:${libraries.androidAutoSize}"
+    implementation "com.afollestad.material-dialogs:core:${libraries.materialDialogs}"
+    implementation "com.afollestad.material-dialogs:datetime:${libraries.materialDialogs}"
+    implementation "de.hdodenhof:circleimageview:${libraries.circleimageview}"
+    implementation "com.afollestad.assent:core:${libraries.runtimePermissions}"
+    implementation "com.google.android.gms:play-services-auth:${libraries.googleAuth}"
+    implementation "com.facebook.android:facebook-login:${libraries.facebookSDK}"
+    implementation "com.google.firebase:firebase-dynamic-links:${libraries.firebaseDynamicLinks}"
+    implementation "io.noties.markwon:core:${libraries.markwon}"
+    implementation "io.noties.markwon:image-glide:${libraries.markwon}"
+    implementation "io.noties.markwon:html:${libraries.markwon}"
+    implementation "io.branch.sdk.android:library:${libraries.branchIO}"
+    implementation "com.google.firebase:firebase-appindexing:${libraries.appindexing}"
+    implementation "androidx.browser:browser:${libraries.browser}"
+    implementation "com.google.android.gms:play-services-maps:${libraries.maps}"
+    implementation "com.google.android.libraries.places:places:${libraries.googlePlaces}"
+    implementation "com.tbuonomo.andrui:viewpagerdotsindicator:${libraries.viewPagerDotIndicator}"
+    implementation "com.afollestad.material-dialogs:bottomsheets:${libraries.materialDialogs}"
+    implementation "com.google.android:flexbox:${libraries.flexboxLayout}"
+    implementation "androidx.work:work-runtime-ktx:${libraries.workManager}"
+    implementation "androidx.work:work-rxjava2:${libraries.workManager}"
+    implementation platform("com.google.firebase:firebase-bom:${libraries.firebaseBOM}")
+    implementation "com.google.firebase:firebase-analytics-ktx"
+    implementation "com.google.firebase:firebase-messaging-ktx"
+    implementation "com.google.firebase:firebase-crashlytics-ktx"
+    implementation "com.google.firebase:firebase-auth-ktx"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:${libraries.androidLifeCycle}"
+    // Background Processing
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${libraries.coroutines}"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${libraries.coroutinesAndroid}"
+    implementation "com.chauthai.overscroll:overscroll-bouncy:${libraries.overScrollBouncy}"
+    implementation "com.google.android.exoplayer:exoplayer:${libraries.exoPlayer}"
+
+//    implementation "im.ene.kohii:kohii-core:1.1.0.2011003"
+//    implementation "im.ene.kohii:kohii-exoplayer:1.1.0.2011003"
+
+//    implementation "im.ene.kohii:kohii-core:1.0.0.2010003" // core library
+//    implementation "im.ene.kohii:kohii-exoplayer:1.0.0.2010004" // default support for ExoPlayer
+
+    implementation "im.ene.toro3:toro:3.6.2.2804"
+    implementation "im.ene.toro3:toro-ext-exoplayer:3.6.2.2804"  // to get ExoPlayer support
+
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
+    implementation "androidx.fragment:fragment-ktx:1.2.4"
+}

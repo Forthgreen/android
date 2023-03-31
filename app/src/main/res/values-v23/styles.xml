@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BaseAppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="android:windowBackground">@drawable/drawable_splash</item>
+        <item name="android:textColorPrimary">@color/colorPrimaryText</item>
+        <item name="cardViewStyle">@style/CardView</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:actionOverflowButtonStyle">@style/MenuOverFlow</item>
+        <item name="android:itemBackground">@color/colorWhite</item>
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextAppearance</item>
+        <item name="popupMenuStyle">@style/StylePopupMenu</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="md_color_button_text">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:listDivider">@drawable/drawable_item_divider</item>
+    </style>
+</resources>

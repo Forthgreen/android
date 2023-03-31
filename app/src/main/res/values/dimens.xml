@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="user_image_downsample_size">200dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="stroke_width">1dp</dimen>
+    <dimen name="rounded_corner_radius">5dp</dimen>
+    <dimen name="rounded_radius">4dp</dimen>
+    <dimen name="rounded_btn_radius">2dp</dimen>
+    <dimen name="default_edit_text_height">48dp</dimen>
+    <dimen name="default_button_height">48dp</dimen>
+    <dimen name="tab_strip_height">3dp</dimen>
+    <dimen name="toolbar_elevation">1dp</dimen>
+    <dimen name="dialog_corner_radius">0dp</dimen>
+    <dimen name="user_image_size_sign_up">72dp</dimen>
+    <dimen name="default_btn_width">250dp</dimen>
+    <dimen name="sign_up_interest_row_offset">16dp</dimen>
+    <dimen name="app_gallery_row_offset">1dp</dimen>
+    <dimen name="row_user_image_size">40dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="community_grid_offset">64dp</dimen>
+    <dimen name="user_image_profile_size">150dp</dimen>
+    <dimen name="user_image_size_small">40dp</dimen>
+    <dimen name="user_image_size_large">54dp</dimen>
+    <dimen name="user_image_corner_radius">10dp</dimen>
+    <dimen name="home_brand_offset">8dp</dimen>
+    <dimen name="home_product_offset">10dp</dimen>
+    <dimen name="map_detail_padding">32dp</dimen>
+    <dimen name="corner_radius_post_image">8dp</dimen>
+    <dimen name="create_post_end_margin">8dp</dimen>
+    <dimen name="create_post_start_margin">16dp</dimen>
+    <dimen name="shapeable_image_view_radius">8dp</dimen>
+</resources>

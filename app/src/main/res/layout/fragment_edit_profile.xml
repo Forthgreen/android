@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".views.fragments.EditProfileFragment">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.04" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.96" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civUserImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_placeholder_broken_img"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.28" />
+
+            <TextView
+                android:id="@+id/tvNameLabel"
+                style="@style/StyleRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/name_label"
+                android:textColor="@color/colorEditProfileLabels"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/civUserImage" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorLoginEditTextBG"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvNameLabel">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etName"
+                    style="@style/StyleInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:backgroundTint="@color/colorLoginEditTextBG"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPersonName|textCapWords"
+                    android:maxLines="1"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/viewBottomName"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="@color/colorEditTextBottomGrey"
+                app:layout_constraintEnd_toEndOf="@id/tilName"
+                app:layout_constraintStart_toStartOf="@id/tilName"
+                app:layout_constraintTop_toBottomOf="@id/tilName" />
+
+            <TextView
+                android:id="@+id/tvUserNameLabel"
+                style="@style/StyleRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/user_name_label"
+                android:textColor="@color/colorEditProfileLabels"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tilName" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilUserName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorLoginEditTextBG"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserNameLabel">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUserName"
+                    style="@style/StyleInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorLoginEditTextBG"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:background="@null"
+                    android:maxLines="1"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/viewBottomUsername"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="@color/colorEditTextBottomGrey"
+                app:layout_constraintEnd_toEndOf="@id/tilUserName"
+                app:layout_constraintStart_toStartOf="@id/tilUserName"
+                app:layout_constraintTop_toBottomOf="@id/tilUserName" />
+
+            <TextView
+                android:id="@+id/tvBioLabel"
+                style="@style/StyleRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/bio_label"
+                android:textColor="@color/colorEditProfileLabels"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tilUserName" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBio"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorLoginEditTextBG"
+                app:layout_constraintDimensionRatio="4.34"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvBioLabel">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etBio"
+                    style="@style/StyleInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorLoginEditTextBG"
+                    android:gravity="top"
+                    android:imeOptions="actionDone"
+                    android:ellipsize="end"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:maxLines="1"
+                    android:maxLength="150"
+                    android:background="@null"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/viewBottomBio"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="@color/colorEditTextBottomGrey"
+                app:layout_constraintEnd_toEndOf="@id/tilBio"
+                app:layout_constraintStart_toStartOf="@id/tilBio"
+                app:layout_constraintTop_toBottomOf="@id/tilBio" />
+
+            <TextView
+                android:id="@+id/tvEmailLabel"
+                style="@style/StyleRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/email_label"
+                android:textColor="@color/colorEditProfileLabels"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tilBio" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                style="@style/StyleInputEditText"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorTabGreyBG"
+                android:enabled="false"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvEmailLabel" />
+
+            <TextView
+                android:id="@+id/tvPasswordLabel"
+                style="@style/StyleRegular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="20dp"
+                android:text="@string/update_password_label"
+                android:textSize="14sp"
+                app:drawableEndCompat="@drawable/ic_next"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/tvPasswordLabel" />
+
+
+            <TextView
+                android:id="@+id/tvDeleteAccountLabel"
+                style="@style/StyleRegular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="20dp"
+                android:text="@string/delete_account_label"
+                android:textSize="14sp"
+                android:textColor="@color/colorNotificationBadge"
+                app:drawableEndCompat="@drawable/ic_next"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvPasswordLabel" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/tvDeleteAccountLabel" />
+
+
+            <EditText
+                android:id="@+id/etPassword"
+                style="@style/StyleInputEditText"
+                android:layout_marginTop="1dp"
+                android:enabled="false"
+                android:maxLines="1"
+                android:text="****************"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvDeleteAccountLabel" />
+
+            <TextView
+                android:id="@+id/tvChangePassword"
+                style="@style/StyleSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="@string/change_label"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/etPassword"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintTop_toTopOf="@+id/etPassword" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="tvPasswordLabel" />
+
+            <Button
+                android:id="@+id/btnUpdate"
+                style="@style/StyleSubmitButton"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/update_btn_label"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>

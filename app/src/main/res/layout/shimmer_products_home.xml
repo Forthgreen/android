@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="16dp"
+    android:background="@color/colorPrimaryBackground">
+
+    <View
+        android:id="@+id/viewProdImg1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@id/viewProdImg2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewProdName1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="21.6"
+        app:layout_constraintStart_toStartOf="@id/viewProdImg1"
+        app:layout_constraintTop_toBottomOf="@id/viewProdImg1"
+        app:layout_constraintWidth_percent="0.36" />
+
+    <View
+        android:id="@+id/viewBrandName1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="10"
+        app:layout_constraintStart_toStartOf="@id/viewProdImg1"
+        app:layout_constraintTop_toBottomOf="@id/viewProdName1"
+        app:layout_constraintWidth_percent="0.16" />
+
+    <View
+        android:id="@+id/viewProdImg2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/viewProdImg1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewProdName2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="21.6"
+        app:layout_constraintStart_toStartOf="@id/viewProdImg2"
+        app:layout_constraintTop_toBottomOf="@id/viewProdImg2"
+        app:layout_constraintWidth_percent="0.36" />
+
+    <View
+        android:id="@+id/viewBrandName2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="10"
+        app:layout_constraintStart_toStartOf="@id/viewProdImg2"
+        app:layout_constraintTop_toBottomOf="@id/viewProdName2"
+        app:layout_constraintWidth_percent="0.16" />
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>

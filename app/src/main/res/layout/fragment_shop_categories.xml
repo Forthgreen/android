@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etSearchProductsOrBrands"
+                style="@style/StyleInputEditText"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/drawable_color_grey_rounded_corners_stroke"
+                android:drawableStart="@drawable/ic_search_icon"
+                android:drawablePadding="12dp"
+                android:enabled="false"
+                android:hint="@string/search_products_brands_hint"
+                android:textSize="14sp"
+                app:layout_constraintDimensionRatio="9.5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.92" />
+
+            <View
+                android:id="@+id/viewSearch"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/etSearchProductsOrBrands"
+                app:layout_constraintEnd_toEndOf="@id/etSearchProductsOrBrands"
+                app:layout_constraintStart_toStartOf="@id/etSearchProductsOrBrands"
+                app:layout_constraintTop_toTopOf="@+id/etSearchProductsOrBrands" />
+
+            <View
+                android:id="@+id/viewDividerSearch"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorTabGreyBG"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etSearchProductsOrBrands" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/flShimmer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewDividerSearch">
+
+                <LinearLayout
+                    android:id="@+id/llCategories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/shimmer_shop_categories_rv" />
+
+                    <include layout="@layout/shimmer_shop_categories_rv" />
+
+                    <include layout="@layout/shimmer_shop_categories_rv" />
+
+                    <include layout="@layout/shimmer_shop_categories_rv" />
+
+                    <include layout="@layout/shimmer_shop_categories_rv" />
+
+                    <include layout="@layout/shimmer_shop_categories_rv" />
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+            <!--    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+            <!--        android:id="@+id/swipeRefreshLayout"-->
+            <!--        android:layout_width="0dp"-->
+            <!--        android:layout_height="0dp"-->
+            <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--        app:layout_constraintEnd_toEndOf="parent"-->
+            <!--        app:layout_constraintStart_toStartOf="parent"-->
+            <!--        app:layout_constraintTop_toBottomOf="@+id/viewDividerSearch">-->
+
+            <!--        <androidx.recyclerview.widget.RecyclerView-->
+            <!--            android:id="@+id/recyclerView"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="match_parent"-->
+            <!--            android:clipToPadding="false"-->
+            <!--            android:paddingStart="8dp"-->
+            <!--            android:paddingEnd="8dp" />-->
+
+            <!--    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewDividerSearch" />
+
+            <TextView
+                android:id="@+id/tvNoData"
+                style="@style/StyleTextViewNoData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="2dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>

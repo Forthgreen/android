@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <include layout="@layout/toolbar" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/flShimmer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:id="@+id/llBrands"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_brands_list" />
+
+            <include layout="@layout/shimmer_brands_list" />
+
+            <include layout="@layout/shimmer_brands_list" />
+
+            <include layout="@layout/shimmer_brands_list" />
+
+            <include layout="@layout/shimmer_brands_list" />
+
+            <include layout="@layout/shimmer_brands_list" />
+
+            <include layout="@layout/shimmer_brands_list" />
+
+            <include layout="@layout/shimmer_brands_list" />
+
+            <include layout="@layout/shimmer_brands_list" />
+
+            <include layout="@layout/shimmer_brands_list" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingStart="16dp"
+            android:visibility="visible" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tvNoData"
+        style="@style/StyleTextViewNoData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="2dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    <ScrollView-->
+    <!--        android:id="@+id/svGuestSignUp"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:visibility="gone"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/toolbar">-->
+
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvTitleSignUp"-->
+    <!--                style="@style/StyleSemiBold"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="76dp"-->
+    <!--                android:ems="7"-->
+    <!--                android:text="@string/signUp_to_follow"-->
+    <!--                android:textAlignment="center"-->
+    <!--                android:textSize="21sp"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/ivImage"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="0dp"-->
+    <!--                android:layout_marginTop="32dp"-->
+    <!--                android:src="@drawable/ic_onboarding2"-->
+    <!--                app:layout_constraintBottom_toTopOf="@id/btnSignUp"-->
+    <!--                app:layout_constraintDimensionRatio="1.36"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/tvTitleSignUp"-->
+    <!--                app:layout_constraintWidth_percent="0.85" />-->
+
+    <!--            <Button-->
+    <!--                android:id="@+id/btnSignUp"-->
+    <!--                style="@style/StyleSubmitButton"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="48dp"-->
+    <!--                android:text="@string/btn_signUp"-->
+    <!--                app:layout_constraintBottom_toTopOf="@+id/llLogin"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/ivImage"-->
+    <!--                app:layout_constraintWidth_percent="0.42" />-->
+
+
+    <!--            <LinearLayout-->
+    <!--                android:id="@+id/llLogin"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:orientation="horizontal"-->
+    <!--                android:layout_marginTop="18dp"-->
+    <!--                android:layout_marginBottom="60dp"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/btnSignUp"-->
+    <!--                app:layout_constraintVertical_chainStyle="packed">-->
+
+    <!--                <TextView-->
+    <!--                    android:id="@+id/tvHaveAccountLabel"-->
+    <!--                    style="@style/StyleRegular"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="@string/have_an_account"-->
+    <!--                    android:textSize="16sp" />-->
+
+    <!--                <TextView-->
+    <!--                    android:id="@+id/tvHaveAccount"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    style="@style/StyleSemiBold"-->
+    <!--                    android:textSize="12sp"-->
+    <!--                    android:text="@string/login"-->
+    <!--                    android:textAllCaps="true"-->
+    <!--                    android:padding="8dp" />-->
+
+    <!--            </LinearLayout>-->
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+    <!--    </ScrollView>-->
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>

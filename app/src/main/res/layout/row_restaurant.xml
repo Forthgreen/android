@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivCross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:src="@drawable/ic_cross"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivRestaurantPic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        android:src="@color/colorGrayBg"
+        app:layout_constraintDimensionRatio="2.09"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvRestaurantName"
+        style="@style/StyleSemiBold"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Restaurant name"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivRestaurantPic" />
+
+    <RatingBar
+        android:id="@+id/rattingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:clickable="false"
+        android:max="5"
+        android:progressBackgroundTint="@color/colorRatingStars"
+        android:progressTint="@color/colorRatingStars"
+        android:rating="0"
+        android:secondaryProgressTint="@color/colorRatingStars"
+        android:stepSize="1"
+        app:layout_constraintStart_toStartOf="@+id/tvRestaurantName"
+        app:layout_constraintTop_toBottomOf="@+id/tvRestaurantName" />
+
+    <TextView
+        android:id="@+id/tvRatingCount"
+        style="@style/StyleRegular"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="32"
+        android:textColor="@color/colorEditProfileLabels"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rattingBar"
+        app:layout_constraintStart_toEndOf="@+id/rattingBar"
+        app:layout_constraintTop_toTopOf="@+id/rattingBar" />
+
+    <TextView
+        android:id="@+id/tvCuisine"
+        style="@style/StyleRegular"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Italian • Pizza • Pasta • Salads"
+        android:textColor="@color/colorEditProfileLabels"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/tvRestaurantName"
+        app:layout_constraintStart_toStartOf="@+id/tvRestaurantName"
+        app:layout_constraintTop_toBottomOf="@+id/tvRatingCount" />
+
+    <TextView
+        android:id="@+id/tvPriceRange"
+        style="@style/StyleSemiBold"
+        android:layout_width="wrap_content"
+        android:text="$$$"
+        android:textColor="@color/colorDisabledText"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvDistance"
+        app:layout_constraintStart_toStartOf="@+id/tvRestaurantName"
+        app:layout_constraintTop_toTopOf="@id/tvDistance" />
+
+    <TextView
+        android:id="@+id/tvDistance"
+        style="@style/StyleRegular"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="32dp"
+        android:text="1.9 miles"
+        android:textColor="@color/colorEditProfileLabels"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvPriceRange"
+        app:layout_constraintTop_toBottomOf="@+id/tvCuisine" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

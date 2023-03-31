@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".views.fragments.CreatePostFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryBackground"
+        android:elevation="@dimen/toolbar_elevation"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        app:theme="@style/DarkSearchViewTheme">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEndToolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.96" />
+
+            <TextView
+                android:id="@+id/tvCreatePost"
+                style="@style/StyleToolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_post"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnPost"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnPost"
+                style="@style/StyleSubmitButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/drawable_button_create_post_disabled"
+                android:enabled="false"
+                android:stateListAnimator="@null"
+                android:text="@string/post_btn"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="2.4875"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEndToolbar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.21" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/svPost"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toTopOf="@id/btnAddPictures"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineStartSv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.04" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEndSv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.96" />
+
+            <EditText
+                android:id="@+id/etPostText"
+                style="@style/StyleInputEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/transparent"
+                android:hint="@string/create_post_hint"
+                android:imeOptions="actionDone"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEndSv"
+                app:layout_constraintStart_toStartOf="@id/guidelineStartSv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPostImages"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingStart="@dimen/create_post_start_margin"
+                android:paddingEnd="@dimen/create_post_end_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etPostText" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivVideo"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/ic_placeholder_broken_img"
+                app:layout_constraintDimensionRatio="1"
+                app:shapeAppearanceOverlay="@style/StyleShapeableRoundedImageView"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEndSv"
+                app:layout_constraintStart_toStartOf="@id/guidelineStartSv"
+                app:layout_constraintTop_toBottomOf="@id/rvPostImages" />
+
+            <ImageView
+                android:id="@+id/ivPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_play_video"
+                app:layout_constraintBottom_toBottomOf="@id/ivVideo"
+                app:layout_constraintEnd_toEndOf="@id/ivVideo"
+                app:layout_constraintStart_toStartOf="@id/ivVideo"
+                app:layout_constraintTop_toTopOf="@id/ivVideo" />
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_close_video"
+                app:layout_constraintEnd_toEndOf="@id/ivVideo"
+                app:layout_constraintTop_toTopOf="@id/ivVideo" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="ivVideo, ivPlay, ivClose" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewTags"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etPostText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/viewPost"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/svPost"
+        app:layout_constraintEnd_toEndOf="@id/svPost"
+        app:layout_constraintStart_toStartOf="@id/svPost"
+        app:layout_constraintTop_toTopOf="@id/svPost" />
+
+    <Button
+        android:id="@+id/btnAddPictures"
+        style="@style/StyleSubmitButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:background="@color/colorTabGreyBG"
+        android:text="@string/add_pictures_btn"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart" />
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>

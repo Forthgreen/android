@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "700251019899",
+    "firebase_url": "https://forthgreen-ios.firebaseio.com",
+    "project_id": "forthgreen-ios",
+    "storage_bucket": "forthgreen-ios.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700251019899:android:eb47147a92c753b95fe0de",
+        "android_client_info": {
+          "package_name": "com.forthgreen.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "700251019899-bnmhim0elbn8cg3518t93nc6p0iefo9r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.forthgreen.app",
+            "certificate_hash": "975f14d0034fbfd96e049cb96b9e85fb1f441e06"
+          }
+        },
+        {
+          "client_id": "700251019899-e0n4tj7115psn1vumbufh1aftc2mtk54.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCb3dhtBh7DTZbN2hZIq2CaZBUXvuOKds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "700251019899-qrq1n0la70mo7a01toce3qm1qd15idqu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "700251019899-dpfuf52caef5h9qeb35vut963ivll9mo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.forthgreenApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

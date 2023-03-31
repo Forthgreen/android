@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".views.fragments.ProfileNavDrawerFragment">
+
+    <View
+        android:id="@+id/viewTop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorTransparent"
+        app:layout_constraintDimensionRatio="1.39"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civUserImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_placeholder_broken_img"
+        app:layout_constraintBottom_toBottomOf="@+id/viewTop"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/viewTop"
+        app:layout_constraintWidth_percent="0.28" />
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:padding="16dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/viewTop" />
+
+    <TextView
+        android:id="@+id/tvUserFullName"
+        style="@style/StyleSemiBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/civUserImage"
+        tools:text="Lula Obrien" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewTop">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.04" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.96" />
+
+            <TextView
+                android:id="@+id/tvEditProfile"
+                style="@style/StyleRegular"
+                android:drawablePadding="16dp"
+                android:gravity="start|center"
+                android:paddingTop="22dp"
+                android:paddingBottom="22dp"
+                android:text="@string/edit_profile_label"
+                android:textSize="14sp"
+                app:drawableEndCompat="@drawable/ic_right_arrow_black"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/viewDividerEditProfile"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorGrayBg"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditProfile" />
+
+            <View
+                android:id="@+id/viewDividerCollections"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorGrayBg"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditProfile" />
+
+            <TextView
+                android:id="@+id/tvContactUs"
+                style="@style/StyleRegular"
+                android:gravity="start|center"
+                android:paddingTop="22dp"
+                android:paddingBottom="22dp"
+                android:text="@string/contact_us_label"
+                android:textSize="14sp"
+                app:drawableEndCompat="@drawable/ic_right_arrow_black"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/viewDividerCollections" />
+
+            <View
+                android:id="@+id/viewDividerContactUs"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorGrayBg"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvContactUs" />
+
+            <TextView
+                android:id="@+id/tvLeaveFeedback"
+                style="@style/StyleRegular"
+                android:gravity="start|center"
+                android:paddingTop="22dp"
+                android:paddingBottom="22dp"
+                android:text="@string/leave_feedback_label"
+                android:textSize="14sp"
+                app:drawableEndCompat="@drawable/ic_external_link"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/viewDividerContactUs" />
+
+            <View
+                android:id="@+id/viewDividerLeaveFeedback"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorGrayBg"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvLeaveFeedback" />
+
+            <TextView
+                android:id="@+id/tvAboutUs"
+                style="@style/StyleRegular"
+                android:gravity="start|center"
+                android:paddingTop="22dp"
+                android:paddingBottom="22dp"
+                android:text="@string/about_us_label"
+                android:textSize="14sp"
+                app:drawableEndCompat="@drawable/ic_external_link"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/viewDividerLeaveFeedback" />
+
+            <View
+                android:id="@+id/viewDividerAboutUs"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorGrayBg"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvAboutUs" />
+
+            <TextView
+                android:id="@+id/tvTermsConditions"
+                style="@style/StyleRegular"
+                android:gravity="start|center"
+                android:paddingTop="22dp"
+                android:paddingBottom="22dp"
+                android:text="@string/terms_label"
+                android:textSize="14sp"
+                app:drawableEndCompat="@drawable/ic_external_link"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/viewDividerAboutUs" />
+
+            <View
+                android:id="@+id/viewDividerTerms"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorGrayBg"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvTermsConditions" />
+
+            <TextView
+                android:id="@+id/tvPrivacyPolicy"
+                style="@style/StyleRegular"
+                android:gravity="start|center"
+                android:paddingTop="22dp"
+                android:paddingBottom="22dp"
+                android:text="@string/privacy_and_policy_label"
+                android:textSize="14sp"
+                app:drawableEndCompat="@drawable/ic_external_link"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/viewDividerTerms" />
+
+            <View
+                android:id="@+id/viewDividerPrivacy"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorGrayBg"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvPrivacyPolicy" />
+
+            <TextView
+                android:id="@+id/tvDeleteAccount"
+                style="@style/StyleRegular"
+                android:gravity="start|center"
+                android:paddingTop="22dp"
+                android:paddingBottom="22dp"
+                android:text="@string/delete_account_label"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/viewDividerPrivacy" />
+
+            <TextView
+                android:id="@+id/tvLogout"
+                style="@style/StyleRegular"
+                android:gravity="start|center"
+                android:paddingTop="22dp"
+                android:paddingBottom="22dp"
+                android:text="@string/logout_label"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvDeleteAccount" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>

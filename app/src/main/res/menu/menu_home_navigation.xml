@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/drawable_navigation_home_selector"
+        android:title="" />
+    <item
+        android:id="@+id/nav_shop_page"
+        android:icon="@drawable/drawable_navigation_shop_selector"
+        android:title="" />
+    <!-- <item
+         android:id="@+id/nav_brand"
+         android:icon="@drawable/drawable_navigation_brand_selector"
+         android:title="" />-->
+    <item
+        android:id="@+id/nav_restaurant"
+        android:icon="@drawable/drawable_navigation_restaurant_selector"
+        android:title="" />
+    <!--    <item-->
+    <!--        android:id="@+id/nav_bookmarked"-->
+    <!--        android:icon="@drawable/drawable_navigation_bookmark_selector"-->
+    <!--        android:title="" />-->
+    <item
+        android:id="@+id/nav_bookmark"
+        android:icon="@drawable/drawable_navigation_bookmark_selector"
+        android:title="" />
+    <!--    <item-->
+    <!--        android:id="@+id/nav_settings"-->
+    <!--        android:icon="@drawable/drawable_navigation_settings_selector"-->
+    <!--        android:title="" />-->
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/drawable_navigation_profile_selector"
+        android:title="" />
+
+</menu>

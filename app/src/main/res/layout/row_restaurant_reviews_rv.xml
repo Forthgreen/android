@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryBackground"
+    android:paddingTop="16dp"
+    android:paddingBottom="20dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civUserImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@color/colorGrayBg"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.13" />
+
+    <ImageView
+        android:id="@+id/ivMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        android:src="@drawable/ic_horizontal_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/civUserImage" />
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/StyleSemiBold"
+        android:layout_marginStart="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="John Doe"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/rbRating"
+        app:layout_constraintEnd_toStartOf="@+id/ivMenu"
+        app:layout_constraintStart_toEndOf="@id/civUserImage"
+        app:layout_constraintTop_toTopOf="@id/civUserImage"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+    <RatingBar
+        android:id="@+id/rbRating"
+        style="?attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:progressBackgroundTint="@color/colorRatingStars"
+        android:progressTint="@color/colorRatingStars"
+        android:rating="0"
+        android:secondaryProgressTint="@color/colorRatingStars"
+        android:stepSize="0.5"
+        app:layout_constraintBottom_toBottomOf="@id/civUserImage"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <TextView
+        android:id="@+id/tvReviewTitle"
+        style="@style/StyleSemiBold"
+        android:layout_marginTop="24dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Review title"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/civUserImage" />
+
+    <TextView
+        android:id="@+id/tvReview"
+        style="@style/StyleRegular"
+        android:layout_marginTop="11dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor nibh, sit amet tempor nibh finibus et. Aenean eu enim justo. Vestibulum aliquam hendrerit molestie. Mauris malesuada nisi sit amet. Aenean eu enim justo. "
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvReviewTitle" />
+
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>

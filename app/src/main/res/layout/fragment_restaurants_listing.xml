@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sclRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryBackground"
+        android:elevation="@dimen/toolbar_elevation"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        app:theme="@style/DarkSearchViewTheme">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvToolbarTitle"
+                style="@style/StyleToolbarTitle"
+                android:layout_width="0dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMap"
+                style="@style/StyleSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/drawable_color_grey_bg_clear_filters_solid"
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:text="@string/map_restaurant_label"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/flShimmer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:id="@+id/llRestaurants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_search_restaurants" />
+
+            <include layout="@layout/shimmer_restaurants_list" />
+
+            <include layout="@layout/shimmer_restaurants_list" />
+
+            <include layout="@layout/shimmer_restaurants_list" />
+
+            <include layout="@layout/shimmer_restaurants_list" />
+
+            <include layout="@layout/shimmer_restaurants_list" />
+
+            <include layout="@layout/shimmer_restaurants_list" />
+
+            <include layout="@layout/shimmer_restaurants_list" />
+
+            <include layout="@layout/shimmer_restaurants_list" />
+
+            <include layout="@layout/shimmer_restaurants_list" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tvNoData"
+        style="@style/StyleTextViewNoData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupRestaurantListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="swipeRefreshLayout" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapRestaurants"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <ImageView
+        android:id="@+id/ivCurrentLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:elevation="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_current_location_new"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/mapRestaurants"
+        app:layout_constraintTop_toTopOf="@+id/mapRestaurants" />
+
+    <TextView
+        android:id="@+id/tvSearchHere"
+        style="@style/StyleSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/drawable_color_white_map_buttons_bg_rounded_corners_solid"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:paddingStart="23dp"
+        android:paddingTop="9dp"
+        android:paddingEnd="23dp"
+        android:paddingBottom="9dp"
+        android:text="@string/search_here_label"
+        android:textAllCaps="true"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/mapRestaurants"
+        app:layout_constraintStart_toStartOf="@id/mapRestaurants"
+        app:layout_constraintTop_toTopOf="@+id/mapRestaurants" />
+
+    <TextView
+        android:id="@+id/tvShowMore"
+        style="@style/StyleSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/drawable_color_white_map_buttons_bg_rounded_corners_solid"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:paddingStart="23dp"
+        android:paddingTop="9dp"
+        android:paddingEnd="23dp"
+        android:paddingBottom="9dp"
+        android:text="@string/show_more_label"
+        android:textAllCaps="true"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@+id/mapRestaurants"
+        app:layout_constraintEnd_toEndOf="@id/mapRestaurants"
+        app:layout_constraintStart_toStartOf="@id/mapRestaurants" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSingleRestaurant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorWhite"
+        android:clipToPadding="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>

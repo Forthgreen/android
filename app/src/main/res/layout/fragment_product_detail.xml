@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".views.fragments.ProductDetailFragment">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.04" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.96" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProductImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerCrop"
+                android:src="@color/colorShimmerGrey"
+                app:civ_border_color="@color/colorGrayBg"
+                app:civ_border_width="1dp"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.2" />
+
+            <TextView
+                android:id="@+id/tvProductNameTop"
+                style="@style/StyleSemiBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="2dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Product Name"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@id/rbProductRating"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toEndOf="@id/ivProductImage"
+                app:layout_constraintTop_toTopOf="@id/ivProductImage"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+
+            <RatingBar
+                android:id="@+id/rbProductRating"
+                style="?attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:progressBackgroundTint="@color/colorRatingStars"
+                android:progressTint="@color/colorRatingStars"
+                android:rating="0"
+                android:secondaryProgressTint="@color/colorRatingStars"
+                android:stepSize="0.5"
+                app:layout_constraintBottom_toBottomOf="@id/ivProductImage"
+                app:layout_constraintStart_toStartOf="@id/tvProductNameTop"
+                app:layout_constraintTop_toBottomOf="@id/tvProductNameTop" />
+
+            <TextView
+                android:id="@+id/tvRatingNumber"
+                style="@style/StyleRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="4"
+                android:textColor="@color/colorDisabledText"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/rbProductRating"
+                app:layout_constraintStart_toEndOf="@id/rbProductRating"
+                app:layout_constraintTop_toTopOf="@id/rbProductRating" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorWhite"
+                app:fillColor="@color/colorWhite"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivProductImage"
+                app:strokeColor="@color/colorGrayBg" />
+
+            <com.forthgreen.app.views.utils.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/circlePagerIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_vertical_margin"
+                app:fillColor="@color/colorBlack"
+                app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/tvProductName"
+                style="@style/StyleSemiBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Product Name"
+                android:textSize="21sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/viewPager" />
+
+            <TextView
+                android:id="@+id/tvProductPrice"
+                style="@style/StyleSemiBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="$120"
+                android:textSize="21sp"
+                app:layout_constraintEnd_toStartOf="@id/cbBookmark"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/tvProductName" />
+
+            <CheckBox
+                android:id="@+id/cbBookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/drawable_navigation_bookmark_selector"
+                android:padding="4dp"
+                app:layout_constraintBottom_toBottomOf="@id/tvProductPrice"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintTop_toTopOf="@id/tvProductPrice" />
+
+            <Button
+                android:id="@+id/btnWebsite"
+                style="@style/StyleSubmitButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/drawable_button_following_brand_detail"
+                android:gravity="center"
+                android:text="@string/shop_now_btn"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="12sp"
+                app:layout_constraintDimensionRatio="8.2"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/tvProductPrice" />
+
+            <TextView
+                android:id="@+id/tvProductDesc"
+                style="@style/StyleRegular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:lineSpacingMultiplier="1.3"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor nibh, sit amet tempor nibh finibus et. Aenean eu enim justo. Vestibulum aliquam hendrerit molestie.Mauris malesuada nisi sit amet augue accumsan tincidunt. Maecenas tincidunt, velit ac porttitor pulvinar, tortor eros facilisis libero, vitae commodo nunc quam et ligula. Ut nec ipsum sapien. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer."
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/btnWebsite" />
+
+            <TextView
+                android:id="@+id/tvYouMightLikeLabel"
+                style="@style/StyleSemiBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/you_might_also_like_label"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/tvProductDesc" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSuggestedProducts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvYouMightLikeLabel" />
+
+            <View
+                android:id="@+id/viewDividerSuggestedProducts"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorTabGreyBG"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/rvSuggestedProducts" />
+
+            <TextView
+                android:id="@+id/tvWriteReview"
+                style="@style/StyleRegular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/write_a_review"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerSuggestedProducts" />
+
+            <View
+                android:id="@+id/viewDividerWriteAReview"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorTabGreyBG"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/tvWriteReview" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewDividerWriteAReview"
+                app:layout_goneMarginTop="24dp" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupSuggestedProducts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="rvSuggestedProducts, tvYouMightLikeLabel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>
