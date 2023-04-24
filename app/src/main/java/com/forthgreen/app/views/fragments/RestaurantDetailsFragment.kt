@@ -11,6 +11,7 @@ import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.view.View
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -35,6 +36,8 @@ import com.forthgreen.app.views.activities.BaseAppCompactActivity
 import com.forthgreen.app.views.activities.doFragmentTransaction
 import com.forthgreen.app.views.adapters.RestaurantReviewsAdapter
 import com.forthgreen.app.views.adapters.ViewPagerAdapter
+import com.forthgreen.app.views.dialogfragments.UserLoginDialog
+import com.forthgreen.app.views.interfaces.LoginButtonClickInterface
 import com.forthgreen.app.views.utils.gone
 import com.forthgreen.app.views.utils.supportFragmentManager
 import com.forthgreen.app.views.utils.trimmedText
@@ -159,7 +162,8 @@ class RestaurantDetailsFragment : BaseRecyclerViewFragment(), View.OnClickListen
         when (v?.id) {
             R.id.ivToolbarActionEnd -> {
                 if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
-                    performTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                   // performTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                    callUserLoginDialog()
                 } else {
                     GeneralFunctions.shareGenericDeepLink(
                         mContext = requireContext(),
@@ -222,7 +226,8 @@ class RestaurantDetailsFragment : BaseRecyclerViewFragment(), View.OnClickListen
             R.id.tvWriteReview -> {
                 //Show Dialog in case of Guest mode else perform action.
                 if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
-                    performTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                  //  performTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                    callUserLoginDialog()
                 } else {
                     performFragTransaction(
                         RestaurantReviewFragment.newInstance(mDetails._id),
@@ -369,7 +374,8 @@ class RestaurantDetailsFragment : BaseRecyclerViewFragment(), View.OnClickListen
 
     //Show Guest Mode Dialog with help of Material Dialog by inflating custom layout.
     private fun showGuestModeDialog() {
-        performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+        callUserLoginDialog()
+      //  performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
 //        MaterialDialog(requireContext()).show {
 //            customView(R.layout.dialog_fragment_brand_detail, dialogWrapContent = true, noVerticalPadding = true, horizontalPadding = false)
 //            cancelable(false)
@@ -402,7 +408,8 @@ class RestaurantDetailsFragment : BaseRecyclerViewFragment(), View.OnClickListen
             tvReportAbuse.setOnClickListener {
                 this.dismiss()
                 if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
-                    performTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                   // performTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                    callUserLoginDialog()
                 } else {
                     performTransaction(
                         ReportReviewFragment.newInstance(review._id, false),
@@ -432,5 +439,15 @@ class RestaurantDetailsFragment : BaseRecyclerViewFragment(), View.OnClickListen
             fragmentTag,
             isAddFragment = true
         )
+    }
+
+    private fun callUserLoginDialog() {
+        val userLoginDialog = UserLoginDialog()
+        userLoginDialog.showUserLoginDialog(requireActivity() as AppCompatActivity, object :
+            LoginButtonClickInterface {
+            override fun loginButtonClick() {
+                performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+            }
+        })
     }
 }

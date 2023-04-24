@@ -423,6 +423,15 @@
     <string name="suggested_users">Suggested users</string>
     <string name="invite">Invite</string>
     <string name="invited">INVITED</string>
+    <string name="block_user">Block user</string>
+    <string name="unblocked_user">Unblock user</string>
+    <string name="this_user_has_blocked_you">This user has blocked you.</string>
+    <string name="you_have_blocked_this_user">You’ve blocked this user.</string>
+    <string name="report_user">Report user</string>
+    <string name="cancel_block_user_menu">CANCEL</string>
+    <string name="block_block_user_menu">BLOCK</string>
+    <string name="block_user_dialog_desc">This users will no longer be able to follow you, and you will not see notifications from this user. </string>
+    <string name="login_to_continue">Login to Continue</string>
 
 
 

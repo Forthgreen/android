@@ -5,6 +5,8 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
@@ -24,7 +26,10 @@ import com.forthgreen.app.views.utils.gone
 import com.forthgreen.app.views.utils.visible
 import com.thekhaeng.pushdownanim.PushDownAnim
 import kotlinx.android.synthetic.main.bottom_sheet_menu_options.tvCancel
+import kotlinx.android.synthetic.main.dialog_block_user.*
 import kotlinx.android.synthetic.main.dialog_review_menu.*
+import kotlinx.android.synthetic.main.dialog_review_menu.tvBlockUser
+import kotlinx.android.synthetic.main.dialog_review_menu.tvReportAbuse
 import kotlinx.android.synthetic.main.fragment_other_user_profile.*
 import kotlinx.android.synthetic.main.toolbar.*
 
@@ -49,6 +54,8 @@ class OtherUserProfileFragment : BaseRecyclerViewFragment(), LoadMoreListener, P
             }
         }
     }
+
+    private var userPostList: List<HomeFeed> = emptyList()
 
     // Variables
     private var page = 1
@@ -86,6 +93,18 @@ class OtherUserProfileFragment : BaseRecyclerViewFragment(), LoadMoreListener, P
 
     override val isShowRecyclerViewDivider: Boolean
         get() = false
+
+    var userProfile= UserProfile()
+
+    private lateinit var noDataTextView: TextView
+
+    private var blockedUserTextView: String = "Block user"
+    private var follow: Boolean = true
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        noDataTextView = view.findViewById<TextView>(R.id.tvNoData)
+    }
 
     override fun setData() {
         setupViews()
@@ -136,9 +155,42 @@ class OtherUserProfileFragment : BaseRecyclerViewFragment(), LoadMoreListener, P
                 cancelOnTouchOutside(false)
                 cancelable(false)
                 cornerRadius(res = R.dimen.dialog_corner_radius)
+                tvBlockUser.text = blockedUserTextView
+                if (blockedUserTextView != "") {
+                    tvBlockUser.visible()
+                }
+                tvBlockUser.setOnClickListener {
+                    this.dismiss()
+
+                    if (blockedUserTextView != "Unblock user") {
+                        MaterialDialog(requireContext()).show {
+                            customView(R.layout.dialog_block_user, dialogWrapContent = true, noVerticalPadding = true)
+                            cancelOnTouchOutside(false)
+                            cancelable(false)
+                            cornerRadius(res = R.dimen.dialog_corner_radius)
+                            tvCancel.setOnClickListener {
+                                this.dismiss()
+                            }
+                            tvBlock.setOnClickListener {
+                                this.dismiss()
+                                mProfileDetailsViewModel.updateUserBlockStatus(
+                                    isShowLoading = true,
+                                    status = follow,
+                                    userRef = mUserDetails._id
+                                )
+                            }
+                        }
+                    } else {
+                        mProfileDetailsViewModel.updateUserBlockStatus(
+                            isShowLoading = true,
+                            status = follow,
+                            userRef = mUserDetails._id
+                        )
+                    }
+                }
                 tvReportAbuse.apply {
-                    text = getString(R.string.report_label)
-                    setTextColor(ContextCompat.getColor(requireContext(), R.color.colorReportAbuse))
+                    text = getString(R.string.report_user)
+                  //  setTextColor(ContextCompat.getColor(requireContext(), R.color.colorReportAbuse))
                 }
                 tvReportAbuse.setOnClickListener {
                     this.dismiss()
@@ -158,7 +210,27 @@ class OtherUserProfileFragment : BaseRecyclerViewFragment(), LoadMoreListener, P
             flShimmer.gone()
             swipeRefreshLayout.visible()
             tvToolbarTitle.text = fetchedDetails.data.firstName
-            mAdapter.submitDetails(fetchedDetails.data.posts, fetchedDetails.data, fetchedDetails.hasMore, page, selfId)
+            userProfile = fetchedDetails.data
+            userPostList = fetchedDetails.data.posts
+
+            if (userProfile.isBlock && userProfile.isSenderBlock.isEmpty()) {
+                follow = false
+                blockedUserTextView = requireContext().getString(R.string.unblocked_user)
+                noDataTextView.text = requireContext().getString(R.string.this_user_has_blocked_you)
+                noDataTextView.visible()
+                val userProfileBlocked = userProfile.copy(isBlock = true)
+                mAdapter.submitDetails(emptyList(), userProfileBlocked, false, page, selfId)
+            } else if (userProfile.isSenderBlock.isNotEmpty()){
+                follow = false
+                blockedUserTextView = ""
+                val userProfileBlocked = userProfile.copy(isBlock = true)
+                noDataTextView.text = requireContext().getString(R.string.this_user_has_blocked_you)
+                noDataTextView.visible()
+                mAdapter.submitDetails(emptyList(), userProfileBlocked, false, page, selfId)
+            } else {
+                mAdapter.submitDetails(fetchedDetails.data.posts, fetchedDetails.data, fetchedDetails.hasMore, page, selfId)
+            }
+          //  mAdapter.submitDetails(fetchedDetails.data.posts, fetchedDetails.data, fetchedDetails.hasMore, page, selfId)
         })
         mProfileDetailsViewModel.onFollowStatusUpdated().observe(viewLifecycleOwner, { statusUpdated ->
             if (statusUpdated) {
@@ -166,10 +238,27 @@ class OtherUserProfileFragment : BaseRecyclerViewFragment(), LoadMoreListener, P
 
                 // Send Broadcast
                 LocalBroadcastManager.getInstance(requireContext()).sendBroadcast(
-                        Intent(PostsFeedFragment.LOCAL_INTENT_ACTION_PERFORMED).apply {
-                            putExtra(INTENT_EXTRAS_FOLLOW_STATUS, userData.isFollow)
-                        }
+                    Intent(PostsFeedFragment.LOCAL_INTENT_ACTION_PERFORMED).apply {
+                        putExtra(INTENT_EXTRAS_FOLLOW_STATUS, userData.isFollow)
+                    }
                 )
+            }
+        })
+        mProfileDetailsViewModel.onBlockStatusUpdated().observe(viewLifecycleOwner, { statusUserBlockedUpdated ->
+            if (statusUserBlockedUpdated) {
+                follow = !follow
+                if (follow) {
+                    blockedUserTextView = requireContext().getString(R.string.block_user)
+                    val userProfileBlocked = userProfile.copy(isBlock = false)
+                    noDataTextView.gone()
+                    mAdapter.submitDetails(userPostList, userProfileBlocked, false, page, selfId)
+                } else {
+                    blockedUserTextView = requireContext().getString(R.string.unblocked_user)
+                    val userProfileBlocked = userProfile.copy(isBlock = true)
+                    noDataTextView.text = requireContext().getString(R.string.you_have_blocked_this_user)
+                    noDataTextView.visible()
+                    mAdapter.submitDetails(emptyList(), userProfileBlocked, false, page, selfId)
+                }
             }
         })
         mProfileDetailsViewModel.onPostLikeUpdated().observe(viewLifecycleOwner, { postLikeUpdated ->
@@ -257,9 +346,9 @@ class OtherUserProfileFragment : BaseRecyclerViewFragment(), LoadMoreListener, P
                 // Vibrate phone
                 GeneralFunctions.vibratePhone(requireContext())
                 mProfileDetailsViewModel.updatePostLike(
-                        mShowLoader = true,
-                        postRef = postInfo._id,
-                        liked = postLiked
+                    mShowLoader = true,
+                    postRef = postInfo._id,
+                    liked = postLiked
                 )
                 post = if (postLiked) {
                     postInfo.copy(isLike = postLiked, likes = postInfo.likes + 1)
@@ -280,8 +369,8 @@ class OtherUserProfileFragment : BaseRecyclerViewFragment(), LoadMoreListener, P
             }
             ValueMapping.onLikesClick() -> {
                 performFragTransaction(LikesFragment.newInstance(postInfo._id, true), LikesFragment.TAG,
-                        enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
-                        popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right
+                    enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
+                    popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right
                 )
             }
         }
@@ -291,20 +380,20 @@ class OtherUserProfileFragment : BaseRecyclerViewFragment(), LoadMoreListener, P
         when (clickType) {
             ValueMapping.onFollowersClick() -> {
                 performFragTransaction(FollowersFollowingTabFragment.newInstance(user, true), FollowersFollowingTabFragment.TAG,
-                        enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
-                        popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right)
+                    enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
+                    popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right)
             }
             ValueMapping.onFollowingClick() -> {
                 performFragTransaction(FollowersFollowingTabFragment.newInstance(user, false), FollowersFollowingTabFragment.TAG,
-                        enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
-                        popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right)
+                    enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
+                    popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right)
             }
             else -> {
                 // Update the follow status via API hit
                 mProfileDetailsViewModel.updateUserFollowStatus(
-                        isShowLoading = true,
-                        status = follow,
-                        userRef = user._id
+                    isShowLoading = true,
+                    status = follow,
+                    userRef = user._id
                 )
                 userData = if (follow) {
                     user.copy(isFollow = follow, followers = user.followers + 1)
@@ -318,37 +407,37 @@ class OtherUserProfileFragment : BaseRecyclerViewFragment(), LoadMoreListener, P
     override fun onTaggedUserClick(taggedUser: Users) {
         when (taggedUser.type) {
             ValueMapping.onUserTaggedAction() -> performFragTransaction(
-                    OtherUserProfileFragment.newInstance(
-                            UserProfile(
-                                    _id = taggedUser._id,
-                                    image = taggedUser.image,
-                                    username = taggedUser.name
-                            )
-                    ), OtherUserProfileFragment.TAG,
-                    enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
-                    popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right
+                OtherUserProfileFragment.newInstance(
+                    UserProfile(
+                        _id = taggedUser._id,
+                        image = taggedUser.image,
+                        username = taggedUser.name
+                    )
+                ), OtherUserProfileFragment.TAG,
+                enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
+                popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right
             )
 
             ValueMapping.onBrandTaggedAction() -> performFragTransaction(
-                    BrandDetailFragment.newInstance(
-                            Brand(
-                                    _id = taggedUser._id,
-                                    coverImage = taggedUser.image,
-                                    brandName = taggedUser.name
-                            )
-                    ), BrandDetailFragment.TAG,
-                    enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
-                    popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right
+                BrandDetailFragment.newInstance(
+                    Brand(
+                        _id = taggedUser._id,
+                        coverImage = taggedUser.image,
+                        brandName = taggedUser.name
+                    )
+                ), BrandDetailFragment.TAG,
+                enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
+                popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right
             )
 
             ValueMapping.onRestaurantTaggedAction() -> performFragTransaction(
-                    RestaurantDetailsFragment.newInstance(
-                            Restaurant(
-                                    _id = taggedUser._id,
-                                thumbnail = taggedUser.image,
-                                name = taggedUser.name
-                            )
-                    ), RestaurantDetailsFragment.TAG,
+                RestaurantDetailsFragment.newInstance(
+                    Restaurant(
+                        _id = taggedUser._id,
+                        thumbnail = taggedUser.image,
+                        name = taggedUser.name
+                    )
+                ), RestaurantDetailsFragment.TAG,
                 enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
                 popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right
             )

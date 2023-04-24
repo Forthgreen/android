@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.net.Uri
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
@@ -19,6 +20,8 @@ import com.forthgreen.app.viewmodels.BaseViewModel
 import com.forthgreen.app.viewmodels.SettingsViewModel
 import com.forthgreen.app.views.activities.BaseAppCompactActivity
 import com.forthgreen.app.views.activities.doFragmentTransaction
+import com.forthgreen.app.views.dialogfragments.UserLoginDialog
+import com.forthgreen.app.views.interfaces.LoginButtonClickInterface
 import com.forthgreen.app.views.utils.gone
 import com.forthgreen.app.views.utils.loadURL
 import com.forthgreen.app.views.utils.supportFragmentManager
@@ -111,7 +114,8 @@ class SettingsFragment : BasePictureOptionsFragment(), View.OnClickListener {
                     showPictureOptionsBottomSheet(true, Constants.LOCAL_STORAGE_BASE_PATH_FOR_USER_PHOTOS, false)
             }
             R.id.tvLogin -> {
-                performTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+               // performTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                callUserLoginDialog()
             }
             R.id.tvUserAccount -> {
                 performTransaction(AccountFragment(), AccountFragment.TAG)
@@ -183,5 +187,15 @@ class SettingsFragment : BasePictureOptionsFragment(), View.OnClickListener {
     override fun onDestroy() {
         mLocalBroadcastManager.unregisterReceiver(mLocalBroadcastReceiver)
         super.onDestroy()
+    }
+
+    private fun callUserLoginDialog() {
+        val userLoginDialog = UserLoginDialog()
+        userLoginDialog.showUserLoginDialog(requireActivity() as AppCompatActivity, object :
+            LoginButtonClickInterface {
+            override fun loginButtonClick() {
+                performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+            }
+        })
     }
 }

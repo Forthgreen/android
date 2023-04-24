@@ -30,7 +30,9 @@ import com.forthgreen.app.viewmodels.WelcomeViewModel
 import com.forthgreen.app.views.activities.BaseAppCompactActivity
 import com.forthgreen.app.views.activities.MainActivity
 import com.forthgreen.app.views.activities.doFragmentTransaction
+import com.forthgreen.app.views.utils.gone
 import com.forthgreen.app.views.utils.supportFragmentManager
+import com.forthgreen.app.views.utils.visible
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -100,6 +102,8 @@ class WelcomeFragment : BaseFragment() {
         // hide close icon if fragment is displayed in my brands
 //        if (isFromMyBrands) ivBackButton.gone() else ivBackButton.visible()
 
+       // if (!isFromMyBrands) ivBackButton.gone() else ivBackButton.visible()
+
         /**
          *  methods for making terms and conditions policy
          */
@@ -148,6 +152,10 @@ class WelcomeFragment : BaseFragment() {
 
     private fun setClickListeners() {
         ivBackButton.setOnClickListener {
+            supportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+        }
+
+        tvSkipLabel.setOnClickListener {
             supportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
         }
 

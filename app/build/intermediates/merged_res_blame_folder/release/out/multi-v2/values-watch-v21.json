@@ -4,7 +4,7 @@
             "outputFile": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
-                    "source": "/home/admin123/.gradle/caches/transforms-2/files-2.1/3d478f0fa10a3bb5100d40024812b625/appcompat-1.2.0/res/values-watch-v21/values-watch-v21.xml",
+                    "source": "/home/admin123/.gradle/caches/transforms-2/files-2.1/4990c74ccbbb5d5c1c522551c79f0823/appcompat-1.2.0/res/values-watch-v21/values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

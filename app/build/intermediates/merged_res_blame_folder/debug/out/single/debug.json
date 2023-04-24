@@ -172,6 +172,10 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/generated/res/pngs/debug/drawable-ldpi/ic_search_post_icon.png"
     },
     {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/res/merged/debug/drawable_ic_close_icon.xml.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/drawable/ic_close_icon.xml"
+    },
+    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_email.xml.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_email.xml"
     },
@@ -2000,6 +2004,10 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_down.png"
     },
     {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/res/merged/debug/font_roboto.xml.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/font/roboto.xml"
+    },
+    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_close.xml.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_close.xml"
     },
@@ -2544,6 +2552,10 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/drawable/drawable_color_bg_gray_rounded_corners_solid.xml"
     },
     {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/res/merged/debug/layout_dialog_login_user.xml.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/dialog_login_user.xml"
+    },
+    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_dialog_product_detail.png.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/generated/res/pngs/debug/drawable-mdpi/ic_dialog_product_detail.png"
     },
@@ -2832,6 +2844,10 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/drawable/drawable_color_black_rounded_corners.xml"
     },
     {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/res/merged/debug/layout_dialog_block_user.xml.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/dialog_block_user.xml"
+    },
+    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/res/merged/debug/layout_toolbar.xml.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/toolbar.xml"
     },
@@ -2892,12 +2908,12 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_profile_icon.png"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_category_clothing.png.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/drawable-xxxhdpi/ic_category_clothing.png"
-    },
-    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_filter_health.xml.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_filter_health.xml"
+    },
+    {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_category_clothing.png.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/drawable-xxxhdpi/ic_category_clothing.png"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/res/merged/debug/drawable_selector_tab_indicator.xml.flat",

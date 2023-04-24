@@ -11,10 +11,10 @@ INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app
 	android:name
 		ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:94:13-62
 manifest
-ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:2:1-165:12
-INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:2:1-165:12
-INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:2:1-165:12
-INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:2:1-165:12
+ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:2:1-168:12
+INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:2:1-168:12
+INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:2:1-168:12
+INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:2:1-168:12
 MERGED from [com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2] /home/admin123/.gradle/caches/transforms-2/files-2.1/ecdbaa2daa4414d89a1830cac4f562e4/jetified-viewpagerdotsindicator-4.1.2/AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.firebase:firebase-crashlytics-ktx:17.4.1] /home/admin123/.gradle/caches/transforms-2/files-2.1/9e67ecffea72fe6f9b7a12e5d7e30a10/jetified-firebase-crashlytics-ktx-17.4.1/AndroidManifest.xml:15:1-33:12
 MERGED from [com.google.firebase:firebase-analytics-ktx:18.0.3] /home/admin123/.gradle/caches/transforms-2/files-2.1/d810d1ac0b4088ce27d37376e10a4e55/jetified-firebase-analytics-ktx-18.0.3/AndroidManifest.xml:2:1-17:12
@@ -160,22 +160,22 @@ MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/admin123/.
 MERGED from [com.android.installreferrer:installreferrer:1.0] /home/admin123/.gradle/caches/transforms-2/files-2.1/b9389928cbf3add473d239e8483cd54e/jetified-installreferrer-1.0/AndroidManifest.xml:2:1-13:12
 MERGED from [com.android.volley:volley:1.1.1] /home/admin123/.gradle/caches/transforms-2/files-2.1/e5b928eb8f9d121e9313e92f31198775/jetified-volley-1.1.1/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.gms:play-services-ads-base:15.0.1] /home/admin123/.gradle/caches/transforms-2/files-2.1/5df1e75135bfd27ea0e86b7e558b4bfb/jetified-play-services-ads-base-15.0.1/AndroidManifest.xml:17:1-24:12
-INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:2:1-165:12
-INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:2:1-165:12
-INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:2:1-165:12
+INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:2:1-168:12
+INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:2:1-168:12
+INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:2:1-168:12
 	package
 		ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:4:5-33
 		INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml
 		INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml
-		ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:2:1-165:12
+		ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:2:1-168:12
 		INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml
-		ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:2:1-165:12
+		ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:2:1-168:12
 		INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:2:11-69
@@ -256,7 +256,7 @@ ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/sr
 	android:scheme
 		ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:18:19-41
 application
-ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:21:5-163:19
+ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:21:5-166:19
 MERGED from [com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2] /home/admin123/.gradle/caches/transforms-2/files-2.1/ecdbaa2daa4414d89a1830cac4f562e4/jetified-viewpagerdotsindicator-4.1.2/AndroidManifest.xml:11:5-47
 MERGED from [com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2] /home/admin123/.gradle/caches/transforms-2/files-2.1/ecdbaa2daa4414d89a1830cac4f562e4/jetified-viewpagerdotsindicator-4.1.2/AndroidManifest.xml:11:5-47
 MERGED from [com.google.firebase:firebase-crashlytics-ktx:17.4.1] /home/admin123/.gradle/caches/transforms-2/files-2.1/9e67ecffea72fe6f9b7a12e5d7e30a10/jetified-firebase-crashlytics-ktx-17.4.1/AndroidManifest.xml:23:5-31:19
@@ -519,18 +519,24 @@ ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/sr
 		ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:148:13-52
 	android:name
 		ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:147:13-58
+meta-data#preloaded_fonts
+ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:149:9-151:57
+	android:resource
+		ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:151:13-54
+	android:name
+		ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:150:13-43
 service#com.forthgreen.app.services.MyFirebaseMessagingService
-ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:152:9-158:19
+ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:155:9-161:19
 	android:exported
-		ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:154:13-36
+		ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:157:13-36
 	android:name
-		ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:153:13-64
+		ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:156:13-64
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:155:13-157:29
+ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:158:13-160:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:156:17-78
+ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:159:17-78
 	android:name
-		ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:156:25-75
+		ADDED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:159:25-75
 uses-sdk
 INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml

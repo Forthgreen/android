@@ -199,7 +199,9 @@ class PostsAdapter(val loadMore: LoadMoreListener, val clickCallback: PostsClick
                     }
                     if (user._id == selfId || dummyUser) {
                         btnFollow.gone()
-                    } else {
+                    } else if (user.isBlock){
+                        btnFollow.gone()
+                    }else {
                         btnFollow.isChecked = isFollow
                         btnFollow.visible()
                     }

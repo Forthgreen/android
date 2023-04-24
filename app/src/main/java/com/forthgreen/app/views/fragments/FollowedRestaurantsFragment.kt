@@ -74,10 +74,17 @@ class FollowedRestaurantsFragment : BaseLocationRecyclerViewFragment(), LoadMore
         swipeRefreshLayout.gone()
 
         if (coordinates[0] != 0.0 && coordinates[1] != 0.0) {
-            mFollowedRestaurantsViewModel.fetchFollowedRestaurants(isShowLoading = true,
+            if (ApplicationGlobal.isLoggedIn != ValueMapping.getUserAccessGuest()) {
+                //  performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                mFollowedRestaurantsViewModel.fetchFollowedRestaurants(isShowLoading = true,
                     mPage = page, mResultSize = resultSize, refType = ValueMapping.onRestaurantBookmarkAction(),
                     mLatitude = coordinates[0], mLongitude = coordinates[1]
-            )
+                )
+            }
+           /* mFollowedRestaurantsViewModel.fetchFollowedRestaurants(isShowLoading = true,
+                    mPage = page, mResultSize = resultSize, refType = ValueMapping.onRestaurantBookmarkAction(),
+                    mLatitude = coordinates[0], mLongitude = coordinates[1]
+            )*/
         } else {
             // Fetch location
             fetchCurrentLocation()
@@ -114,28 +121,51 @@ class FollowedRestaurantsFragment : BaseLocationRecyclerViewFragment(), LoadMore
         mFollowedRestaurantsViewModel.saveUserLocation(mLatitude, mLongitude)
 
         // Fetch followed restaurants
-        mFollowedRestaurantsViewModel.fetchFollowedRestaurants(isShowLoading = true,
+        if (ApplicationGlobal.isLoggedIn != ValueMapping.getUserAccessGuest()) {
+            //  performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+            mFollowedRestaurantsViewModel.fetchFollowedRestaurants(isShowLoading = true,
                 mPage = page, mResultSize = resultSize, refType = ValueMapping.onRestaurantBookmarkAction(),
                 mLatitude = mLatitude, mLongitude = mLongitude
-        )
+            )
+        }
+       /* mFollowedRestaurantsViewModel.fetchFollowedRestaurants(isShowLoading = true,
+                mPage = page, mResultSize = resultSize, refType = ValueMapping.onRestaurantBookmarkAction(),
+                mLatitude = mLatitude, mLongitude = mLongitude
+        )*/
     }
 
     override fun onPullDownToRefresh() {
         page = 1
-        mFollowedRestaurantsViewModel.fetchFollowedRestaurants(
+        if (ApplicationGlobal.isLoggedIn != ValueMapping.getUserAccessGuest()) {
+            //  performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+            mFollowedRestaurantsViewModel.fetchFollowedRestaurants(
                 isShowLoading = false, mPage = page, mResultSize = resultSize,
                 refType = ValueMapping.onRestaurantBookmarkAction(),
                 mLatitude = coordinates[0], mLongitude = coordinates[1]
-        )
+            )
+        }
+       /* mFollowedRestaurantsViewModel.fetchFollowedRestaurants(
+                isShowLoading = false, mPage = page, mResultSize = resultSize,
+                refType = ValueMapping.onRestaurantBookmarkAction(),
+                mLatitude = coordinates[0], mLongitude = coordinates[1]
+        )*/
     }
 
     override fun onLoadMore() {
         page++
-        mFollowedRestaurantsViewModel.fetchFollowedRestaurants(
+        if (ApplicationGlobal.isLoggedIn != ValueMapping.getUserAccessGuest()) {
+            //  performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+            mFollowedRestaurantsViewModel.fetchFollowedRestaurants(
                 isShowLoading = false, mPage = page, mResultSize = resultSize,
                 refType = ValueMapping.onRestaurantBookmarkAction(),
                 mLatitude = coordinates[0], mLongitude = coordinates[1]
-        )
+            )
+        }
+       /* mFollowedRestaurantsViewModel.fetchFollowedRestaurants(
+                isShowLoading = false, mPage = page, mResultSize = resultSize,
+                refType = ValueMapping.onRestaurantBookmarkAction(),
+                mLatitude = coordinates[0], mLongitude = coordinates[1]
+        )*/
     }
 
     override fun openDetails(restaurant: Restaurant) {
@@ -171,10 +201,18 @@ class FollowedRestaurantsFragment : BaseLocationRecyclerViewFragment(), LoadMore
         swipeRefreshLayout.gone()
 
         if (coordinates[0] != 0.0 && coordinates[1] != 0.0) {
-            mFollowedRestaurantsViewModel.fetchFollowedRestaurants(isShowLoading = true,
+            if (ApplicationGlobal.isLoggedIn != ValueMapping.getUserAccessGuest()) {
+                //  performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                mFollowedRestaurantsViewModel.fetchFollowedRestaurants(
+                    isShowLoading = false, mPage = page, mResultSize = resultSize,
+                    refType = ValueMapping.onRestaurantBookmarkAction(),
+                    mLatitude = coordinates[0], mLongitude = coordinates[1]
+                )
+            }
+           /* mFollowedRestaurantsViewModel.fetchFollowedRestaurants(isShowLoading = true,
                     mPage = page, mResultSize = resultSize, refType = ValueMapping.onRestaurantBookmarkAction(),
                     mLatitude = coordinates[0], mLongitude = coordinates[1]
-            )
+            )*/
         } else {
             // Fetch location
             fetchCurrentLocation()

@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,7 +21,9 @@ import com.forthgreen.app.viewmodels.BaseViewModel
 import com.forthgreen.app.viewmodels.ShopCategoriesViewModel
 import com.forthgreen.app.views.adapters.ShopCategoriesAdapter
 import com.forthgreen.app.views.adapters.ShopProductsAdapter
+import com.forthgreen.app.views.dialogfragments.UserLoginDialog
 import com.forthgreen.app.views.interfaces.LoadMoreListener
+import com.forthgreen.app.views.interfaces.LoginButtonClickInterface
 import com.forthgreen.app.views.utils.gone
 import com.forthgreen.app.views.utils.visible
 import kotlinx.android.synthetic.main.fragment_shop_categories.*
@@ -251,7 +254,18 @@ class ShopCategoriesFragment : BaseRecyclerViewFragment(), LoadMoreListener,
 
     // Show Guest Mode Dialog with help of Material Dialog by inflating custom layout.
     private fun showGuestModeDialog() {
-        performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+       // performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+        callUserLoginDialog()
+    }
+
+    private fun callUserLoginDialog() {
+        val userLoginDialog = UserLoginDialog()
+        userLoginDialog.showUserLoginDialog(requireActivity() as AppCompatActivity, object :
+            LoginButtonClickInterface {
+            override fun loginButtonClick() {
+                performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+            }
+        })
     }
 
     override fun onDestroy() {

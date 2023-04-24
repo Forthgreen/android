@@ -47,7 +47,8 @@ class OnBoardingsFragment : BaseFragment() {
         btnNext.setOnClickListener {
             when (viewPager.currentItem) {
                 3 -> {
-                    performFragTransaction(WelcomeFragment.newInstance(isFromMyBrands = false), WelcomeFragment.TAG)
+                   // performFragTransaction(WelcomeFragment.newInstance(isFromMyBrands = false), WelcomeFragment.TAG)
+                    performFragTransaction(WelcomeFragment.newInstance(isFromMyBrands = true), WelcomeFragment.TAG)
                 }
                 else -> {
                     viewPager.currentItem = viewPager.currentItem + 1
@@ -55,7 +56,8 @@ class OnBoardingsFragment : BaseFragment() {
             }
         }
         tvSkipLabel.setOnClickListener {
-            performFragTransaction(WelcomeFragment.newInstance(isFromMyBrands = false), WelcomeFragment.TAG)
+            performFragTransaction(WelcomeFragment.newInstance(isFromMyBrands = true), WelcomeFragment.TAG)
+           // performFragTransaction(WelcomeFragment.newInstance(isFromMyBrands = false), WelcomeFragment.TAG)
         }
     }
 }

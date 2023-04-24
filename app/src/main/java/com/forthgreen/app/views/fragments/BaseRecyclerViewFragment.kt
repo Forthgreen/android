@@ -67,6 +67,15 @@ abstract class BaseRecyclerViewFragment : BaseFragment() {
         }
     }
 
+    fun showNoDataTextMessage(resId: Int?, message: String? = null) {
+        if (null == resId && null == message) {
+            hideNoDataText()
+        } else {
+            tvNoData?.visibility = View.VISIBLE
+            tvNoData?.text = message ?: getString(resId!!)
+        }
+    }
+
     /**
      *  @description call this method to hide NoDataText
      */

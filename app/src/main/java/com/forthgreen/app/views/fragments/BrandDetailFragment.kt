@@ -17,6 +17,7 @@ import android.text.style.StyleSpan
 import android.view.View
 import android.view.ViewTreeObserver
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
@@ -33,7 +34,9 @@ import com.forthgreen.app.viewmodels.BaseViewModel
 import com.forthgreen.app.viewmodels.BrandDetailViewModel
 import com.forthgreen.app.views.adapters.ProductListAdapter
 import com.forthgreen.app.views.adapters.ProductListIemDecoration
+import com.forthgreen.app.views.dialogfragments.UserLoginDialog
 import com.forthgreen.app.views.interfaces.LoadMoreListener
+import com.forthgreen.app.views.interfaces.LoginButtonClickInterface
 import com.forthgreen.app.views.utils.gone
 import com.forthgreen.app.views.utils.loadURL
 import com.forthgreen.app.views.utils.visible
@@ -314,7 +317,8 @@ class BrandDetailFragment : BaseRecyclerViewFragment(), LoadMoreListener,
 
     //Show Guest Mode Dialog with help of Material Dialog by inflating custom layout.
     private fun showGuestModeDialog() {
-        performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+        callUserLoginDialog()
+       // performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
 //        MaterialDialog(requireContext()).show {
 //            customView(R.layout.dialog_fragment_brand_detail, dialogWrapContent = true, noVerticalPadding = true, horizontalPadding = false)
 //            cancelable(false)
@@ -332,6 +336,16 @@ class BrandDetailFragment : BaseRecyclerViewFragment(), LoadMoreListener,
 //                this.dismiss()
 //            }
 //        }
+    }
+
+    private fun callUserLoginDialog() {
+        val userLoginDialog = UserLoginDialog()
+        userLoginDialog.showUserLoginDialog(requireActivity() as AppCompatActivity, object :
+            LoginButtonClickInterface {
+            override fun loginButtonClick() {
+                performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+            }
+        })
     }
 
     /**

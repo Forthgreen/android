@@ -20,6 +20,16 @@ data class PojoPostsList(
 )
 
 @Parcelize
+data class SenderBlock(
+    val _id: String = "",
+    val userRef: String = "",
+    val blockingRef: String = "",
+    val createdOn: String = "",
+    val updatedOn: String = "",
+    val __v: String = "",
+    ): Parcelable
+
+@Parcelize
 data class HomeFeed(
     val _id: String = "",
     val addedBy: UserProfile = UserProfile(),

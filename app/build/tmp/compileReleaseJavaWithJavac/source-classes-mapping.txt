@@ -7,6 +7,7 @@ com/forthgreen/app/views/utils/NestedScrollView.java
 com/forthgreen/app/R2.java
  com.forthgreen.app.R2
  com.forthgreen.app.R2$anim
+ com.forthgreen.app.R2$array
  com.forthgreen.app.R2$attr
  com.forthgreen.app.R2$bool
  com.forthgreen.app.R2$color

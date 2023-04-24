@@ -7,6 +7,7 @@ import android.content.IntentFilter
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -27,7 +28,9 @@ import com.forthgreen.app.viewmodels.HomeFeedViewModel
 import com.forthgreen.app.views.activities.BaseAppCompactActivity
 import com.forthgreen.app.views.activities.doFragmentTransaction
 import com.forthgreen.app.views.adapters.PostsFeedAdapter
+import com.forthgreen.app.views.dialogfragments.UserLoginDialog
 import com.forthgreen.app.views.interfaces.LoadMoreListener
+import com.forthgreen.app.views.interfaces.LoginButtonClickInterface
 import com.forthgreen.app.views.utils.gone
 import com.forthgreen.app.views.utils.setVisibility
 import com.forthgreen.app.views.utils.supportFragmentManager
@@ -117,6 +120,9 @@ class PostsFeedFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsFee
         flShimmerPosts.startShimmer()
         flShimmerPosts.visible()
         swipeRefreshLayout.gone()
+        if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
+            toolbar.visible()
+        }
 
         // Fetch Feed Data
         mHomeFeedViewModel.fetchFeedData(false, page, resultSize)
@@ -148,7 +154,8 @@ class PostsFeedFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsFee
             ApplicationGlobal.muteVideo = true
             mAdapter.pauseVideo()
             if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
-                performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+              //  performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                callUserLoginDialog()
             } else {
                 performTransaction(SearchUsersFragment(), SearchUsersFragment.TAG)
             }
@@ -157,7 +164,8 @@ class PostsFeedFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsFee
             ApplicationGlobal.muteVideo = true
             mAdapter.pauseVideo()
             if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
-                performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+               // performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                callUserLoginDialog()
             } else {
                 performFragTransaction(CreatePostFragment(), CreatePostFragment.TAG,
                     enterAnim = R.anim.slide_up, exitAnim = R.anim.fade_out,
@@ -168,7 +176,8 @@ class PostsFeedFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsFee
             ApplicationGlobal.muteVideo = true
             mAdapter.pauseVideo()
             if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
-                performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+               // performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                callUserLoginDialog()
             } else {
 //                mHomeFeedViewModel.saveUserDetailsForNotifDot(mHomeFeedViewModel.getUserProfileDataFromSharedPrefs()
 //                    .copy(showNotifyDot = false))
@@ -334,7 +343,8 @@ class PostsFeedFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsFee
         when (clickType) {
             ValueMapping.onMenuClick() -> {
                 if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
-                    performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                  //  performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                    callUserLoginDialog()
                 } else {
                     // Open Custom Dialog
                     MaterialDialog(requireContext()).show {
@@ -374,7 +384,8 @@ class PostsFeedFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsFee
                 ApplicationGlobal.muteVideo = true
                 mAdapter.pauseVideo()
                 if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
-                    performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                   // performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                    callUserLoginDialog()
                 } else {
                     performFragTransaction(OtherUserProfileFragment.newInstance(postData.addedBy),
                         OtherUserProfileFragment.TAG,
@@ -388,7 +399,8 @@ class PostsFeedFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsFee
                 ApplicationGlobal.muteVideo = true
                 mAdapter.pauseVideo()
                 if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
-                    performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                   // performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                    callUserLoginDialog()
                 } else {
                     performFragTransaction(
                             CommentsListFragment.newInstance(postData._id),
@@ -400,7 +412,8 @@ class PostsFeedFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsFee
                 // Vibrate phone
                 GeneralFunctions.vibratePhone(requireContext())
                 if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
-                    performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                  //  performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                    callUserLoginDialog()
                 } else {
                     LocalBroadcastManager.getInstance(requireContext()).sendBroadcast(Intent(
                         PostsFeedFollowingFragment.LOCAL_INTENT_LIKE_DISLIKE_ACTION_PERFORMED
@@ -419,7 +432,8 @@ class PostsFeedFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsFee
             }
             ValueMapping.onLikesClick() -> {
                 if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
-                    performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                   // performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                    callUserLoginDialog()
                 } else {
                     performFragTransaction(LikesFragment.newInstance(postData._id, true), LikesFragment.TAG,
                             enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
@@ -432,7 +446,8 @@ class PostsFeedFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsFee
     override fun performUserClickAction(userData: HomeFeed, openProfile: Boolean, follow: Boolean) {
         if (openProfile) {
             if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
-                performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+               // performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                callUserLoginDialog()
             } else {
                 performFragTransaction(OtherUserProfileFragment.newInstance(userData.randomUserData), OtherUserProfileFragment.TAG,
                         enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
@@ -440,7 +455,8 @@ class PostsFeedFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsFee
             }
         } else {
             if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
-                performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+              //  performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                callUserLoginDialog()
             } else {
                 // Hit the API to update follow status
                 mHomeFeedViewModel.updateUserFollowStatus(isShowLoading = true, status = follow, userRef = userData._id)
@@ -453,7 +469,8 @@ class PostsFeedFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsFee
         when (taggedUser.type) {
             ValueMapping.onUserTaggedAction() -> {
                 if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
-                    performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                   // performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                    callUserLoginDialog()
                 } else {
                     performFragTransaction(OtherUserProfileFragment.newInstance(
                             UserProfile(_id = taggedUser._id, image = taggedUser.image, username = taggedUser.name)),
@@ -510,5 +527,15 @@ class PostsFeedFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsFee
         mLocalBroadcastManagerLikeAndDislike.unregisterReceiver(mLocalBroadcastReceiver)
         mLocalBroadcastManager.unregisterReceiver(mLocalBroadcastReceiver)
         super.onDestroyView()
+    }
+
+    private fun callUserLoginDialog() {
+        val userLoginDialog = UserLoginDialog()
+        userLoginDialog.showUserLoginDialog(requireActivity() as AppCompatActivity, object :
+            LoginButtonClickInterface {
+            override fun loginButtonClick() {
+                performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+            }
+        })
     }
 }

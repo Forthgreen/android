@@ -1,47 +1,23 @@
 package com.forthgreen.app.views.fragments
 
-import android.annotation.SuppressLint
 import android.net.Uri
-import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.recyclerview.widget.RecyclerView
 import com.forthgreen.app.R
-import com.forthgreen.app.repository.models.UserProfile
 import com.forthgreen.app.viewmodels.BaseViewModel
 import com.forthgreen.app.viewmodels.ContactsViewModel
-import com.forthgreen.app.viewmodels.SearchUsersViewModel
 import com.forthgreen.app.views.adapters.InvitesUsersAdapter
-import com.forthgreen.app.views.adapters.SearchUsersAdapter
-import com.forthgreen.app.views.interfaces.LoadMoreListener
 import com.forthgreen.app.views.utils.*
-import com.thekhaeng.pushdownanim.PushDownAnim
-import kotlinx.android.synthetic.main.fragment_search_users.*
 import kotlinx.android.synthetic.main.toolbar.*
 import android.text.TextUtils
 import com.forthgreen.app.repository.models.Contact
-import java.util.*
 import kotlin.Comparator
 import kotlin.collections.ArrayList
 import android.os.Handler
-import android.database.ContentObserver
-import android.database.Cursor
-import android.widget.Toast
-import android.R.attr.phoneNumber
-import android.app.PendingIntent
 
-import com.forthgreen.app.views.utils.SmsSendObserver
-import android.app.Activity
-import android.content.*
-import android.telephony.SmsManager
 import android.content.Intent
-import android.R.attr.phoneNumber
-import android.app.Activity.RESULT_OK
-import android.util.Log
 import android.provider.Telephony
-import android.app.Instrumentation.ActivityResult
-import kotlinx.android.synthetic.main.fragment_invites_users.*
 import kotlinx.android.synthetic.main.fragment_search_users.flShimmer
 import kotlinx.android.synthetic.main.fragment_search_users.recyclerView
 

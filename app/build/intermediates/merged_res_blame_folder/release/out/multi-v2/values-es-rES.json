@@ -4,7 +4,7 @@
             "outputFile": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-es-rES/values-es-rES.xml",
             "map": [
                 {
-                    "source": "/home/admin123/.gradle/caches/transforms-2/files-2.1/7b835b2ca5063e1ba6eb1a3dec06fc06/jetified-facebook-login-11.3.0/res/values-es-rES/values-es-rES.xml",
+                    "source": "/home/admin123/.gradle/caches/transforms-2/files-2.1/45fe1e0bee6a26b96ef89b88626c93e4/jetified-facebook-login-11.3.0/res/values-es-rES/values-es-rES.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

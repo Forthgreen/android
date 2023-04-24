@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
@@ -18,7 +19,9 @@ import com.forthgreen.app.utils.ValueMapping
 import com.forthgreen.app.viewmodels.BaseViewModel
 import com.forthgreen.app.viewmodels.ProfileDetailsViewModel
 import com.forthgreen.app.views.adapters.PostsAdapter
+import com.forthgreen.app.views.dialogfragments.UserLoginDialog
 import com.forthgreen.app.views.interfaces.LoadMoreListener
+import com.forthgreen.app.views.interfaces.LoginButtonClickInterface
 import com.forthgreen.app.views.utils.gone
 import com.forthgreen.app.views.utils.visible
 import com.forthgreen.app.workers.CreatePostWorker
@@ -92,14 +95,23 @@ class SelfProfileFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsA
         PushDownAnim.setPushDownAnimTo(ivToolbarActionEnd)
 
         // Start shimmer
-        flShimmer.startShimmer()
-        flShimmer.visible()
-        swipeRefreshLayout.gone()
+      //  flShimmer.startShimmer()
+      //  flShimmer.visible()
+     //   swipeRefreshLayout.gone()
+        if (ApplicationGlobal.isLoggedIn != ValueMapping.getUserAccessGuest()) {
+            //  performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+            flShimmer.startShimmer()
+            flShimmer.visible()
+            swipeRefreshLayout.gone()
+
+            // Fetch details
+            mProfileDetailsViewModel.fetchUserDetails(false, mPage = page, mResultSize = resultSize)
+        }
 
         mAdapter.submitDetails(selfDetails.posts, selfDetails, false, page, selfDetails._id)
 
         // Fetch details
-        mProfileDetailsViewModel.fetchUserDetails(false, mPage = page, mResultSize = resultSize)
+    //    mProfileDetailsViewModel.fetchUserDetails(false, mPage = page, mResultSize = resultSize)
 
         // Register Receiver
         mLocalBroadcastManager.registerReceiver(mLocalBroadcastReceiver, IntentFilter().apply {
@@ -115,10 +127,22 @@ class SelfProfileFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsA
 
     private fun setupListeners() {
         toolbar.setNavigationOnClickListener {
-            drawerCallbacks.openNavDrawer()
+            if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
+                //  performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                callUserLoginDialog()
+            } else {
+                drawerCallbacks.openNavDrawer()
+            }
+           // drawerCallbacks.openNavDrawer()
         }
         ivToolbarActionEnd.setOnClickListener {
-            GeneralFunctions.shareGenericDeepLink(requireContext(), selfDetails.firstName, selfDetails.bio, GeneralFunctions.getResizedImage(ValueMapping.getPathSmall(), selfDetails.image), Gson().toJson(selfDetails), ValueMapping.deepLinkingTypeProfile())
+            if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
+                //  performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                callUserLoginDialog()
+            } else {
+                GeneralFunctions.shareGenericDeepLink(requireContext(), selfDetails.firstName, selfDetails.bio, GeneralFunctions.getResizedImage(ValueMapping.getPathSmall(), selfDetails.image), Gson().toJson(selfDetails), ValueMapping.deepLinkingTypeProfile())
+            }
+           // GeneralFunctions.shareGenericDeepLink(requireContext(), selfDetails.firstName, selfDetails.bio, GeneralFunctions.getResizedImage(ValueMapping.getPathSmall(), selfDetails.image), Gson().toJson(selfDetails), ValueMapping.deepLinkingTypeProfile())
         }
     }
 
@@ -295,12 +319,15 @@ class SelfProfileFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsA
 
     fun showShimmer() {
         // Start shimmer
-        flShimmer.startShimmer()
-        flShimmer.visible()
-        swipeRefreshLayout.gone()
+        if (ApplicationGlobal.isLoggedIn != ValueMapping.getUserAccessGuest()) {
+            //  performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+            flShimmer.startShimmer()
+            flShimmer.visible()
+            swipeRefreshLayout.gone()
 
-        // Fetch details
-        mProfileDetailsViewModel.fetchUserDetails(false, mPage = page, mResultSize = resultSize)
+            // Fetch details
+            mProfileDetailsViewModel.fetchUserDetails(false, mPage = page, mResultSize = resultSize)
+        }
     }
 
     override fun onMuteUnmuteClicked(post: HomeFeed) {
@@ -321,5 +348,15 @@ class SelfProfileFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsA
     override fun onDestroyView() {
         mLocalBroadcastManager.unregisterReceiver(mLocalBroadcastReceiver)
         super.onDestroyView()
+    }
+
+    private fun callUserLoginDialog() {
+        val userLoginDialog = UserLoginDialog()
+        userLoginDialog.showUserLoginDialog(requireActivity() as AppCompatActivity, object :
+            LoginButtonClickInterface {
+            override fun loginButtonClick() {
+                performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+            }
+        })
     }
 }

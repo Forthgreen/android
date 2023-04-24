@@ -6,6 +6,22 @@
     android:background="@color/colorPrimaryBackground">
 
     <TextView
+        android:id="@+id/tvBlockUser"
+        style="@style/StyleSemiBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:paddingStart="24dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"
+        android:text="@string/block_user"
+        android:visibility="gone"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/tvReportAbuse"
         style="@style/StyleSemiBold"
         android:layout_width="0dp"
@@ -15,11 +31,10 @@
         android:paddingTop="18dp"
         android:paddingBottom="18dp"
         android:text="@string/report_abuse_label"
-        android:textColor="@color/colorReportAbuse"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tvBlockUser" />
 
     <TextView
         android:id="@+id/tvCancel"

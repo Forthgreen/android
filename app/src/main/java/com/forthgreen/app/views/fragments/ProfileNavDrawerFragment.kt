@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.afollestad.materialdialogs.MaterialDialog
@@ -21,6 +22,8 @@ import com.forthgreen.app.utils.GeneralFunctions
 import com.forthgreen.app.utils.ValueMapping
 import com.forthgreen.app.viewmodels.BaseViewModel
 import com.forthgreen.app.viewmodels.SettingsViewModel
+import com.forthgreen.app.views.dialogfragments.UserLoginDialog
+import com.forthgreen.app.views.interfaces.LoginButtonClickInterface
 import com.forthgreen.app.views.utils.loadURL
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -200,7 +203,18 @@ class ProfileNavDrawerFragment : BaseFragment(), View.OnClickListener {
     }
 
     private fun showGuestModeDialog() {
-        performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+       // performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+        callUserLoginDialog()
+    }
+
+    private fun callUserLoginDialog() {
+        val userLoginDialog = UserLoginDialog()
+        userLoginDialog.showUserLoginDialog(requireActivity() as AppCompatActivity, object :
+            LoginButtonClickInterface {
+            override fun loginButtonClick() {
+                performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+            }
+        })
     }
 
     // Local Broadcast receiver

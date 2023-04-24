@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimaryBackground"
-        android:elevation="@dimen/toolbar_elevation"
+        android:elevation="0dp"
         app:contentInsetLeft="0dp"
         app:contentInsetStart="0dp"
         android:visibility="gone"

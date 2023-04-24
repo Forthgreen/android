@@ -4,12 +4,12 @@ package com.forthgreen.app.repository.networkrequest
  * Created by ShrayChona on 03-10-2018.
  */
 object WebConstants {
-   // private const val ACTION_BASE_URL = "http://3.15.254.192/development/"
+  //  private const val ACTION_BASE_URL = "http://3.15.254.192/development/"
 //    private const val ACTION_BASE_URL = "http://52.14.88.170/beta/"
   //  private const val ACTION_BASE_URL = "http://3.23.147.117/staging/"
 
     private const val ACTION_BASE_URL = "https://profile.forthgreen.com/staging/"
-   // private const val ACTION_BASE_URL = "https://forthgreen.in.ngrok.io/"
+  //  private const val ACTION_BASE_URL = "https://forthgreen.in.ngrok.io/"
   //  private const val ACTION_BASE_URL = "https://4539-183-82-152-144.ngrok.io/"
  //   private const val ACTION_BASE_URL = "http://18.117.6.190/development/"
   //  private const val ACTION_BASE_URL = "https://92ec-136-232-143-82.ngrok.io/"

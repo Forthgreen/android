@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.recyclerview.widget.RecyclerView
 import com.forthgreen.app.R
+import com.forthgreen.app.utils.ApplicationGlobal
 import com.forthgreen.app.utils.ValueMapping
 import com.forthgreen.app.viewmodels.BaseViewModel
 import com.forthgreen.app.viewmodels.MyBrandsViewModel
@@ -77,13 +78,16 @@ class MyBrandsFragment : BaseRecyclerViewFragment(), LoadMoreListener {
         flShimmer.visible()
         swipeRefreshLayout.gone()
 
-        //get brands
-        mBrandsViewModel.getBookmarkedBrands(
+        if (ApplicationGlobal.isLoggedIn != ValueMapping.getUserAccessGuest()) {
+            //get brands
+            mBrandsViewModel.getBookmarkedBrands(
                 true,
                 mPage,
                 resultSize,
                 ValueMapping.onBrandBookmarkAction()
-        )
+            )
+        }
+
         observeProperties()
     }
 
@@ -107,22 +111,28 @@ class MyBrandsFragment : BaseRecyclerViewFragment(), LoadMoreListener {
 
     override fun onPullDownToRefresh() {
         mPage = 1
-        mBrandsViewModel.getBookmarkedBrands(
-                false,
+        if (ApplicationGlobal.isLoggedIn != ValueMapping.getUserAccessGuest()) {
+            //get brands
+            mBrandsViewModel.getBookmarkedBrands(
+                true,
                 mPage,
                 resultSize,
                 ValueMapping.onBrandBookmarkAction()
-        )
+            )
+        }
     }
 
     override fun onLoadMore() {
         mPage++
-        mBrandsViewModel.getBookmarkedBrands(
-                false,
+        if (ApplicationGlobal.isLoggedIn != ValueMapping.getUserAccessGuest()) {
+            //get brands
+            mBrandsViewModel.getBookmarkedBrands(
+                true,
                 mPage,
                 resultSize,
                 ValueMapping.onBrandBookmarkAction()
-        )
+            )
+        }
 
     }
 
@@ -151,12 +161,15 @@ class MyBrandsFragment : BaseRecyclerViewFragment(), LoadMoreListener {
         swipeRefreshLayout.gone()
 
         //get brands
-        mBrandsViewModel.getBookmarkedBrands(
+        if (ApplicationGlobal.isLoggedIn != ValueMapping.getUserAccessGuest()) {
+            //get brands
+            mBrandsViewModel.getBookmarkedBrands(
                 true,
                 mPage,
                 resultSize,
                 ValueMapping.onBrandBookmarkAction()
-        )
+            )
+        }
     }
 
     override fun onDestroyView() {

@@ -301,6 +301,13 @@ interface API {
             @Body body: RequestBody,
     ): Observable<Response<PojoCommon>>
 
+    // API for user block status update
+    @POST("block/user")
+    fun updateUserBlockStatus(
+        @Header("Authorization") accessToken: String,
+        @Body body: RequestBody,
+    ): Observable<Response<PojoCommon>>
+
     // API to report user
     @POST("report/user")
     fun reportUser(

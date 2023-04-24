@@ -1,6 +1,7 @@
 package com.forthgreen.app.views.fragments
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
@@ -14,6 +15,8 @@ import com.forthgreen.app.viewmodels.BaseViewModel
 import com.forthgreen.app.viewmodels.HomeFeedViewModel
 import com.forthgreen.app.views.activities.BaseAppCompactActivity
 import com.forthgreen.app.views.activities.doFragmentTransaction
+import com.forthgreen.app.views.dialogfragments.UserLoginDialog
+import com.forthgreen.app.views.interfaces.LoginButtonClickInterface
 import com.forthgreen.app.views.utils.setVisibility
 import com.forthgreen.app.views.utils.supportFragmentManager
 import kotlinx.android.synthetic.main.fragment_category_filter_tab.toolbar
@@ -81,7 +84,8 @@ class PostFeedFilterTabFragment : BaseTabLayoutFragment() {
             LocalBroadcastManager.getInstance(requireContext())
                 .sendBroadcast(Intent(PostsFeedFragment.LOCAL_INTENT_ACTION_MUTE))
             if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
-                performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+              //  performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                callUserLoginDialog()
             } else {
                 performFragTransaction(SearchUsersInviteFriendsFragment(), SearchUsersInviteFriendsFragment.TAG,  enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
                     popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right)
@@ -92,7 +96,8 @@ class PostFeedFilterTabFragment : BaseTabLayoutFragment() {
             LocalBroadcastManager.getInstance(requireContext())
                 .sendBroadcast(Intent(PostsFeedFragment.LOCAL_INTENT_ACTION_MUTE))
             if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
-                performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+              //  performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                callUserLoginDialog()
             } else {
                 performFragTransaction(CreatePostFragment(), CreatePostFragment.TAG,
                     enterAnim = R.anim.slide_up, exitAnim = R.anim.fade_out,
@@ -104,7 +109,8 @@ class PostFeedFilterTabFragment : BaseTabLayoutFragment() {
             LocalBroadcastManager.getInstance(requireContext())
                 .sendBroadcast(Intent(PostsFeedFragment.LOCAL_INTENT_ACTION_MUTE))
             if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
-                performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+               // performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                callUserLoginDialog()
             } else {
 //                mHomeFeedViewModel.saveUserDetailsForNotifDot(mHomeFeedViewModel.getUserProfileDataFromSharedPrefs()
 //                    .copy(showNotifyDot = false))
@@ -146,4 +152,12 @@ class PostFeedFilterTabFragment : BaseTabLayoutFragment() {
         mLinearLayoutManager.startSmoothScroll(smoothScroller)
     }
 
+    private fun callUserLoginDialog() {
+        val userLoginDialog = UserLoginDialog()
+        userLoginDialog.showUserLoginDialog(requireActivity() as AppCompatActivity, object : LoginButtonClickInterface {
+            override fun loginButtonClick() {
+                performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+            }
+        })
+    }
 }

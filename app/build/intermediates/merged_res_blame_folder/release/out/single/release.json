@@ -88,12 +88,12 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-anydpi-v24/ic_bookmark.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/menu_menu_search.xml.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/menu/menu_search.xml"
-    },
-    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_comment_icon.png.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xxhdpi/ic_comment_icon.png"
+    },
+    {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/menu_menu_search.xml.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/menu/menu_search.xml"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/layout_fragment_base_recycler_view.xml.flat",
@@ -128,12 +128,12 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_shop_categories_rv.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_filter_fast_food.png.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xhdpi/ic_filter_fast_food.png"
-    },
-    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/animator_slide_right_out_fade_out.xml.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/animator/slide_right_out_fade_out.xml"
+    },
+    {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_filter_fast_food.png.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xhdpi/ic_filter_fast_food.png"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xxxhdpi_ic_video_unmute.png.flat",
@@ -300,40 +300,44 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-hdpi/ic_brand_selected.png"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_create_post.png.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xxhdpi/ic_create_post.png"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/layout_dialog_delete_account.xml.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/dialog_delete_account.xml"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_category_food.png.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/drawable-xxhdpi/ic_category_food.png"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/layout_dialog_delete_account.xml.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/dialog_delete_account.xml"
-    },
-    {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/layout_fragment_category_products.xml.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_category_products.xml"
-    },
-    {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/layout_row_products.xml.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_products.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_create_post.png.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xxhdpi/ic_create_post.png"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xxxhdpi_ic_brand.png.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xxxhdpi/ic_brand.png"
     },
     {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/layout_row_products.xml.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_products.xml"
+    },
+    {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/layout_fragment_category_products.xml.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_category_products.xml"
+    },
+    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_restaurant_map_regular.png.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/drawable-xhdpi/ic_restaurant_map_regular.png"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-hdpi_ic_shirt_filter.png.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-hdpi/ic_shirt_filter.png"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_restaurant_map_regular.png.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/drawable-xhdpi/ic_restaurant_map_regular.png"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/layout_dialog_block_user.xml.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/dialog_block_user.xml"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/layout_shimmer_comments.xml.flat",
@@ -424,12 +428,12 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/drawable-hdpi/ic_restaurant_map_regular.png"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-anydpi_ic_video.xml.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/drawable-anydpi/ic_video.xml"
-    },
-    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_onboarding_one.png.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/drawable-xhdpi/ic_onboarding_one.png"
+    },
+    {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-anydpi_ic_video.xml.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/drawable-anydpi/ic_video.xml"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_external_link.png.flat",
@@ -440,12 +444,12 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xxhdpi/ic_settings_selected.png"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_filter_health.png.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xhdpi/ic_filter_health.png"
-    },
-    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-ldpi_drawable_button_icon.png.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-ldpi/drawable_button_icon.png"
+    },
+    {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_filter_health.png.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xhdpi/ic_filter_health.png"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xxxhdpi_ic_bookmark.png.flat",
@@ -484,32 +488,32 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-hdpi/ic_filter_take_out.png"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xxxhdpi_ic_bookmark_selected.png.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xxxhdpi/ic_bookmark_selected.png"
-    },
-    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-ldpi_ic_like_post_unselected.png.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-ldpi/ic_like_post_unselected.png"
+    },
+    {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xxxhdpi_ic_bookmark_selected.png.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xxxhdpi/ic_bookmark_selected.png"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-ldpi_ic_filter_fast_food.png.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-ldpi/ic_filter_fast_food.png"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-mdpi_ic_bookmark.png.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-mdpi/ic_bookmark.png"
-    },
-    {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-mdpi_ic_horizontal_menu.png.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-mdpi/ic_horizontal_menu.png"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-ldpi_ic_search_icon.png.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-ldpi/ic_search_icon.png"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_filter_pizza.png.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xxhdpi/ic_filter_pizza.png"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-ldpi_ic_search_icon.png.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-ldpi/ic_search_icon.png"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-mdpi_ic_horizontal_menu.png.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-mdpi/ic_horizontal_menu.png"
+    },
+    {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-mdpi_ic_bookmark.png.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-mdpi/ic_bookmark.png"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-mdpi_ic_filter_food.png.flat",
@@ -548,12 +552,12 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xhdpi/ic_email_icon.png"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xxxhdpi_ic_filter_beauty.png.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xxxhdpi/ic_filter_beauty.png"
-    },
-    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_filter_pub.png.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xxhdpi/ic_filter_pub.png"
+    },
+    {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xxxhdpi_ic_filter_beauty.png.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xxxhdpi/ic_filter_beauty.png"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-ldpi_ic_restaurant_selected.png.flat",
@@ -596,12 +600,12 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/animator/fade_out.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-mdpi_ic_category_misc.png.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/drawable-mdpi/ic_category_misc.png"
-    },
-    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xxxhdpi_ic_category_drinks.png.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/drawable-xxxhdpi/ic_category_drinks.png"
+    },
+    {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-mdpi_ic_category_misc.png.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/drawable-mdpi/ic_category_misc.png"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable_drawable_color_black_rounded_corners.xml.flat",
@@ -676,12 +680,12 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-mdpi/ic_right_arrow.png"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_placeholder_broken_img.png.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xxhdpi/ic_placeholder_broken_img.png"
-    },
-    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-mdpi_ic_clock.png.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-mdpi/ic_clock.png"
+    },
+    {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_placeholder_broken_img.png.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xxhdpi/ic_placeholder_broken_img.png"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-anydpi-v24_ic_like_selected.xml.flat",
@@ -800,6 +804,10 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_play_video.xml"
     },
     {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/font_roboto.xml.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/font/roboto.xml"
+    },
+    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-ldpi_ic_close.png.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-ldpi/ic_close.png"
     },
@@ -904,12 +912,12 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xhdpi/ic_filter_clothing.png"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-anydpi-v24_ic_follow_brand.xml.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-anydpi-v24/ic_follow_brand.xml"
-    },
-    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-mdpi_ic_share.png.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-mdpi/ic_share.png"
+    },
+    {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-anydpi-v24_ic_follow_brand.xml.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-anydpi-v24/ic_follow_brand.xml"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/animator_overshoot_slide_up.xml.flat",
@@ -928,16 +936,16 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/drawable-hdpi/ic_onboarding_two.png"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-hdpi_ic_brand_menu.png.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-hdpi/ic_brand_menu.png"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xxxhdpi_ic_category_food.png.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/drawable-xxxhdpi/ic_category_food.png"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/animator_slide_up.xml.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/animator/slide_up.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xxxhdpi_ic_category_food.png.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/drawable-xxxhdpi/ic_category_food.png"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-hdpi_ic_brand_menu.png.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-hdpi/ic_brand_menu.png"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/anim_slide_in_right_medium.xml.flat",
@@ -948,16 +956,20 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-hdpi/ic_back.png"
     },
     {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/layout_fragment_search_users_invites_friends.xml.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_search_users_invites_friends.xml"
+    },
+    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_onboarding2.png.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xhdpi/ic_onboarding2.png"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-mdpi_ic_filter_drinks.png.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-mdpi/ic_filter_drinks.png"
-    },
-    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-ldpi_ic_logo.png.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-ldpi/ic_logo.png"
+    },
+    {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-mdpi_ic_filter_drinks.png.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-mdpi/ic_filter_drinks.png"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-ldpi_ic_video_unmute.png.flat",
@@ -988,12 +1000,12 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-anydpi-v24/ic_filter_salad_bar.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_filter_macro_bio.png.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xxhdpi/ic_filter_macro_bio.png"
-    },
-    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable_drawable_comment_like_button_selector.xml.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/drawable/drawable_comment_like_button_selector.xml"
+    },
+    {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_filter_macro_bio.png.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xxhdpi/ic_filter_macro_bio.png"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-anydpi_ic_facebook_logo.xml.flat",
@@ -2400,6 +2412,10 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-xhdpi/ic_brand_placeholder.png"
     },
     {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable_ic_close_icon.xml.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/drawable/ic_close_icon.xml"
+    },
+    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-ldpi_ic_share.png.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-ldpi/ic_share.png"
     },
@@ -2992,10 +3008,6 @@
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_welcome.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/layout_fragment_search_users2.xml.flat",
-        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_search_users2.xml"
-    },
-    {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-hdpi_ic_email.png.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-hdpi/ic_email.png"
     },
@@ -3454,6 +3466,10 @@
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/drawable-anydpi-v24_ic_profile_selected.xml.flat",
         "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/generated/res/pngs/release/drawable-anydpi-v24/ic_profile_selected.xml"
+    },
+    {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/layout_dialog_login_user.xml.flat",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/dialog_login_user.xml"
     },
     {
         "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/res/merged/release/xml_provider_paths.xml.flat",

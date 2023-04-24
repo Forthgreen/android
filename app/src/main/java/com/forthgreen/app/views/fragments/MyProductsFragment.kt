@@ -11,6 +11,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.recyclerview.widget.RecyclerView
 import com.forthgreen.app.R
 import com.forthgreen.app.repository.models.Product
+import com.forthgreen.app.utils.ApplicationGlobal
 import com.forthgreen.app.utils.ValueMapping
 import com.forthgreen.app.viewmodels.BaseViewModel
 import com.forthgreen.app.viewmodels.MyProductsViewModel
@@ -76,13 +77,22 @@ class MyProductsFragment : BaseRecyclerViewFragment(), LoadMoreListener, MyProdu
         flShimmer.visible()
         swipeRefreshLayout.gone()
 
-        // Get Products
+       /* // Get Products
         mMyProductsViewModel.getBookmarkedProducts(
                 true,
                 mPage,
                 resultSize,
                 ValueMapping.onProductBookmarkAction()
-        )
+        )*/
+        if (ApplicationGlobal.isLoggedIn != ValueMapping.getUserAccessGuest()) {
+            //get brands
+            mMyProductsViewModel.getBookmarkedProducts(
+                true,
+                mPage,
+                resultSize,
+                ValueMapping.onProductBookmarkAction()
+            )
+        }
         observeProperties()
     }
 
@@ -105,22 +115,28 @@ class MyProductsFragment : BaseRecyclerViewFragment(), LoadMoreListener, MyProdu
 
     override fun onPullDownToRefresh() {
         mPage = 1
-        mMyProductsViewModel.getBookmarkedProducts(
-                false,
+        if (ApplicationGlobal.isLoggedIn != ValueMapping.getUserAccessGuest()) {
+            //get brands
+            mMyProductsViewModel.getBookmarkedProducts(
+                true,
                 mPage,
                 resultSize,
                 ValueMapping.onProductBookmarkAction()
-        )
+            )
+        }
     }
 
     override fun onLoadMore() {
         mPage++
-        mMyProductsViewModel.getBookmarkedProducts(
-                false,
+        if (ApplicationGlobal.isLoggedIn != ValueMapping.getUserAccessGuest()) {
+            //get brands
+            mMyProductsViewModel.getBookmarkedProducts(
+                true,
                 mPage,
                 resultSize,
                 ValueMapping.onProductBookmarkAction()
-        )
+            )
+        }
 
     }
 
@@ -131,12 +147,15 @@ class MyProductsFragment : BaseRecyclerViewFragment(), LoadMoreListener, MyProdu
         swipeRefreshLayout.gone()
 
         // Get Products
-        mMyProductsViewModel.getBookmarkedProducts(
+        if (ApplicationGlobal.isLoggedIn != ValueMapping.getUserAccessGuest()) {
+            //get brands
+            mMyProductsViewModel.getBookmarkedProducts(
                 true,
                 mPage,
                 resultSize,
                 ValueMapping.onProductBookmarkAction()
-        )
+            )
+        }
     }
 
     override fun showProductDetail(product: Product) {

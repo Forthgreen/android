@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.util.Log
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
@@ -20,8 +21,10 @@ import com.forthgreen.app.utils.GeneralFunctions
 import com.forthgreen.app.utils.GeneralFunctions.INTENT_DEEP_LINK_TIME_STAMP
 import com.forthgreen.app.utils.ValueMapping
 import com.forthgreen.app.views.adapters.ViewPagerAdapterCommon
+import com.forthgreen.app.views.dialogfragments.UserLoginDialog
 import com.forthgreen.app.views.fragments.*
 import com.forthgreen.app.views.interfaces.DrawerCallbacks
+import com.forthgreen.app.views.interfaces.LoginButtonClickInterface
 import com.google.gson.Gson
 import io.branch.referral.Branch
 import kotlinx.android.synthetic.main.activity_main.*
@@ -36,7 +39,7 @@ class MainActivity : BaseAppCompactActivity(), DrawerCallbacks {
     // Variables
     private var prevMenuItem: MenuItem? = null        // To keep track of previous menu item selected.
     private val mShopFragment by lazy { ShopCategoriesFragment() }
-  //  private val mPostFeedFragment by lazy { PostsFeedFragment() }
+    private val mPostFeedFragmentGuestUser by lazy { PostsFeedFragment() }
     private val mPostFeedFragment by lazy { PostFeedFilterTabFragment() }
     private val mRestaurantFragment by lazy { RestaurantListingFragment() }
     private val mMyStuffFragment by lazy { MyStuffFragment() }
@@ -99,16 +102,25 @@ class MainActivity : BaseAppCompactActivity(), DrawerCallbacks {
         try {
             unlockNavDrawer()
             val mAdapter = ViewPagerAdapterCommon(supportFragmentManager)
-            mAdapter.addFrag(mPostFeedFragment)
+            if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
+                //  performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                mAdapter.addFrag(mPostFeedFragmentGuestUser)
+            }else {
+                mAdapter.addFrag(mPostFeedFragment)
+            }
+           // mAdapter.addFrag(mPostFeedFragment)
             mAdapter.addFrag(mShopFragment)
             mAdapter.addFrag(mRestaurantFragment)
             if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessLoggedIn()) {
                 mAdapter.addFrag(mMyStuffFragment)
                 mAdapter.addFrag(mSelfProfileFragment)
             } else {
-                repeat(2) {
-                    mAdapter.addFrag(WelcomeFragment.newInstance(true))
-                }
+               /* repeat(2) {
+                   // mAdapter.addFrag(WelcomeFragment.newInstance(true))
+                    mAdapter.addFrag(WelcomeFragment.newInstance(false))
+                }*/
+                mAdapter.addFrag(mMyStuffFragment)
+                mAdapter.addFrag(mSelfProfileFragment)
             }
             lockNavDrawer()     // Lock Nav Drawer by default.
             vpBottomNav.adapter = mAdapter
@@ -349,13 +361,13 @@ class MainActivity : BaseAppCompactActivity(), DrawerCallbacks {
         // To Implement Instagram like Backstack, we find our Fragment in fragments list by
         // comparing if it is an instanceOf PostFragments and cross check its childFragmentManager
         // to see if there is any pending backstack, if so first pop it.
-       /* supportFragmentManager.fragments.find { frag -> frag is PostsFeedFragment }?.let { postFeed ->
+        supportFragmentManager.fragments.find { frag -> frag is PostsFeedFragment }?.let { postFeed ->
             if (postFeed.childFragmentManager.backStackEntryCount > 0
                     && vpBottomNav.currentItem == 0 && supportFragmentManager.backStackEntryCount == 0) {
                 postFeed.childFragmentManager.popBackStack()
                 return
             }
-        }*/
+        }
 
         supportFragmentManager.fragments.find { frag -> frag is PostFeedFilterTabFragment }?.let { postFeed ->
             if (postFeed.childFragmentManager.backStackEntryCount > 0
@@ -385,5 +397,15 @@ class MainActivity : BaseAppCompactActivity(), DrawerCallbacks {
     override fun onDestroy() {
         mLocalBroadcastManager.unregisterReceiver(mLocalBroadcastReceiver)
         super.onDestroy()
+    }
+
+    private fun callUserLoginDialog() {
+        val userLoginDialog = UserLoginDialog()
+        userLoginDialog.showUserLoginDialog(this as AppCompatActivity, object :
+            LoginButtonClickInterface {
+            override fun loginButtonClick() {
+                performTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+            }
+        })
     }
 }

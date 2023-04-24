@@ -16,6 +16,7 @@ import android.text.style.ClickableSpan
 import android.text.style.StyleSpan
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
@@ -34,7 +35,9 @@ import com.forthgreen.app.viewmodels.ProductDetailViewModel
 import com.forthgreen.app.views.adapters.ImagePreviewAdapter
 import com.forthgreen.app.views.adapters.ProductReviewAdapter
 import com.forthgreen.app.views.adapters.SuggestedProductsAdapter
+import com.forthgreen.app.views.dialogfragments.UserLoginDialog
 import com.forthgreen.app.views.interfaces.LoadMoreListener
+import com.forthgreen.app.views.interfaces.LoginButtonClickInterface
 import com.forthgreen.app.views.utils.gone
 import com.forthgreen.app.views.utils.visible
 import com.google.gson.Gson
@@ -225,7 +228,8 @@ class ProductDetailFragment : BaseRecyclerViewFragment(),
         tvWriteReview.setOnClickListener {
             //Show Dialog in case of Guest mode else perform action.
             if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()) {
-                performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+               // performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+                callUserLoginDialog()
             } else {
                 performFragTransaction(
                         ProductReviewFragment.newInstance(product._id),
@@ -358,7 +362,8 @@ class ProductDetailFragment : BaseRecyclerViewFragment(),
     }
 
     private fun showGuestModeDialog() {
-        performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+       // performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+        callUserLoginDialog()
     }
 
     /**
@@ -482,5 +487,15 @@ class ProductDetailFragment : BaseRecyclerViewFragment(),
     override fun onDestroy() {
         mLocalBroadcastManager.unregisterReceiver(mLocalBroadcastReceiver)
         super.onDestroy()
+    }
+
+    private fun callUserLoginDialog() {
+        val userLoginDialog = UserLoginDialog()
+        userLoginDialog.showUserLoginDialog(requireActivity() as AppCompatActivity, object :
+            LoginButtonClickInterface {
+            override fun loginButtonClick() {
+                performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
+            }
+        })
     }
 }

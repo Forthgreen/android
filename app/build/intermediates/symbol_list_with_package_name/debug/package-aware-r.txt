@@ -84,6 +84,10 @@ animator slide_right_in_fade_in
 animator slide_right_out
 animator slide_right_out_fade_out
 animator slide_up
+array com_google_android_gms_fonts_certs
+array com_google_android_gms_fonts_certs_dev
+array com_google_android_gms_fonts_certs_prod
+array preloaded_fonts
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -2636,6 +2640,7 @@ drawable ic_chevron_right
 drawable ic_clock
 drawable ic_clock_black_24dp
 drawable ic_close
+drawable ic_close_icon
 drawable ic_close_video
 drawable ic_close_video_light_black
 drawable ic_collection
@@ -2820,6 +2825,7 @@ drawable worm_dot_background
 drawable worm_dot_stroke_background
 font font_regular
 font font_semi_bold
+font roboto
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3467,6 +3473,7 @@ id rootLayout
 id rounded
 id row
 id row_index_key
+id row_profile_details_rv_costraint_layout
 id row_reverse
 id rvPostImages
 id rvSingleRestaurant
@@ -3617,6 +3624,8 @@ id tvAboutUs
 id tvAddress
 id tvAddressDesc
 id tvBioLabel
+id tvBlock
+id tvBlockUser
 id tvBrand
 id tvBrandDetail
 id tvBrandFollowers
@@ -3957,11 +3966,13 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_block_user
 layout dialog_delete_account
 layout dialog_delete_delete_account_user
 layout dialog_fragment_brand_detail
 layout dialog_fragment_brand_detail_options
 layout dialog_fragment_country_code
+layout dialog_login_user
 layout dialog_product_detail_menu
 layout dialog_progress_loader
 layout dialog_review_menu
@@ -4244,6 +4255,9 @@ string auto_fill_key_name
 string auto_fill_key_password
 string auto_fill_key_phone
 string bio_label
+string block_block_user_menu
+string block_user
+string block_user_dialog_desc
 string boarding_desc_four
 string boarding_desc_one
 string boarding_desc_three
@@ -4271,6 +4285,7 @@ string btn_view_products
 string btn_view_restaurants
 string camera_permission_needed
 string cancel
+string cancel_block_user_menu
 string cancel_label
 string cancel_menu
 string change
@@ -4488,6 +4503,7 @@ string login
 string login_as_guest
 string login_fragment
 string login_spannable
+string login_to_continue
 string logout
 string logout_label
 string male_label
@@ -4640,6 +4656,7 @@ string report_reply_label
 string report_review
 string report_review_sent
 string report_sent
+string report_user
 string request_new
 string restaurant_detail_opening_closing
 string restaurant_review_sent
@@ -4705,10 +4722,12 @@ string text_guest
 string text_privacy
 string text_register_guest
 string text_terms
+string this_user_has_blocked_you
 string tool_title
 string toolbar_new_password
 string toolbar_title
 string try_again_later_error
+string unblocked_user
 string unexpected_intent_action
 string update
 string update_btn_label
@@ -4732,6 +4751,7 @@ string write_reply_hint_label
 string write_report_reason
 string yes
 string yes_delete
+string you_have_blocked_this_user
 string you_might_also_like_label
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
