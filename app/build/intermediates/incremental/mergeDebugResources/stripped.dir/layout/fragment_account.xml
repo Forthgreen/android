@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    android:focusable="true">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilFull"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/full_name"
+        app:boxBackgroundColor="@color/colorPrimaryBackground"
+        app:boxStrokeColor="@color/colorGrayBg"
+        app:hintTextColor="@color/colorDisabledText"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etFull"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center_vertical"
+            android:imeOptions="actionDone"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/email"
+        app:boxBackgroundColor="@color/colorPrimaryBackground"
+        app:boxStrokeColor="@color/colorGrayBg"
+        app:hintTextColor="@color/colorDisabledText"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/tilFull">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center_vertical"
+            android:imeOptions="actionDone"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/password_tag"
+        app:boxBackgroundColor="@color/colorPrimaryBackground"
+        app:boxStrokeColor="@color/colorGrayBg"
+        app:hintTextColor="@color/colorDisabledText"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/tilEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center_vertical"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:text="***********"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvChangePassword"
+        style="@style/StyleSemiBold"
+        android:layout_width="wrap_content"
+        android:padding="16dp"
+        android:text="@string/change"
+        android:textAllCaps="true"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tilPass"
+        app:layout_constraintEnd_toEndOf="@+id/tilPass"
+        app:layout_constraintTop_toTopOf="@+id/tilPass" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        style="@style/StyleSubmitButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/update"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/tilPass"
+        app:layout_constraintWidth_percent="0.38" />
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>

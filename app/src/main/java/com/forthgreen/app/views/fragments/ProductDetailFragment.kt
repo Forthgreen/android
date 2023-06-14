@@ -14,6 +14,7 @@ import android.text.TextPaint
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.text.style.StyleSpan
+import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -277,9 +278,29 @@ class ProductDetailFragment : BaseRecyclerViewFragment(),
                     mSuggestedProductsAdapter.updateProduct(bookmarkProductStatus.copy(isBookmark = !bookmarkProductStatus.isBookmark))
                 } else {
                     cbBookmark.isChecked = !cbBookmark.isChecked
+
+                    val gson = Gson()
+                    val jsonString = gson.toJson(product.copy(isBookmark = !product.isBookmark))
+
+                  //  product.isBookmark = !cbBookmark.isChecked
+
+                    val intent = Intent()
+
+                    // Set a unique action string prefixed by your app package name.
+
+                    // Set a unique action string prefixed by your app package name.
+                    intent.action = BOOKMARK_INTENT_STATUS_UPDATED
+                    intent.putExtra("product", jsonString)
+                    // Deliver the Intent.
+                    // Deliver the Intent.
+
                     // Send Broadcast
                     LocalBroadcastManager.getInstance(requireContext())
-                            .sendBroadcast(Intent(BOOKMARK_INTENT_STATUS_UPDATED))
+                        .sendBroadcast(intent)
+
+                   /* // Send Broadcast
+                    LocalBroadcastManager.getInstance(requireContext())
+                            .sendBroadcast(Intent(BOOKMARK_INTENT_STATUS_UPDATED))*/
                 }
                 // Send Broadcast
                 LocalBroadcastManager.getInstance(requireContext())
@@ -305,6 +326,7 @@ class ProductDetailFragment : BaseRecyclerViewFragment(),
         tvProductName.text = product.name
         tvProductPrice.text = product.productPriceText
         tvProductDesc.text = product.info
+        Log.d("bkmProductionDetail", product.isBookmark.toString())
         cbBookmark.isChecked = product.isBookmark
 
         viewPager.adapter =

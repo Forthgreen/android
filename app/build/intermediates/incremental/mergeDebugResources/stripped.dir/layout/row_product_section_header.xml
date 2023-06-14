@@ -1,0 +1,141 @@
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryBackground"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".views.fragments.ProductDetailFragment">
+
+    <View
+        android:id="@+id/viewTopDivider"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="14dp"
+        android:visibility="gone"
+        android:background="@color/colorGrayBg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sectionHeaderConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/viewTopDivider">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProductImageSectionHeader"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:scaleType="centerCrop"
+            android:src="@color/colorShimmerGrey"
+            app:civ_border_color="@color/colorGrayBg"
+            app:civ_border_width="1dp"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:id="@+id/tvProductNameTop"
+            style="@style/StyleSemiBold"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Product Name"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/ivProductImageSectionHeader"
+            app:layout_constraintBottom_toTopOf="@id/tvProductNameSectionHeader"
+            app:layout_constraintTop_toTopOf="@id/ivProductImageSectionHeader" />
+
+        <TextView
+            android:id="@+id/tvProductNameSectionHeader"
+            style="@style/StyleRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Product Name"
+            android:textSize="12sp"
+            android:textColor="#3E4B4D"
+            app:layout_constraintBottom_toTopOf="@+id/tvProductPriceSectionHeader"
+            app:layout_constraintStart_toStartOf="@id/tvProductNameTop"
+            app:layout_constraintStart_toEndOf="@id/ivProductImageSectionHeader"
+            app:layout_constraintTop_toBottomOf="@id/tvProductNameTop" />
+
+        <TextView
+            android:id="@+id/tvProductPriceSectionHeader"
+            style="@style/StyleRegular"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12sp"
+            android:textColor="#3E4B4D"
+            app:layout_constraintBottom_toBottomOf="@+id/ivProductImageSectionHeader"
+            app:layout_constraintStart_toEndOf="@id/ivProductImageSectionHeader"
+            app:layout_constraintStart_toStartOf="@id/tvProductNameTop"
+            app:layout_constraintTop_toBottomOf="@id/tvProductNameSectionHeader"
+            tools:text="£29" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorWhite"
+            app:fillColor="@color/colorWhite"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivProductImageSectionHeader"
+            app:strokeColor="@color/colorGrayBg" />
+
+        <!-- <com.forthgreen.app.views.utils.viewpagerindicator.CirclePageIndicator
+             android:id="@+id/circlePagerIndicator"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:padding="@dimen/activity_vertical_margin"
+             app:fillColor="@color/colorBlack"
+             app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:strokeColor="@color/colorWhite" />-->
+
+        <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+            android:id="@+id/circlePagerIndicatorShop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:visibility="visible"
+            app:dampingRatio="0.5"
+            app:dotsColor="@color/colorWhite"
+            app:dotsCornerRadius="8dp"
+            app:dotsSize="8dp"
+            app:dotsSpacing="2dp"
+            app:dotsStrokeColor="@color/colorWhite"
+            app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+            app:layout_constraintEnd_toEndOf="@+id/viewPager"
+            app:layout_constraintStart_toStartOf="@+id/viewPager"
+            app:selectedDotColor="@color/colorWhite" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>

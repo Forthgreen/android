@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/flShimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/llCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_products_shop_home" />
+
+            <include layout="@layout/shimmer_products_shop_home" />
+
+            <include layout="@layout/shimmer_products_shop_home" />
+
+            <include layout="@layout/shimmer_products_shop_home" />
+
+            <include layout="@layout/shimmer_products_shop_home" />
+
+            <include layout="@layout/shimmer_products_shop_home" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/llLoadMore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="center"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNoMoreData"
+                    style="@style/StyleTextViewNoData"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorGrayBg"
+                    android:gravity="center"
+                    android:padding="24dp"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="@style/Base.Widget.AppCompat.ProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="24dp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCategoryList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingBottom="20dp"
+        android:visibility="gone" />
+
+</LinearLayout>

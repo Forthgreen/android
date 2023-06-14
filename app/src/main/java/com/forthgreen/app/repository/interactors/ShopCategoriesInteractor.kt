@@ -8,6 +8,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.observers.DisposableObserver
 import io.reactivex.schedulers.Schedulers
+import okhttp3.RequestBody
 import retrofit2.Response
 
 class ShopCategoriesInteractor {
@@ -16,9 +17,9 @@ class ShopCategoriesInteractor {
         private const val TAG = "ShopCategoriesInteracto"
     }
 
-    fun fetchProductsCategory(networkRequestCallbacks: NetworkRequestCallbacks): Disposable {
+    fun fetchProductsCategory(body: RequestBody, networkRequestCallbacks: NetworkRequestCallbacks): Disposable {
         return if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessLoggedIn()) RestClient.get()
-            .fetchProductsCategory(ApplicationGlobal.accessToken)
+            .fetchProductsCategory2(ApplicationGlobal.accessToken, body)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeWith(object : DisposableObserver<Response<*>>() {

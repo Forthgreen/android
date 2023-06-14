@@ -28,7 +28,7 @@ object Constants {
     val LOCAL_STORAGE_BASE_PATH_FOR_USER_POST_VIDEOS = "$LOCAL_STORAGE_BASE_PATH_FOR_MEDIA/User/Videos/"
     val LOCAL_STORAGE_BASE_PATH_FOR_USER_AUDIO = "$LOCAL_STORAGE_BASE_PATH_FOR_MEDIA/User/Audios/"
 
-    val categoriesList = arrayListOf(Filter(1, "Clothing", R.drawable.ic_category_clothing),
+    val categoriesList = arrayListOf(Filter(1, "Clothing", R.drawable.ic_category_cloth),
             Filter(2, "Beauty", R.drawable.ic_category_beauty),
             Filter(7, "Accessories", R.drawable.ic_category_accessories),
             Filter(4, "Food", R.drawable.ic_category_food),

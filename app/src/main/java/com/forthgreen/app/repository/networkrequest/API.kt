@@ -379,10 +379,21 @@ interface API {
         @Header("Authorization") accessToken: String
     ): Observable<Response<PojoProductCategory>>
 
-    // API to show 20 products in shop for every category for guest user
+    // API to show 20 products in shop for every category
+    @POST("product/shopfeed")
+    fun fetchProductsCategory2(
+        @Header("Authorization") accessToken: String,
+        @Body body: RequestBody,
+    ): Observable<Response<ShopResponse>>
+
+   /* // API to show 20 products in shop for every category for guest user
     @POST("product/homeForAll")
     fun fetchProductsCategoryGuest(
-    ): Observable<Response<PojoProductCategory>>
+    ): Observable<Response<PojoProductCategory>>*/
+
+    @POST("product/shopfeed")
+    fun fetchProductsCategoryGuest(
+    ): Observable<Response<ShopResponse>>
 
     // Api to delete account
     @POST("user/deleteaccount")

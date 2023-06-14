@@ -117,4 +117,5 @@ object ValueMapping {
     // For video thumbnail
     fun onCaptureVideoType() = 1
     fun onGalleryVideoType() = 2
+
 }

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="16dp"
+    android:background="@color/colorPrimaryBackground">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStartShimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEndShimmer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civPostUserImageShimmer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="@id/guidelineStartShimer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.14" />
+
+    <TextView
+        android:id="@+id/tvUserFullNameShimmer"
+        style="@style/StyleSemiBold"
+        android:layout_width="90dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/colorShimmerGrey"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvUserNameShimmer"
+        app:layout_constraintStart_toEndOf="@+id/civPostUserImageShimmer"
+        app:layout_constraintTop_toTopOf="@+id/civPostUserImageShimmer" />
+
+    <TextView
+        android:id="@+id/tvUserNameShimmer"
+        style="@style/StyleRegular"
+        android:layout_width="90dp"
+        android:layout_marginTop="2dp"
+        android:layout_height="12dp"
+        android:background="@color/colorShimmerGrey"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvUserPriceShimmer"
+        app:layout_constraintStart_toStartOf="@+id/tvUserFullNameShimmer"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserFullNameShimmer" />
+
+    <TextView
+        android:id="@+id/tvUserPriceShimmer"
+        style="@style/StyleRegular"
+        android:layout_width="57dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorShimmerGrey"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/civPostUserImageShimmer"
+        app:layout_constraintStart_toStartOf="@+id/tvUserFullNameShimmer"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserNameShimmer" />
+
+    <View
+        android:id="@+id/viewPictureDividerShimmer"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorShimmerGrey"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvViewMoreShimmer" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerShimmer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/civPostUserImageShimmer" />
+
+
+    <View
+        android:id="@+id/viewProdImg1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@id/viewProdImg2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPagerShimmer" />
+
+    <View
+        android:id="@+id/viewProdName1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="21.6"
+        app:layout_constraintStart_toStartOf="@id/viewProdImg1"
+        app:layout_constraintTop_toBottomOf="@id/viewProdImg1"
+        app:layout_constraintWidth_percent="0.36" />
+
+    <View
+        android:id="@+id/viewBrandName1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="10"
+        app:layout_constraintStart_toStartOf="@id/viewProdImg1"
+        app:layout_constraintTop_toBottomOf="@id/viewProdName1"
+        app:layout_constraintWidth_percent="0.16" />
+
+    <View
+        android:id="@+id/viewProdImg2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="1"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/viewProdImg1"
+        app:layout_constraintTop_toBottomOf="@id/viewPagerShimmer" />
+
+    <View
+        android:id="@+id/viewProdName2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="21.6"
+        app:layout_constraintStart_toStartOf="@id/viewProdImg2"
+        app:layout_constraintTop_toBottomOf="@id/viewProdImg2"
+        app:layout_constraintWidth_percent="0.36" />
+
+    <View
+        android:id="@+id/viewBrandName2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="10"
+        app:layout_constraintStart_toStartOf="@id/viewProdImg2"
+        app:layout_constraintTop_toBottomOf="@id/viewProdName2"
+        app:layout_constraintWidth_percent="0.16" />
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>

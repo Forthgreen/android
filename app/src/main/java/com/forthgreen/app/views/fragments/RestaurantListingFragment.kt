@@ -42,6 +42,10 @@ import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 import com.thekhaeng.pushdownanim.PushDownAnim
 import kotlinx.android.synthetic.main.fragment_restaurants_listing.*
+import kotlinx.android.synthetic.main.fragment_restaurants_listing.flShimmer
+import kotlinx.android.synthetic.main.fragment_restaurants_listing.toolbar
+import kotlinx.android.synthetic.main.toolbar.*
+import kotlinx.android.synthetic.main.toolbar.view.*
 
 /**
  * @author shraychona@gmail.com
@@ -125,9 +129,15 @@ class RestaurantListingFragment : BaseLocationRecyclerViewFragment(),
     private fun setUpViews() {
         //Set toolbar title as drawable
         tvToolbarTitle.text = getString(R.string.restaurant_toolbar_title)
-        toolbar.navigationIcon = null
+      //  toolbar.navigationIcon = null
+        toolbar.toolbar.navigationIcon = null
 
-        tvMap.text = getString(R.string.map_restaurant_label)
+        ivToolbarActionEnd.apply {
+            setImageResource(R.drawable.ic_map1)
+            visible()
+        }
+
+      //  tvMap.text = getString(R.string.map_restaurant_label)
 
         //Set Linear Layout Manager
         mLinearLayoutManager = LinearLayoutManager(requireContext())
@@ -170,15 +180,24 @@ class RestaurantListingFragment : BaseLocationRecyclerViewFragment(),
 //            performFragTransaction(HomeFilterFragment.newInstance(filterList, true), HomeFilterFragment.TAG)
 //        }
 
-        tvMap.setOnSafeClickListener {
+        ivToolbarActionEnd.setOnSafeClickListener {
             //Hide-Show Map according to current visibility.
             if (isMapVisible) {
-                tvMap.text = getString(R.string.map_restaurant_label)
+              //  tvMap.text = getString(R.string.map_restaurant_label)
+                ivToolbarActionEnd.apply {
+                    setImageResource(R.drawable.ic_map1)
+                    visible()
+                }
                 hideMapViews()
                 hideMap()
                 hideRestaurantCard()
             } else {
-                tvMap.text = getString(R.string.list_restaurant_label)
+
+                ivToolbarActionEnd.apply {
+                    setImageResource(R.drawable.ic_map_list)
+                    visible()
+                }
+               // tvMap.text = getString(R.string.list_restaurant_label)
                 showMap()
             }
         }
@@ -480,6 +499,11 @@ class RestaurantListingFragment : BaseLocationRecyclerViewFragment(),
     }
 
     fun showShimmer() {
+        isMapVisible = false
+        ivToolbarActionEnd.apply {
+            setImageResource(R.drawable.ic_map1)
+            visible()
+        }
         // Show Shimmer
         flShimmer.startShimmer()
         flShimmer.visible()

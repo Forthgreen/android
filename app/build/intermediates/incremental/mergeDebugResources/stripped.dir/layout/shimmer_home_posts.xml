@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryBackground"
+    android:paddingTop="16dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStartShimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEndShimmer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civPostUserImageShimmer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="@id/guidelineStartShimer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.14" />
+
+    <TextView
+        android:id="@+id/tvUserFullNameShimmer"
+        style="@style/StyleSemiBold"
+        android:layout_marginStart="16dp"
+        android:background="@color/colorShimmerGrey"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvUserNameShimmer"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEndShimmer"
+        app:layout_constraintStart_toEndOf="@+id/civPostUserImageShimmer"
+        app:layout_constraintTop_toTopOf="@+id/civPostUserImageShimmer"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvUserNameShimmer"
+        style="@style/StyleRegular"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorShimmerGrey"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/civPostUserImageShimmer"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineEndShimmer"
+        app:layout_constraintStart_toStartOf="@+id/tvUserFullNameShimmer"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserFullNameShimmer" />
+
+    <TextView
+        android:id="@+id/tvPostDescShimmer"
+        style="@style/StyleRegular"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorShimmerGrey"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEndShimmer"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStartShimer"
+        app:layout_constraintTop_toBottomOf="@+id/civPostUserImageShimmer" />
+
+    <TextView
+        android:id="@+id/tvViewMoreShimmer"
+        style="@style/StyleSemiBold"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorShimmerGrey"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textAllCaps="true"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintDimensionRatio="10"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStartShimer"
+        app:layout_constraintTop_toBottomOf="@+id/tvPostDescShimmer"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <View
+        android:id="@+id/viewPictureDividerShimmer"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvViewMoreShimmer" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerShimmer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPictureDividerShimmer" />
+
+    <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+        android:id="@+id/dotIndicatorShimmer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        app:dampingRatio="0.5"
+        app:dotsColor="@color/colorShimmerGrey"
+        app:dotsCornerRadius="8dp"
+        app:dotsSize="8dp"
+        app:dotsSpacing="2dp"
+        app:dotsStrokeColor="@color/colorShimmerGrey"
+        app:layout_constraintBottom_toBottomOf="@+id/viewPagerShimmer"
+        app:layout_constraintEnd_toEndOf="@+id/viewPagerShimmer"
+        app:layout_constraintStart_toStartOf="@+id/viewPagerShimmer"
+        app:selectedDotColor="@color/colorShimmerGrey" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/flexBoxShimmer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorShimmerGrey"
+        app:alignItems="flex_start"
+        app:flexDirection="row"
+        app:flexWrap="nowrap"
+        app:layout_constraintEnd_toStartOf="@id/viewMessageShimmer"
+        app:layout_constraintStart_toStartOf="@id/guidelineStartShimer"
+        app:layout_constraintTop_toBottomOf="@+id/viewPagerShimmer">
+
+        <TextView
+            android:id="@+id/tvCommentsShimmer"
+            style="@style/StyleRegular"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/tvLikes"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/guidelineStartShimer"
+            app:layout_constraintTop_toBottomOf="@+id/viewPagerShimmer" />
+
+        <TextView
+            android:id="@+id/tvLikesShimmer"
+            style="@style/StyleRegular"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCommentsShimmer"
+            app:layout_constraintEnd_toStartOf="@+id/viewMessageShimmer"
+            app:layout_constraintStart_toEndOf="@+id/tvCommentsShimmer"
+            app:layout_constraintTop_toTopOf="@+id/tvCommentsShimmer" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <!--    <CheckBox-->
+    <!--        android:id="@+id/cbLike"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:button="@drawable/drawable_post_like_button_selector"-->
+    <!--        android:paddingTop="12dp"-->
+    <!--        android:paddingBottom="12dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/flexBox"-->
+    <!--        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/flexBox" />-->
+
+    <View
+        android:id="@+id/viewMessageShimmer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintBottom_toBottomOf="@id/flexBoxShimmer"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@+id/viewLikeShimmer"
+        app:layout_constraintTop_toTopOf="@id/flexBoxShimmer"
+        app:layout_constraintWidth_percent="0.07" />
+
+    <View
+        android:id="@+id/viewLikeShimmer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintBottom_toBottomOf="@+id/flexBoxShimmer"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEndShimmer"
+        app:layout_constraintTop_toTopOf="@+id/flexBoxShimmer"
+        app:layout_constraintWidth_percent="0.07" />
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/ivMessage"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginEnd="12dp"-->
+    <!--        android:padding="12dp"-->
+    <!--        android:scaleType="centerCrop"-->
+    <!--        android:src="@drawable/ic_message"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/cbLike"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/cbLike"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/cbLike" />-->
+
+    <View
+        android:id="@+id/viewBottomDividerShimmer"
+        android:layout_width="0dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flexBoxShimmer" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupMultiPictures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="dotIndicatorShimmer,viewPagerShimmer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

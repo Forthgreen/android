@@ -1,5 +1,49 @@
+com/forthgreen/app/databinding/RowRestaurantBinding.java
+ com.forthgreen.app.databinding.RowRestaurantBinding
+com/forthgreen/app/databinding/RowSingleRestaurantBinding.java
+ com.forthgreen.app.databinding.RowSingleRestaurantBinding
+com/forthgreen/app/databinding/BottomSheetMenuOptionsBinding.java
+ com.forthgreen.app.databinding.BottomSheetMenuOptionsBinding
+com/forthgreen/app/databinding/ShimmerProductsShopHomeBinding.java
+ com.forthgreen.app.databinding.ShimmerProductsShopHomeBinding
+com/forthgreen/app/databinding/FragmentEditProfileBinding.java
+ com.forthgreen.app.databinding.FragmentEditProfileBinding
+com/forthgreen/app/databinding/RowCommentsRvBinding.java
+ com.forthgreen.app.databinding.RowCommentsRvBinding
+com/forthgreen/app/databinding/DialogSignUpToReviewBinding.java
+ com.forthgreen.app.databinding.DialogSignUpToReviewBinding
+com/forthgreen/app/databinding/RowBrandProductsBinding.java
+ com.forthgreen.app.databinding.RowBrandProductsBinding
+com/forthgreen/app/databinding/FragmentHomeSearchBinding.java
+ com.forthgreen.app.databinding.FragmentHomeSearchBinding
 com/forthgreen/app/views/utils/NestedScrollView.java
  com.forthgreen.app.views.utils.NestedScrollView
+com/forthgreen/app/databinding/FragmentPostFeedFilterTabBinding.java
+ com.forthgreen.app.databinding.FragmentPostFeedFilterTabBinding
+com/forthgreen/app/databinding/FragmentPlayVideoBinding.java
+ com.forthgreen.app.databinding.FragmentPlayVideoBinding
+com/forthgreen/app/databinding/RowSuggestedProductsRvBinding.java
+ com.forthgreen.app.databinding.RowSuggestedProductsRvBinding
+com/forthgreen/app/databinding/RowProductReviewRvBinding.java
+ com.forthgreen.app.databinding.RowProductReviewRvBinding
+com/forthgreen/app/databinding/DialogFragmentBrandDetailBinding.java
+ com.forthgreen.app.databinding.DialogFragmentBrandDetailBinding
+com/forthgreen/app/databinding/FragmentStaticDataBinding.java
+ com.forthgreen.app.databinding.FragmentStaticDataBinding
+com/forthgreen/app/databinding/FragmentNotificationDetailsBinding.java
+ com.forthgreen.app.databinding.FragmentNotificationDetailsBinding
+com/forthgreen/app/databinding/ShimmerSearchRestaurantsBinding.java
+ com.forthgreen.app.databinding.ShimmerSearchRestaurantsBinding
+com/forthgreen/app/databinding/DialogfragmentVideoPlayBinding.java
+ com.forthgreen.app.databinding.DialogfragmentVideoPlayBinding
+com/forthgreen/app/databinding/FragmentReportSentBinding.java
+ com.forthgreen.app.databinding.FragmentReportSentBinding
+com/forthgreen/app/databinding/RowProductsBinding.java
+ com.forthgreen.app.databinding.RowProductsBinding
+com/forthgreen/app/databinding/FragmentRestaurantDetailsMapBinding.java
+ com.forthgreen.app.databinding.FragmentRestaurantDetailsMapBinding
+com/forthgreen/app/databinding/ShowPhotoVideoOptionsBottomSheetBinding.java
+ com.forthgreen.app.databinding.ShowPhotoVideoOptionsBottomSheetBinding
 com/forthgreen/app/R2.java
  com.forthgreen.app.R2
  com.forthgreen.app.R2$anim
@@ -17,5 +61,243 @@ com/forthgreen/app/R2.java
  com.forthgreen.app.R2$string
  com.forthgreen.app.R2$style
  com.forthgreen.app.R2$styleable
+com/forthgreen/app/views/utils/ListSpacingDecoration.java
+ com.forthgreen.app.views.utils.ListSpacingDecoration
+com/forthgreen/app/databinding/BottomSheetProductSortOptions2Binding.java
+ com.forthgreen.app.databinding.BottomSheetProductSortOptions2Binding
+com/forthgreen/app/databinding/FragmentMyBrandsBinding.java
+ com.forthgreen.app.databinding.FragmentMyBrandsBinding
+com/forthgreen/app/databinding/FragmentShopCategoriesBinding.java
+ com.forthgreen.app.databinding.FragmentShopCategoriesBinding
+com/forthgreen/app/databinding/ShimmerSearchProductBinding.java
+ com.forthgreen.app.databinding.ShimmerSearchProductBinding
+com/forthgreen/app/databinding/ShimmerHomeUsersBinding.java
+ com.forthgreen.app.databinding.ShimmerHomeUsersBinding
+com/forthgreen/app/databinding/ShimmerShopCategoriesRv2Binding.java
+ com.forthgreen.app.databinding.ShimmerShopCategoriesRv2Binding
+com/forthgreen/app/databinding/RowProfileDetailsRvBinding.java
+ com.forthgreen.app.databinding.RowProfileDetailsRvBinding
+com/forthgreen/app/databinding/FragmentMyProductsBinding.java
+ com.forthgreen.app.databinding.FragmentMyProductsBinding
+com/forthgreen/app/databinding/FragmentForgotPasswordBinding.java
+ com.forthgreen.app.databinding.FragmentForgotPasswordBinding
+com/forthgreen/app/databinding/DialogFragmentBrandDetailOptionsBinding.java
+ com.forthgreen.app.databinding.DialogFragmentBrandDetailOptionsBinding
+com/forthgreen/app/databinding/FragmentImageBinding.java
+ com.forthgreen.app.databinding.FragmentImageBinding
+com/forthgreen/app/databinding/FragmentInvitesUsersBinding.java
+ com.forthgreen.app.databinding.FragmentInvitesUsersBinding
+com/forthgreen/app/databinding/RowSearchBrandBinding.java
+ com.forthgreen.app.databinding.RowSearchBrandBinding
+com/forthgreen/app/databinding/FragmentFollowedRestaurantsBinding.java
+ com.forthgreen.app.databinding.FragmentFollowedRestaurantsBinding
+com/forthgreen/app/databinding/FragmentOnboadingsBinding.java
+ com.forthgreen.app.databinding.FragmentOnboadingsBinding
+com/forthgreen/app/databinding/FragmentSignUpBinding.java
+ com.forthgreen.app.databinding.FragmentSignUpBinding
+com/forthgreen/app/databinding/DialogReviewMenuBinding.java
+ com.forthgreen.app.databinding.DialogReviewMenuBinding
+com/forthgreen/app/databinding/ShimmerRepliesBinding.java
+ com.forthgreen.app.databinding.ShimmerRepliesBinding
+com/forthgreen/app/databinding/FragmentRestaurantReviewSentBinding.java
+ com.forthgreen.app.databinding.FragmentRestaurantReviewSentBinding
+com/forthgreen/app/databinding/RestaurantDetailViewPagerLayoutBinding.java
+ com.forthgreen.app.databinding.RestaurantDetailViewPagerLayoutBinding
+com/forthgreen/app/databinding/ActivityHomeBinding.java
+ com.forthgreen.app.databinding.ActivityHomeBinding
+com/forthgreen/app/databinding/ShimmerProductsHomeBinding.java
+ com.forthgreen.app.databinding.ShimmerProductsHomeBinding
+com/forthgreen/app/databinding/ShimmerCommentsBinding.java
+ com.forthgreen.app.databinding.ShimmerCommentsBinding
+com/forthgreen/app/databinding/RowProductSectionHeaderBinding.java
+ com.forthgreen.app.databinding.RowProductSectionHeaderBinding
+com/forthgreen/app/databinding/FragmentCategoryProductsBinding.java
+ com.forthgreen.app.databinding.FragmentCategoryProductsBinding
+com/forthgreen/app/databinding/ShowPictureOptionsBottomSheetBinding.java
+ com.forthgreen.app.databinding.ShowPictureOptionsBottomSheetBinding
+com/forthgreen/app/databinding/FragmentContinueWithEmailTabBinding.java
+ com.forthgreen.app.databinding.FragmentContinueWithEmailTabBinding
+com/forthgreen/app/databinding/FragmentBaseTabLayoutBinding.java
+ com.forthgreen.app.databinding.FragmentBaseTabLayoutBinding
+com/forthgreen/app/databinding/FragmentWelcomeBinding.java
+ com.forthgreen.app.databinding.FragmentWelcomeBinding
+com/forthgreen/app/databinding/OnBoardingsViewPagerLayoutBinding.java
+ com.forthgreen.app.databinding.OnBoardingsViewPagerLayoutBinding
+com/forthgreen/app/databinding/ShimmerUserLikesBinding.java
+ com.forthgreen.app.databinding.ShimmerUserLikesBinding
+com/forthgreen/app/databinding/RowSearchProductBinding.java
+ com.forthgreen.app.databinding.RowSearchProductBinding
+com/forthgreen/app/databinding/FragmentReviewReportSentBinding.java
+ com.forthgreen.app.databinding.FragmentReviewReportSentBinding
+com/forthgreen/app/databinding/ShimmerMyProductsRvBinding.java
+ com.forthgreen.app.databinding.ShimmerMyProductsRvBinding
+com/forthgreen/app/databinding/FragmentProductDetailBinding.java
+ com.forthgreen.app.databinding.FragmentProductDetailBinding
+com/forthgreen/app/databinding/FragmentAccountBinding.java
+ com.forthgreen.app.databinding.FragmentAccountBinding
+com/forthgreen/app/databinding/FragmentProductReviewSentBinding.java
+ com.forthgreen.app.databinding.FragmentProductReviewSentBinding
+com/forthgreen/app/databinding/FragmentNewPasswordBinding.java
+ com.forthgreen.app.databinding.FragmentNewPasswordBinding
+com/forthgreen/app/databinding/RowProductSectionHeader2Binding.java
+ com.forthgreen.app.databinding.RowProductSectionHeader2Binding
+com/forthgreen/app/databinding/RowHomeUsersRvBinding.java
+ com.forthgreen.app.databinding.RowHomeUsersRvBinding
+com/forthgreen/app/databinding/RowSingleBrandBinding.java
+ com.forthgreen.app.databinding.RowSingleBrandBinding
+com/forthgreen/app/databinding/ToolbarDialogFragmentsBinding.java
+ com.forthgreen.app.databinding.ToolbarDialogFragmentsBinding
+com/forthgreen/app/databinding/RowNotificationsRvBinding.java
+ com.forthgreen.app.databinding.RowNotificationsRvBinding
+com/forthgreen/app/databinding/ShimmerShopCategoriesRvBinding.java
+ com.forthgreen.app.databinding.ShimmerShopCategoriesRvBinding
+com/forthgreen/app/databinding/FragmentSettingsBinding.java
+ com.forthgreen.app.databinding.FragmentSettingsBinding
+com/forthgreen/app/databinding/RowCountryBinding.java
+ com.forthgreen.app.databinding.RowCountryBinding
+com/forthgreen/app/databinding/DialogFragmentCountryCodeBinding.java
+ com.forthgreen.app.databinding.DialogFragmentCountryCodeBinding
+com/forthgreen/app/databinding/RowInvitesUsersRvBinding.java
+ com.forthgreen.app.databinding.RowInvitesUsersRvBinding
+com/forthgreen/app/databinding/RowSingleMybrandBinding.java
+ com.forthgreen.app.databinding.RowSingleMybrandBinding
+com/forthgreen/app/databinding/BottomSheetProductSortOptionsBinding.java
+ com.forthgreen.app.databinding.BottomSheetProductSortOptionsBinding
+com/forthgreen/app/databinding/ShimmerNotificationsBinding.java
+ com.forthgreen.app.databinding.ShimmerNotificationsBinding
+com/forthgreen/app/databinding/FragmentRepliesBinding.java
+ com.forthgreen.app.databinding.FragmentRepliesBinding
+com/forthgreen/app/databinding/DialogDeleteDeleteAccountUserBinding.java
+ com.forthgreen.app.databinding.DialogDeleteDeleteAccountUserBinding
+com/forthgreen/app/databinding/FragmentOtherUserProfileBinding.java
+ com.forthgreen.app.databinding.FragmentOtherUserProfileBinding
+com/forthgreen/app/databinding/FragmentCategoryFilterTabBinding.java
+ com.forthgreen.app.databinding.FragmentCategoryFilterTabBinding
+com/forthgreen/app/databinding/RowSingleFilterBinding.java
+ com.forthgreen.app.databinding.RowSingleFilterBinding
+com/forthgreen/app/databinding/FragmentProductReviewBinding.java
+ com.forthgreen.app.databinding.FragmentProductReviewBinding
+com/forthgreen/app/databinding/FragmentRestaurantDetailsBinding.java
+ com.forthgreen.app.databinding.FragmentRestaurantDetailsBinding
+com/forthgreen/app/databinding/DialogDeleteAccountBinding.java
+ com.forthgreen.app.databinding.DialogDeleteAccountBinding
+com/forthgreen/app/databinding/FragmentFilterOptionsBinding.java
+ com.forthgreen.app.databinding.FragmentFilterOptionsBinding
+com/forthgreen/app/databinding/FragmentFollowersFollowingTabBinding.java
+ com.forthgreen.app.databinding.FragmentFollowersFollowingTabBinding
+com/forthgreen/app/databinding/FragmentReportProfileBinding.java
+ com.forthgreen.app.databinding.FragmentReportProfileBinding
+com/forthgreen/app/databinding/RowTagUsersRvBinding.java
+ com.forthgreen.app.databinding.RowTagUsersRvBinding
+com/forthgreen/app/databinding/FragmentProfileNavDrawerBinding.java
+ com.forthgreen.app.databinding.FragmentProfileNavDrawerBinding
+com/forthgreen/app/databinding/RowInvitesUsersSectionBinding.java
+ com.forthgreen.app.databinding.RowInvitesUsersSectionBinding
+com/forthgreen/app/databinding/RowRepliesRvBinding.java
+ com.forthgreen.app.databinding.RowRepliesRvBinding
+com/forthgreen/app/databinding/FragmentReportReviewBinding.java
+ com.forthgreen.app.databinding.FragmentReportReviewBinding
+com/forthgreen/app/databinding/RowSingleBrandProductBinding.java
+ com.forthgreen.app.databinding.RowSingleBrandProductBinding
+com/forthgreen/app/databinding/RowLoadMoreBinding.java
+ com.forthgreen.app.databinding.RowLoadMoreBinding
+com/forthgreen/app/databinding/ToolbarBinding.java
+ com.forthgreen.app.databinding.ToolbarBinding
+com/forthgreen/app/databinding/ActivityMainBinding.java
+ com.forthgreen.app.databinding.ActivityMainBinding
+com/forthgreen/app/databinding/RowLayoutCreatePostGalleryBinding.java
+ com.forthgreen.app.databinding.RowLayoutCreatePostGalleryBinding
+com/forthgreen/app/databinding/DialogBlockUserBinding.java
+ com.forthgreen.app.databinding.DialogBlockUserBinding
+com/forthgreen/app/databinding/FragmentChangePasswordBinding.java
+ com.forthgreen.app.databinding.FragmentChangePasswordBinding
+com/forthgreen/app/databinding/DialogfragmentWebviewBinding.java
+ com.forthgreen.app.databinding.DialogfragmentWebviewBinding
+com/forthgreen/app/databinding/RowShopProductsRvBinding.java
+ com.forthgreen.app.databinding.RowShopProductsRvBinding
+com/forthgreen/app/databinding/FragmentPostsFeedBinding.java
+ com.forthgreen.app.databinding.FragmentPostsFeedBinding
+com/forthgreen/app/databinding/FragmentBrandDetailBinding.java
+ com.forthgreen.app.databinding.FragmentBrandDetailBinding
+com/forthgreen/app/databinding/RowMyReviewsRvBinding.java
+ com.forthgreen.app.databinding.RowMyReviewsRvBinding
+com/forthgreen/app/databinding/RowPicksRvBinding.java
+ com.forthgreen.app.databinding.RowPicksRvBinding
+com/forthgreen/app/databinding/FragmentMyReviewsBinding.java
+ com.forthgreen.app.databinding.FragmentMyReviewsBinding
+com/forthgreen/app/databinding/RowHomePostsRvBinding.java
+ com.forthgreen.app.databinding.RowHomePostsRvBinding
+com/forthgreen/app/databinding/RowSearchBinding.java
+ com.forthgreen.app.databinding.RowSearchBinding
+com/forthgreen/app/databinding/FragmentSearchUsersBinding.java
+ com.forthgreen.app.databinding.FragmentSearchUsersBinding
+com/forthgreen/app/databinding/FragmentFollowersFollowingListingBinding.java
+ com.forthgreen.app.databinding.FragmentFollowersFollowingListingBinding
+com/forthgreen/app/databinding/FragmentLoginBinding.java
+ com.forthgreen.app.databinding.FragmentLoginBinding
+com/forthgreen/app/databinding/DialogProductDetailMenuBinding.java
+ com.forthgreen.app.databinding.DialogProductDetailMenuBinding
+com/forthgreen/app/databinding/FragmentMyStuffBinding.java
+ com.forthgreen.app.databinding.FragmentMyStuffBinding
+com/forthgreen/app/databinding/FragmentSearchUsersInvitesFriendsBinding.java
+ com.forthgreen.app.databinding.FragmentSearchUsersInvitesFriendsBinding
+com/forthgreen/app/databinding/ShimmerRestaurantsListBinding.java
+ com.forthgreen.app.databinding.ShimmerRestaurantsListBinding
+com/forthgreen/app/databinding/RowMyProductBinding.java
+ com.forthgreen.app.databinding.RowMyProductBinding
+com/forthgreen/app/databinding/FragmentNotificationsBinding.java
+ com.forthgreen.app.databinding.FragmentNotificationsBinding
+com/forthgreen/app/databinding/FragmentBaseRecyclerViewBinding.java
+ com.forthgreen.app.databinding.FragmentBaseRecyclerViewBinding
+com/forthgreen/app/databinding/RowBrandListBinding.java
+ com.forthgreen.app.databinding.RowBrandListBinding
+com/forthgreen/app/databinding/RowShopCategoriesRvBinding.java
+ com.forthgreen.app.databinding.RowShopCategoriesRvBinding
+com/forthgreen/app/databinding/FragmentSelfProfileBinding.java
+ com.forthgreen.app.databinding.FragmentSelfProfileBinding
+com/forthgreen/app/databinding/RowProductListItemBinding.java
+ com.forthgreen.app.databinding.RowProductListItemBinding
+com/forthgreen/app/databinding/FragmentShopCategoriesNewBinding.java
+ com.forthgreen.app.databinding.FragmentShopCategoriesNewBinding
+com/forthgreen/app/databinding/FragmentMoreBrandsBinding.java
+ com.forthgreen.app.databinding.FragmentMoreBrandsBinding
+com/forthgreen/app/databinding/ShowVideoOptionsBottomSheetBinding.java
+ com.forthgreen.app.databinding.ShowVideoOptionsBottomSheetBinding
+com/forthgreen/app/databinding/RowBrandsBinding.java
+ com.forthgreen.app.databinding.RowBrandsBinding
+com/forthgreen/app/databinding/RowCategoryListBinding.java
+ com.forthgreen.app.databinding.RowCategoryListBinding
+com/forthgreen/app/databinding/BottomSheetAddMediaBinding.java
+ com.forthgreen.app.databinding.BottomSheetAddMediaBinding
+com/forthgreen/app/databinding/DialogLoginUserBinding.java
+ com.forthgreen.app.databinding.DialogLoginUserBinding
+com/forthgreen/app/databinding/FragmentRestaurantsListingBinding.java
+ com.forthgreen.app.databinding.FragmentRestaurantsListingBinding
+com/forthgreen/app/databinding/ShimmerHomePostsBinding.java
+ com.forthgreen.app.databinding.ShimmerHomePostsBinding
+com/forthgreen/app/databinding/FragmentCommentsListBinding.java
+ com.forthgreen.app.databinding.FragmentCommentsListBinding
+com/forthgreen/app/databinding/DialogProgressLoaderBinding.java
+ com.forthgreen.app.databinding.DialogProgressLoaderBinding
+com/forthgreen/app/databinding/FragmentLikesBinding.java
+ com.forthgreen.app.databinding.FragmentLikesBinding
+com/forthgreen/app/databinding/FragmentHomeFilterBinding.java
+ com.forthgreen.app.databinding.FragmentHomeFilterBinding
+com/forthgreen/app/databinding/RowLikesRvBinding.java
+ com.forthgreen.app.databinding.RowLikesRvBinding
+com/forthgreen/app/databinding/FragmentRestaurantReviewBinding.java
+ com.forthgreen.app.databinding.FragmentRestaurantReviewBinding
+com/forthgreen/app/databinding/RowImageViewBinding.java
+ com.forthgreen.app.databinding.RowImageViewBinding
+com/forthgreen/app/databinding/RowProductListItem2Binding.java
+ com.forthgreen.app.databinding.RowProductListItem2Binding
+com/forthgreen/app/databinding/FragmentCreatePostBinding.java
+ com.forthgreen.app.databinding.FragmentCreatePostBinding
+com/forthgreen/app/databinding/RowTextviewBinding.java
+ com.forthgreen.app.databinding.RowTextviewBinding
 com/forthgreen/app/BuildConfig.java
  com.forthgreen.app.BuildConfig
+com/forthgreen/app/databinding/RowRestaurantReviewsRvBinding.java
+ com.forthgreen.app.databinding.RowRestaurantReviewsRvBinding
+com/forthgreen/app/databinding/ShimmerBrandsListBinding.java
+ com.forthgreen.app.databinding.ShimmerBrandsListBinding

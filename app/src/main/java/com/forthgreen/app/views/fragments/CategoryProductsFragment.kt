@@ -110,6 +110,9 @@ class CategoryProductsFragment : BaseRecyclerViewFragment(),
         // Set toolbar title
         tvToolbarTitle.text = mCategory.name
 
+        // set elevation
+        toolbar.elevation = 0f
+
         // Push down anim
         PushDownAnim.setPushDownAnimTo(tvSortLabel, tvFilterLabel)
 

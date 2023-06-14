@@ -2,13 +2,16 @@ package com.forthgreen.app.views.adapters
 
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.forthgreen.app.R
+import com.forthgreen.app.repository.models.Product
 import com.forthgreen.app.views.activities.inflate
+import com.forthgreen.app.views.fragments.ProductDetailFragment
 import com.forthgreen.app.views.utils.loadURL
 import kotlinx.android.synthetic.main.restaurant_detail_view_pager_layout.view.*
 
-class ViewPagerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class ViewPagerAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     companion object {
         private const val TAG = "ViewPagerAdapter"

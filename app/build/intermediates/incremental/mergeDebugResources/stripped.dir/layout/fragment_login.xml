@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <TextView
+        android:id="@+id/tvEmailLabel"
+        style="@style/StyleRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/email_label"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmailLabel">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            style="@style/StyleInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorLoginEditTextBG"
+            android:backgroundTint="@color/colorLoginEditTextBG"
+            android:gravity="center_vertical"
+            android:imeOptions="actionDone"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/viewBottomEmail"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/colorEditTextBottomGrey"
+        app:layout_constraintTop_toBottomOf="@id/tilEmail"
+        app:layout_constraintStart_toStartOf="@id/tilEmail"
+        app:layout_constraintEnd_toEndOf="@id/tilEmail" />
+
+    <TextView
+        android:id="@+id/tvPasswordLabel"
+        style="@style/StyleRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/create_password_label"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/tilEmail" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/tvPasswordLabel"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorBlack">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            style="@style/StyleInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorLoginEditTextBG"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@color/colorLoginEditTextBG"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center_vertical"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/viewBottomPass"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/colorEditTextBottomGrey"
+        app:layout_constraintTop_toBottomOf="@id/tilPassword"
+        app:layout_constraintStart_toStartOf="@id/tilPassword"
+        app:layout_constraintEnd_toEndOf="@id/tilPassword" />
+
+    <TextView
+        android:id="@+id/tvForgot"
+        style="@style/StyleRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/forget"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintTop_toBottomOf="@+id/tilPassword" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        style="@style/StyleSubmitButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/btn_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart" />
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>

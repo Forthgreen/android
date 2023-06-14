@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civUserImageShimmer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.12" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCommentShimmer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:elevation="0dp"
+        app:cardBackgroundColor="@color/colorShimmerGrey"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/civUserImageShimmer"
+        app:layout_constraintTop_toTopOf="@+id/civUserImageShimmer">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineStartShimmer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.033" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEndShimmer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.967" />
+
+            <TextView
+                android:id="@+id/tvUserFullNameShimmer"
+                style="@style/StyleSemiBold"
+                android:layout_marginEnd="4dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingTop="10dp"
+                android:paddingBottom="4dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/guidelineEndShimmer"
+                app:layout_constraintStart_toStartOf="@id/guidelineStartShimmer"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCommentShimmer"
+                style="@style/StyleRegular"
+                android:maxLines="3"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEndShimmer"
+                app:layout_constraintStart_toStartOf="@+id/tvUserFullNameShimmer"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserFullNameShimmer" />
+
+            <TextView
+                android:id="@+id/tvViewMoreShimmer"
+                style="@style/StyleSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/guidelineStartShimmer"
+                app:layout_constraintTop_toBottomOf="@+id/tvCommentShimmer" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!--    <View-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:background="@color/colorShimmerGrey"-->
+    <!--        app:layout_constraintDimensionRatio="14"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/cvComment"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/cvComment" />-->
+
+    <View
+        android:id="@+id/viewCommentsShimmer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="6"
+        app:layout_constraintStart_toStartOf="@id/cvCommentShimmer"
+        app:layout_constraintTop_toBottomOf="@+id/cvCommentShimmer"
+        app:layout_constraintWidth_percent="0.20" />
+
+    <View
+        android:id="@+id/viewLikesShimmer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="6"
+        app:layout_constraintStart_toEndOf="@+id/viewCommentsShimmer"
+        app:layout_constraintTop_toTopOf="@+id/viewCommentsShimmer"
+        app:layout_constraintWidth_percent="0.20" />
+
+    <View
+        android:id="@+id/viewLikeIconShimmer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintBottom_toBottomOf="@+id/viewCommentsShimmer"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewCommentsShimmer"
+        app:layout_constraintWidth_percent="0.06" />
+
+    <View
+        android:id="@+id/viewMessageShimmer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorShimmerGrey"
+        app:layout_constraintBottom_toBottomOf="@+id/viewCommentsShimmer"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@+id/viewLikeIconShimmer"
+        app:layout_constraintTop_toTopOf="@+id/viewCommentsShimmer"
+        app:layout_constraintWidth_percent="0.06" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

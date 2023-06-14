@@ -9,6 +9,7 @@ import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.text.style.ForegroundColorSpan
 import android.text.style.StyleSpan
+import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
@@ -19,6 +20,8 @@ import androidx.annotation.StringRes
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
@@ -343,3 +346,34 @@ fun ImageView.loadURL(imageURL: String, isUserImage: Boolean, cornerRadius: Int 
 
 /** Extension function to return the first element or an empty string instead. **/
 fun List<String>.firstOrEmpty() = this.firstOrNull() ?: ""
+
+fun RecyclerView.addOnScrollPagination(
+    loadMoreItems: () -> Unit,
+    visibleThreshold: Int = 0
+) {
+    val layoutManager = this.layoutManager as? GridLayoutManager
+        ?: throw IllegalStateException("RecyclerView must have a GridLayoutManager")
+
+    this.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+        override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+            super.onScrolled(recyclerView, dx, dy)
+
+            val totalItemCount = layoutManager.itemCount
+            val lastVisibleItemPosition = layoutManager.findLastVisibleItemPosition()
+
+            Log.d("lastVisi", lastVisibleItemPosition.toString())
+
+            if (totalItemCount <= lastVisibleItemPosition) {
+                loadMoreItems()
+            } else {
+                Log.d("lastVisiElse", lastVisibleItemPosition.toString())
+            }
+
+           /* if (totalItemCount <= (lastVisibleItemPosition + visibleThreshold)) {
+                loadMoreItems()
+            } else {
+                Log.d("lastVisiElse", lastVisibleItemPosition.toString())
+            }*/
+        }
+    })
+}

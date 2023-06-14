@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    android:focusable="true"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="0dp">
+
+    <View
+        android:id="@+id/viewCLose"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:background="#EFEFEF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/StyleSemiBold"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:padding="10dp"
+        android:text="@string/add"
+        android:textColor="@color/colorPrimaryTextBlue"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivClose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
+        android:tint="@color/colorPrimaryTextBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_camera"
+        app:layout_constraintEnd_toStartOf="@id/ivImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewCLose" />
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_image"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCamera"
+        app:layout_constraintEnd_toStartOf="@+id/ivGIF"
+        app:layout_constraintStart_toEndOf="@+id/ivCamera" />
+
+    <ImageView
+        android:id="@+id/ivGIF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_gif"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCamera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivImage" />
+
+    <ImageView
+        android:id="@+id/ivVideoRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_videorecorder"
+        app:layout_constraintEnd_toStartOf="@+id/ivVideo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivCamera" />
+
+    <ImageView
+        android:id="@+id/ivVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_video"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivVideoRecord"
+        app:layout_constraintTop_toBottomOf="@+id/ivCamera" />
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>

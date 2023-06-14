@@ -74,8 +74,7 @@ class MainActivity : BaseAppCompactActivity(), DrawerCallbacks {
     }
 
     private fun setupViews() {
-        if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest()
-                && ApplicationGlobal.showOnBoardings) {
+        if (ApplicationGlobal.isLoggedIn == ValueMapping.getUserAccessGuest() && ApplicationGlobal.showOnBoardings) {
             performTransaction(OnBoardingsFragment(), OnBoardingsFragment.TAG)
         } else if (!ApplicationGlobal.showOnBoardings) {
             // If showOnBoardings is false, it implies we just logged-out so show Welcome Screen

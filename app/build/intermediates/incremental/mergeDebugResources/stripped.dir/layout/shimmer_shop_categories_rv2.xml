@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryBackground">
+
+    <TextView
+        android:id="@+id/tvCategoryName"
+        style="@style/StyleSemiBold"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/colorShimmerGrey"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivProductImage"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="@id/tvCategoryName"
+        app:layout_constraintTop_toBottomOf="@+id/tvCategoryName" />
+
+    <TextView
+        android:id="@+id/tvBrandName"
+        style="@style/StyleSemiBold"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorShimmerGrey"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/tvCategoryName"
+        app:layout_constraintTop_toBottomOf="@id/ivProductImage" />
+
+    <TextView
+        android:id="@+id/tvProductName"
+        style="@style/StyleRegular"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorShimmerGrey"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/tvCategoryName"
+        app:layout_constraintTop_toBottomOf="@id/tvBrandName" />
+
+    <ImageView
+        android:id="@+id/ivProductImage2"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toEndOf="@+id/ivProductImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvCategoryName" />
+
+    <TextView
+        android:id="@+id/tvBrandName2"
+        style="@style/StyleSemiBold"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorShimmerGrey"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/ivProductImage2"
+        app:layout_constraintTop_toBottomOf="@id/ivProductImage2" />
+
+    <TextView
+        android:id="@+id/tvProductName2"
+        style="@style/StyleRegular"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorShimmerGrey"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/ivProductImage2"
+        app:layout_constraintTop_toBottomOf="@id/tvBrandName2" />
+
+    <TextView
+        android:id="@+id/tvQuickCategoryName"
+        style="@style/StyleSemiBold"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/colorShimmerGrey"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProductName" />
+
+    <ImageView
+        android:id="@+id/ivQuickProductImage"
+        android:layout_width="0dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="@id/tvCategoryName"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuickCategoryName" />
+
+    <TextView
+        android:id="@+id/tvQuickBrandName"
+        style="@style/StyleSemiBold"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorShimmerGrey"
+        android:ellipsize="end"
+        android:layout_marginStart="20dp"
+        android:maxLines="1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/ivQuickProductImage"
+        app:layout_constraintTop_toBottomOf="@id/tvQuickCategoryName" />
+
+    <TextView
+        android:id="@+id/tvQuickProductName"
+        style="@style/StyleRegular"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorShimmerGrey"
+        android:ellipsize="end"
+        android:layout_marginStart="20dp"
+        android:maxLines="1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/ivQuickProductImage"
+        app:layout_constraintTop_toBottomOf="@id/tvQuickBrandName" />
+
+    <ImageView
+        android:id="@+id/ivQuickProductImage2"
+        android:layout_width="0dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@color/colorShimmerGrey"
+        android:layout_marginStart="20dp"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toEndOf="@+id/ivProductImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuickCategoryName" />
+
+    <TextView
+        android:id="@+id/tvQuickBrandName2"
+        style="@style/StyleSemiBold"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorShimmerGrey"
+        android:ellipsize="end"
+        android:layout_marginStart="20dp"
+        android:maxLines="1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/ivQuickProductImage2"
+        app:layout_constraintTop_toBottomOf="@id/tvQuickCategoryName" />
+
+    <TextView
+        android:id="@+id/tvQuickProductName2"
+        style="@style/StyleRegular"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorShimmerGrey"
+        android:ellipsize="end"
+        android:layout_marginStart="20dp"
+        android:maxLines="1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/ivQuickProductImage2"
+        app:layout_constraintTop_toBottomOf="@id/tvQuickBrandName" />
+
+    <ImageView
+        android:id="@+id/ivQuickProductImage3"
+        android:layout_width="0dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@color/colorShimmerGrey"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="@id/tvCategoryName"
+        app:layout_constraintTop_toBottomOf="@+id/ivQuickProductImage" />
+
+    <TextView
+        android:id="@+id/tvQuickBrandName3"
+        style="@style/StyleSemiBold"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorShimmerGrey"
+        android:ellipsize="end"
+        android:layout_marginStart="20dp"
+        android:maxLines="1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/ivQuickProductImage3"
+        app:layout_constraintTop_toBottomOf="@id/ivQuickProductImage" />
+
+    <TextView
+        android:id="@+id/tvQuickProductName3"
+        style="@style/StyleRegular"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorShimmerGrey"
+        android:ellipsize="end"
+        android:layout_marginStart="20dp"
+        android:maxLines="1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/ivQuickProductImage3"
+        app:layout_constraintTop_toBottomOf="@id/tvQuickBrandName3" />
+
+    <ImageView
+        android:id="@+id/ivQuickProductImage4"
+        android:layout_width="0dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@color/colorShimmerGrey"
+        android:layout_marginStart="20dp"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toEndOf="@+id/ivProductImage"
+        app:layout_constraintTop_toBottomOf="@+id/ivQuickProductImage2" />
+
+    <TextView
+        android:id="@+id/tvQuickBrandName4"
+        style="@style/StyleSemiBold"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorShimmerGrey"
+        android:ellipsize="end"
+        android:layout_marginStart="20dp"
+        android:maxLines="1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/ivQuickProductImage4"
+        app:layout_constraintTop_toBottomOf="@id/ivQuickProductImage" />
+
+    <TextView
+        android:id="@+id/tvQuickProductName4"
+        style="@style/StyleRegular"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorShimmerGrey"
+        android:ellipsize="end"
+        android:layout_marginStart="20dp"
+        android:maxLines="1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/ivQuickProductImage4"
+        app:layout_constraintTop_toBottomOf="@id/tvQuickBrandName4" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

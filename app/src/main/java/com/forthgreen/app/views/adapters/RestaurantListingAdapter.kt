@@ -35,7 +35,7 @@ class RestaurantListingAdapter(
 
     companion object {
         const val TAG = "HomeAdapter"
-        const val ROW_TYPE_SEARCH = 2
+      //  const val ROW_TYPE_SEARCH = 2
         const val ROW_TYPE_ELEMENT = 3
         const val ROW_TYPE_LOAD_MORE = 4
     }
@@ -44,12 +44,12 @@ class RestaurantListingAdapter(
     private val restaurantList = mutableListOf<Restaurant>()
     private val loadMoreListener by lazy { mFragment as LoadMoreListener }
     private var hasMore = false
-    private var showSearch: Boolean = false
+  //  private var showSearch: Boolean = false
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when (viewType) {
             ROW_TYPE_LOAD_MORE -> LoadMoreViewHolder(parent.inflate(R.layout.row_load_more))
-            ROW_TYPE_SEARCH -> SearchViewHolder(parent.inflate(R.layout.row_search))
+         /*   ROW_TYPE_SEARCH -> SearchViewHolder(parent.inflate(R.layout.row_search))*/
             else -> RestaurantViewHolder(parent.inflate(R.layout.row_restaurant))
         }
     }
@@ -57,7 +57,8 @@ class RestaurantListingAdapter(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder) {
             is RestaurantViewHolder -> {
-                holder.bind(restaurantList[position - 1])
+              //  holder.bind(restaurantList[position-1])
+                holder.bind(restaurantList[position])
             }
             is LoadMoreViewHolder -> {
                 holder.bindMore()
@@ -66,17 +67,23 @@ class RestaurantListingAdapter(
     }
 
     override fun getItemCount(): Int {
-        return if (hasMore) {
+       /* return if (hasMore) {
             restaurantList.size + if (showSearch) 2 else 1
         } else {
             restaurantList.size + if (showSearch) 1 else 0
+        }*/
+
+        return if (hasMore) {
+            restaurantList.size + 1
+        } else {
+            restaurantList.size
         }
     }
 
     override fun getItemViewType(position: Int): Int {
         return when (position) {
-            0 -> ROW_TYPE_SEARCH
-            restaurantList.size + 1 -> ROW_TYPE_LOAD_MORE
+          /*  0 -> ROW_TYPE_SEARCH*/
+            restaurantList.size-> ROW_TYPE_LOAD_MORE
             else -> ROW_TYPE_ELEMENT
         }
     }
@@ -86,7 +93,7 @@ class RestaurantListingAdapter(
             restaurantList.clear()
         }
         this.hasMore = hasMore
-        this.showSearch = isShowSearch
+      //  this.showSearch = isShowSearch
         restaurantList.addAll(listWeGet)
         notifyDataSetChanged()
     }
@@ -112,7 +119,7 @@ class RestaurantListingAdapter(
     inner class RestaurantViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         init {
             itemView.setOnSafeClickListener {
-                mClickListener.onRestaurantClick(restaurantList[adapterPosition - 1])
+                mClickListener.onRestaurantClick(restaurantList[adapterPosition])
             }
         }
 
@@ -120,10 +127,15 @@ class RestaurantListingAdapter(
             itemView.apply {
                 // Assign Values
 
-                // Load First Image or Empty String to in turn serve as placeholder.
+               /* // Load First Image or Empty String to in turn serve as placeholder.
                 ivRestaurantPic.loadURL(
                     restaurant.thumbnail,
                     false, resources.getDimension(R.dimen.rounded_radius).toInt()
+                )*/
+                // Load First Image or Empty String to in turn serve as placeholder.
+                ivRestaurantPic.loadURL(
+                    restaurant.thumbnail,
+                    false
                 )
                 tvRestaurantName.text = restaurant.name
                 rattingBar.rating = restaurant.ratings.averageRating.toFloat()

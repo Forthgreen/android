@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/constraint"
+    android:paddingTop="16dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civUserImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_avatar"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.14" />
+
+    <TextView
+        android:id="@+id/tvUserFullName"
+        style="@style/StyleSemiBold"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvUserName"
+        app:layout_constraintEnd_toStartOf="@+id/btnInvite"
+        app:layout_constraintStart_toEndOf="@+id/civUserImage"
+        app:layout_constraintTop_toTopOf="@+id/civUserImage"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Lula Obrien" />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        style="@style/StyleRegular"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="12sp"
+        android:textColor="#3E4B4D"
+        app:layout_constraintBottom_toBottomOf="@+id/civUserImage"
+        app:layout_constraintEnd_toEndOf="@+id/tvUserFullName"
+        app:layout_constraintStart_toStartOf="@+id/tvUserFullName"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserFullName"
+        tools:text="\@lulaobrien" />
+
+    <!--Using Default Style of Submit Button was causing issues with design in this case.-->
+    <Button
+        android:id="@+id/btnInvite"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/drawable_button_follow_user_selector"
+        android:checked="false"
+        android:fontFamily="@font/font_semi_bold"
+        android:gravity="center"
+        android:stateListAnimator="@null"
+        android:textColor="@color/colorBlack"
+        android:text="Invite"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/civUserImage"
+        app:layout_constraintDimensionRatio="3.125"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+        app:layout_constraintTop_toTopOf="@+id/civUserImage"
+        app:layout_constraintWidth_percent="0.261780105" />
+
+    <TextView
+        android:id="@+id/tvUserBio"
+        style="@style/StyleRegular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/civUserImage"
+        tools:text="Life is hectic; it’s true. There are so many things that demand your time and attention. Between work, kids, family and household chores, there is precious little time left over for you. So, it is completely understandable why things like salon reservations get pushed to the end of your priority list. But is it at the end of the “to do” list where your next hair trim belongs? The answer to that question is, of course, no. There are many reasons why you should keep your salon reservation. Aside from taking a little bit of time and relaxation for yourself, which I know is not going to motivate you since all of your energy goes toward enriching the lives of others and not your own, there are many practical reasons why you should not call and cancel your next reservation." />
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorGrayBg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserBio" />
+
+    <View
+        android:id="@+id/viewUsersBottomDivider"
+        android:layout_width="0dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorTabGreyBG"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserBio" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

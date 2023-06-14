@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="40dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.057" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.943" />
+
+    <TextView
+        android:id="@+id/tvSortByLabel"
+        style="@style/StyleSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="@string/sort_by_label"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewDividerOptions"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorGrayBg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSortByLabel" />
+
+    <RadioGroup
+        android:id="@+id/rgSortOptions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:divider="@color/colorGrayBg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewDividerOptions">
+
+        <RadioButton
+            android:id="@+id/rbNewestFirst"
+            style="@style/StyleRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:buttonTint="@color/colorAccent"
+            android:checked="true"
+            android:paddingStart="24dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="@string/newest_first_label"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/viewDividerNewestOption"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrayBg" />
+
+        <RadioButton
+            android:id="@+id/rbPriceLToH"
+            style="@style/StyleRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:buttonTint="@color/colorAccent"
+            android:paddingStart="24dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="@string/price_low_to_high_label"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/viewDividerPriceLToH"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrayBg" />
+
+        <RadioButton
+            android:id="@+id/rbPriceHToL"
+            style="@style/StyleRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:buttonTint="@color/colorAccent"
+            android:paddingStart="24dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="@string/price_high_to_low_label"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/viewDividerPriceHToL"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrayBg" />
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

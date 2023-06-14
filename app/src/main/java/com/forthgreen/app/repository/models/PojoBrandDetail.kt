@@ -76,6 +76,7 @@ data class Product(
         val gender: Int = 0,
         val __v: Int = 0,
         val updatedOn: String = "",
+
 ) : Parcelable {
     val productPriceText: String
         get() {

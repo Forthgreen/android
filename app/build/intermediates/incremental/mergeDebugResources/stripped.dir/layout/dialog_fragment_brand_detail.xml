@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryBackground"
+    android:paddingBottom="28dp">
+
+    <ImageView
+        android:id="@+id/ivCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:src="@drawable/ic_cancel_dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        style="@style/StyleSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="7"
+        android:text="@string/signUp_to_follow"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivCancel" />
+
+    <ImageView
+        android:id="@+id/ivImageDialog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_onboarding2"
+        app:layout_constraintDimensionRatio="1.45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDialogTitle" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        style="@style/StyleSubmitButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/btn_signUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivImageDialog"
+        app:layout_constraintWidth_percent="0.42" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp">
+
+        <TextView
+            android:id="@+id/tvHaveAccountLabel"
+            style="@style/StyleRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/have_an_account"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvHaveAccount"
+            android:layout_width="wrap_content"
+            style="@style/StyleSemiBold"
+            android:textSize="12sp"
+            android:text="@string/login"
+            android:textAllCaps="true"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

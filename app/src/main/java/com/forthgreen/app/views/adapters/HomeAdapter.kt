@@ -137,5 +137,4 @@ class HomeAdapter(private val mFragment: Fragment) : RecyclerView.Adapter<Recycl
             }
         }
     }
-
 }

@@ -2530,6 +2530,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable dot_background
+drawable drawable_bg_category_list_item
 drawable drawable_bg_gray_circle
 drawable drawable_bg_green_circle
 drawable drawable_button_create_post
@@ -2582,6 +2583,7 @@ drawable drawable_navigation_shop_selector
 drawable drawable_post_comment_edit_text_background
 drawable drawable_post_like_button_selector
 drawable drawable_selected_tab_bg
+drawable drawable_shop_bookmark_selector
 drawable drawable_splash
 drawable drawable_tab_color_selector
 drawable drawable_top_bottom_color_divider_stroke
@@ -2620,6 +2622,8 @@ drawable ic_back
 drawable ic_basket_filter
 drawable ic_bookmark
 drawable ic_bookmark_selected
+drawable ic_bookmark_selected_small
+drawable ic_bookmark_small
 drawable ic_brand
 drawable ic_brand_menu
 drawable ic_brand_placeholder
@@ -2629,11 +2633,13 @@ drawable ic_camera
 drawable ic_cancel_dialog
 drawable ic_category_accessories
 drawable ic_category_beauty
-drawable ic_category_clothing
+drawable ic_category_cloth
 drawable ic_category_drinks
 drawable ic_category_food
 drawable ic_category_health
+drawable ic_category_list
 drawable ic_category_misc
+drawable ic_category_search_list
 drawable ic_check_circle
 drawable ic_chevron_left
 drawable ic_chevron_right
@@ -2703,7 +2709,9 @@ drawable ic_like_post_unselected
 drawable ic_like_selected
 drawable ic_location
 drawable ic_logo
+drawable ic_map1
 drawable ic_map_current_location
+drawable ic_map_list
 drawable ic_menu
 drawable ic_message
 drawable ic_misc_filter
@@ -2795,6 +2803,7 @@ drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_dark
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
+drawable normal
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -2810,6 +2819,7 @@ drawable notify_panel_notification_icon_bg
 drawable places_autocomplete_toolbar_shadow
 drawable places_powered_by_google_dark
 drawable places_powered_by_google_light
+drawable pressed
 drawable quantum_ic_arrow_back_grey600_24
 drawable quantum_ic_clear_grey600_24
 drawable quantum_ic_cloud_off_vd_theme_24
@@ -2952,6 +2962,7 @@ id buttonPanel
 id cache_measures
 id cancel_action
 id cancel_button
+id categoryItem
 id cbBookmark
 id cbCommentLike
 id cbLike
@@ -2972,6 +2983,7 @@ id chip_group
 id chronometer
 id ciBrandImage
 id circlePagerIndicator
+id circlePagerIndicatorShop
 id circle_center
 id civBrandIcon
 id civBrandImage
@@ -3222,6 +3234,7 @@ id itemVideoPlayer
 id itemVideoPlayerThumbnail
 id item_touch_helper_previous_elevation
 id ivBackButton
+id ivBookmark
 id ivBrandImage
 id ivBrandNotify
 id ivCamera
@@ -3252,6 +3265,11 @@ id ivProduct
 id ivProductIcon
 id ivProductImage
 id ivProductImage2
+id ivProductImageSectionHeader
+id ivQuickProductImage
+id ivQuickProductImage2
+id ivQuickProductImage3
+id ivQuickProductImage4
 id ivReplyOptions
 id ivRestaurantImage
 id ivRestaurantPic
@@ -3381,6 +3399,7 @@ id nav_shop_page
 id navbar
 id navbarHome
 id navigation_header_container
+id nestedScrollView
 id never
 id never_display
 id noScroll
@@ -3456,6 +3475,7 @@ id rbUserRating
 id rectangles
 id recyclerView
 id recyclerViewBrands
+id recyclerViewCategoryList
 id recyclerViewProducts
 id recyclerViewTags
 id restart
@@ -3501,6 +3521,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id sectionHeaderConstraintLayout
 id select_dialog_listview
 id selected
 id selection_type
@@ -3682,7 +3703,6 @@ id tvLoadMoreComments
 id tvLoadMoreReplies
 id tvLogin
 id tvLogout
-id tvMap
 id tvName
 id tvNameLabel
 id tvNewPassTag
@@ -3709,9 +3729,21 @@ id tvPrivacyPolicy
 id tvProductDesc
 id tvProductName
 id tvProductName2
+id tvProductNameSectionHeader
 id tvProductNameTop
 id tvProductPrice
 id tvProductPrice2
+id tvProductPriceSectionHeader
+id tvQuickBrandName
+id tvQuickBrandName2
+id tvQuickBrandName3
+id tvQuickBrandName4
+id tvQuickCategoryName
+id tvQuickProductName
+id tvQuickProductName1
+id tvQuickProductName2
+id tvQuickProductName3
+id tvQuickProductName4
 id tvRatingCount
 id tvRatingCounts
 id tvRatingNumber
@@ -3759,6 +3791,7 @@ id tvUserLiked
 id tvUserName
 id tvUserNameLabel
 id tvUserNameShimmer
+id tvUserPriceShimmer
 id tvUserSection
 id tvVideo
 id tvViewAll
@@ -3848,6 +3881,7 @@ id viewReviews
 id viewSearch
 id viewTermsConditions
 id viewTop
+id viewTopDivider
 id viewUserAccount
 id viewUserDivider
 id viewUsersBottomDivider
@@ -3942,6 +3976,7 @@ layout activity_main
 layout bottom_sheet_add_media
 layout bottom_sheet_menu_options
 layout bottom_sheet_product_sort_options
+layout bottom_sheet_product_sort_options2
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout com_facebook_activity_layout
@@ -4040,6 +4075,7 @@ layout fragment_search_users_invites_friends
 layout fragment_self_profile
 layout fragment_settings
 layout fragment_shop_categories
+layout fragment_shop_categories_new
 layout fragment_sign_up
 layout fragment_static_data
 layout fragment_welcome
@@ -4130,6 +4166,7 @@ layout restaurant_detail_view_pager_layout
 layout row_brand_list
 layout row_brand_products
 layout row_brands
+layout row_category_list
 layout row_comments_rv
 layout row_country
 layout row_home_posts_rv
@@ -4143,7 +4180,12 @@ layout row_load_more
 layout row_my_product
 layout row_my_reviews_rv
 layout row_notifications_rv
+layout row_picks_rv
+layout row_product_list_item
+layout row_product_list_item2
 layout row_product_review_rv
+layout row_product_section_header
+layout row_product_section_header2
 layout row_products
 layout row_profile_details_rv
 layout row_replies_rv
@@ -4172,11 +4214,13 @@ layout shimmer_home_users
 layout shimmer_my_products_rv
 layout shimmer_notifications
 layout shimmer_products_home
+layout shimmer_products_shop_home
 layout shimmer_replies
 layout shimmer_restaurants_list
 layout shimmer_search_product
 layout shimmer_search_restaurants
 layout shimmer_shop_categories_rv
+layout shimmer_shop_categories_rv2
 layout shimmer_user_likes
 layout show_photo_video_options_bottom_sheet
 layout show_picture_options_bottom_sheet

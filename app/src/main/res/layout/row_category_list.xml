@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@drawable/drawable_bg_category_list_item"
+    android:listSelector="@drawable/drawable_bg_category_list_item"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:padding="16dp"
+    android:id="@+id/categoryItem"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civUserImage"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_brand_placeholder" />
+
+    <TextView
+        android:id="@+id/tvBrandName"
+        style="@style/StyleSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="14sp"
+        tools:text="Brand name" />
+
+</LinearLayout>

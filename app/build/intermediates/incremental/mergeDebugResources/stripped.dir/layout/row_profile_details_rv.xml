@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/row_profile_details_rv_costraint_layout">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civUserImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_placeholder_broken_img"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.14" />
+
+    <TextView
+        android:id="@+id/tvUserFullName"
+        style="@style/StyleSemiBold"
+        android:layout_marginStart="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvUserName"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@+id/civUserImage"
+        app:layout_constraintTop_toTopOf="@+id/civUserImage"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Lula Obrien" />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        style="@style/StyleRegular"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/civUserImage"
+        app:layout_constraintEnd_toEndOf="@+id/tvUserFullName"
+        app:layout_constraintStart_toStartOf="@+id/tvUserFullName"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserFullName"
+        tools:text="\@lulaobrien" />
+
+    <ToggleButton
+        android:id="@+id/btnFollow"
+        style="@style/StyleSubmitButton"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/drawable_button_follow_user_selector"
+        android:checked="false"
+        android:gravity="center"
+        android:stateListAnimator="@null"
+        android:textColor="@color/colorBlack"
+        android:textOff="@string/follow"
+        android:textOn="@string/following_label"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="11"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/civUserImage" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/flexBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:alignItems="flex_start"
+        app:flexDirection="row"
+        app:flexWrap="nowrap"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/btnFollow">
+
+        <TextView
+            android:id="@+id/tvFollowers"
+            style="@style/StyleRegular"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="0 Followers"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/tvFollowing"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/btnFollow" />
+
+        <TextView
+            android:id="@+id/tvFollowing"
+            style="@style/StyleRegular"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="6dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="0 Following"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFollowers"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@+id/tvFollowers"
+            app:layout_constraintTop_toTopOf="@+id/tvFollowers" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <TextView
+        android:id="@+id/tvUserBio"
+        style="@style/StyleRegular"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/flexBox"
+        tools:text="Our philosophy was born as a stand against the system developed by the fashion industry. We put the resources required to lead the transformation towards a fairer" />
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="18dp"
+        android:background="@color/colorGrayBg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserBio" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

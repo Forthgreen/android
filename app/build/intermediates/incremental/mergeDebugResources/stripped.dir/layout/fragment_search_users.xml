@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".views.fragments.SearchUsersFragment">
+
+    <EditText
+        android:id="@+id/etSearchUsers"
+        style="@style/StyleInputEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/drawable_color_grey_rounded_corners_stroke"
+        android:drawableStart="@drawable/ic_search_icon"
+        android:drawablePadding="12dp"
+        android:hint="@string/search"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvCancelSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCancelSearch"
+        style="@style/StyleSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="@string/search_cancel"
+        android:textAllCaps="true"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/etSearchUsers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etSearchUsers"
+        app:layout_constraintTop_toTopOf="@+id/etSearchUsers" />
+
+    <View
+        android:id="@+id/viewDividerSearch"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorNotificationBG"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSearchUsers" />
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/flShimmer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewDividerSearch">
+
+        <LinearLayout
+            android:id="@+id/llUsers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_home_users" />
+
+            <include layout="@layout/shimmer_home_users" />
+
+            <include layout="@layout/shimmer_home_users" />
+
+            <include layout="@layout/shimmer_home_users" />
+
+            <include layout="@layout/shimmer_home_users" />
+
+            <include layout="@layout/shimmer_home_users" />
+
+            <include layout="@layout/shimmer_home_users" />
+
+            <include layout="@layout/shimmer_home_users" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewDividerSearch">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tvNoData"
+        style="@style/StyleTextViewNoData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>

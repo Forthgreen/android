@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".views.fragments.CategoryFilterTabFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryBackground"
+        android:elevation="@dimen/toolbar_elevation"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        app:theme="@style/DarkSearchViewTheme">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvToolbarTitle"
+                style="@style/StyleToolbarTitle"
+                android:layout_width="0dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvClearFilter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvClearFilter"
+                style="@style/StyleSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/drawable_color_grey_bg_clear_filters_solid"
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:text="@string/clear_filter_label"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTransparent"
+            android:elevation="0dp"
+            app:elevation="0dp">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="bottom"
+                android:elevation="0dp"
+                android:textSize="14sp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:tabIndicatorColor="@color/colorGreenDefaultButton"
+                app:tabIndicatorHeight="5dp"
+                app:tabRippleColor="@null"
+                app:tabSelectedTextColor="@color/colorBlack"
+                app:tabTextAppearance="@style/StyleTabLayout"
+                app:tabTextColor="@color/colorBlack" />
+
+            <View
+                android:id="@+id/viewDividerTab"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGrayBg" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>

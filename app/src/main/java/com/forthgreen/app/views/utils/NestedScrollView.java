@@ -3,7 +3,6 @@ package com.forthgreen.app.views.utils;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.widget.ScrollView;
 
 
 public class NestedScrollView extends androidx.core.widget.NestedScrollView {

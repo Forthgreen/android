@@ -1,5 +1,0 @@
--keep class j$.time.Instant {
-    j$.time.Instant parse(java.lang.CharSequence);
-    j$.time.Instant now();
-    long toEpochMilli();
-}

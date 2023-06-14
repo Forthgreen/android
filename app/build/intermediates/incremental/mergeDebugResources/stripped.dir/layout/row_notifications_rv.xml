@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorNotificationBG"
+    android:paddingStart="16dp"
+    android:paddingTop="16dp"
+    android:paddingEnd="8dp"
+    android:paddingBottom="16dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civUserImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@color/colorDisabledText"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.14" />
+
+    <TextView
+        android:id="@+id/tvNotification"
+        style="@style/StyleRegular"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="2dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/civUserImage"
+        app:layout_constraintEnd_toStartOf="@+id/tvTimeStamp"
+        app:layout_constraintStart_toEndOf="@+id/civUserImage"
+        app:layout_constraintTop_toTopOf="@+id/civUserImage"
+        tools:text="Lula Obrien made a comment in your post." />
+
+    <TextView
+        android:id="@+id/tvTimeStamp"
+        style="@style/StyleRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorNotificationsTimeStamp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="4d" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

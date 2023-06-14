@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/tvSkipLabel"
+        style="@style/StyleSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:padding="16dp"
+        android:text="@string/skip_label"
+        android:textAllCaps="true"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:padding="16dp"
+        android:src="@drawable/ic_close_icon"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_forthgreen_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19" />
+
+    <TextView
+        android:id="@+id/tvJoinForthgreen"
+        style="@style/StyleSemiBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="start"
+        android:text="@string/join_forthgreen_label"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+    <TextView
+        android:id="@+id/tvJoinDesc"
+        style="@style/StyleRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="14"
+        android:lineSpacingExtra="6dp"
+        android:text="@string/join_desc_label"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvJoinForthgreen" />
+
+    <Button
+        android:id="@+id/btnFacebook"
+        style="@style/StyleSubmitButton"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/drawable_button_grey_bg_white"
+        android:text="@string/continue_with_facebook_btn"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvJoinDesc" />
+
+    <ImageView
+        android:id="@+id/ivFbIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_facebook_icon"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="@id/btnFacebook"
+        app:layout_constraintTop_toTopOf="@id/btnFacebook"
+        app:layout_constraintBottom_toBottomOf="@id/btnFacebook" />
+
+    <Button
+        android:id="@+id/btnGoogle"
+        style="@style/StyleSubmitButton"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/drawable_button_grey_bg_white"
+        android:text="@string/continue_with_google_btn"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/btnFacebook" />
+
+    <ImageView
+        android:id="@+id/ivGoogleIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_google_icon"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="@id/btnGoogle"
+        app:layout_constraintTop_toTopOf="@id/btnGoogle"
+        app:layout_constraintBottom_toBottomOf="@id/btnGoogle" />
+
+    <Button
+        android:id="@+id/btnEmail"
+        style="@style/StyleSubmitButton"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/drawable_button_grey_bg_white"
+        android:text="@string/continue_with_email_btn"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/btnGoogle" />
+
+    <ImageView
+        android:id="@+id/ivEmailIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_email_icon"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="@id/btnEmail"
+        app:layout_constraintTop_toTopOf="@id/btnEmail"
+        app:layout_constraintBottom_toBottomOf="@id/btnEmail" />
+
+    <TextView
+        android:id="@+id/tvTerms"
+        style="@style/StyleRegular"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:text="@string/terms"
+        android:textColor="@color/colorTermsConditionsLink"
+        android:textColorLink="@color/colorTermsConditionsLink"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart" />
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>

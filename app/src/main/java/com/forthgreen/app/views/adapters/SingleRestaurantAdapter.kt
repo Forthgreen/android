@@ -61,10 +61,10 @@ class SingleRestaurantAdapter(private val singleRestaurantCallback: SingleRestau
                     singleRestaurantCallback.onSingleRestaurantClick(
                             restaurant = restaurantList[adapterPosition], dismissCard = false)
                 }
-                ivCross.setOnSafeClickListener {
+               /* ivCross.setOnSafeClickListener {
                     singleRestaurantCallback.onSingleRestaurantClick(
                             restaurant = restaurantList[adapterPosition], dismissCard = true)
-                }
+                }*/
             }
         }
 
@@ -81,7 +81,7 @@ class SingleRestaurantAdapter(private val singleRestaurantCallback: SingleRestau
 //                    }
                     groupRestaurant.visible()
                     // Assign Values
-                    ivCross.visible()
+                  //  ivCross.visible()
                     tvRestaurantName.text = restaurant.name
                     // Load First Image or Empty String to in turn serve as placeholder.
                     ivRestaurantImage.loadURL(

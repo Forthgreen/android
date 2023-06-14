@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="16dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civBrandImage"
+        android:layout_width="72dp"
+        android:layout_height="0dp"
+        android:src="@color/colorShimmerGrey"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/colorGrayBg"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvBrandName"
+        style="@style/StyleRegular"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:maxWidth="92dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/civBrandImage" />
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>

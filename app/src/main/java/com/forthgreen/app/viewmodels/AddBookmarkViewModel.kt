@@ -94,6 +94,5 @@ open class AddBookmarkViewModel(application: Application) : BaseViewModel(applic
         )
     }
 
-
     fun onBookmarkAddSuccess(): LiveData<Boolean> = mOnBookmarkAddSuccess
 }

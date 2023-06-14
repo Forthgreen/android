@@ -83,7 +83,6 @@ class ProductListAdapter(mFragment: Fragment, val isShowBrandName: Boolean) : Re
         }
     }
 
-
     inner class ProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         init {
             itemView.setOnClickListener {

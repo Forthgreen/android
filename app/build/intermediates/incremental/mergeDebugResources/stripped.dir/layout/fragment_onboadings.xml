@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".views.fragments.OnBoardingsFragment">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/dotIndicator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSkipLabel" />
+
+    <TextView
+        android:id="@+id/tvSkipLabel"
+        style="@style/StyleSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:padding="16dp"
+        android:text="@string/skip_label"
+        android:textAllCaps="true"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+        android:id="@+id/dotIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:dampingRatio="0.5"
+        app:dotsColor="@color/colorBlack"
+        app:dotsCornerRadius="8dp"
+        app:dotsSize="8dp"
+        app:dotsSpacing="2dp"
+        app:dotsStrokeColor="@color/colorBoardingsGreyDot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/viewPager"
+        app:layout_constraintStart_toStartOf="@id/viewPager"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83" />
+
+    <Button
+        android:id="@+id/btnNext"
+        style="@style/StyleSubmitButton"
+        android:layout_marginBottom="16dp"
+        android:text="@string/next_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.94"
+        app:layout_constraintWidth_percent="0.92" />
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>
