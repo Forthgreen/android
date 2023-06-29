@@ -30,7 +30,9 @@ import kotlinx.android.synthetic.main.dialog_block_user.*
 import kotlinx.android.synthetic.main.dialog_review_menu.*
 import kotlinx.android.synthetic.main.dialog_review_menu.tvBlockUser
 import kotlinx.android.synthetic.main.dialog_review_menu.tvReportAbuse
+import kotlinx.android.synthetic.main.fragment_notification_details2.*
 import kotlinx.android.synthetic.main.fragment_other_user_profile.*
+import kotlinx.android.synthetic.main.fragment_other_user_profile.flShimmer
 import kotlinx.android.synthetic.main.toolbar.*
 
 /**
@@ -263,6 +265,7 @@ class OtherUserProfileFragment : BaseRecyclerViewFragment(), LoadMoreListener, P
         })
         mProfileDetailsViewModel.onPostLikeUpdated().observe(viewLifecycleOwner, { postLikeUpdated ->
             if (postLikeUpdated) {
+
                 mAdapter.updatePost(post)
 
                 // Send Broadcast
@@ -345,8 +348,8 @@ class OtherUserProfileFragment : BaseRecyclerViewFragment(), LoadMoreListener, P
             ValueMapping.onLikeOrDislike() -> {
                 // Vibrate phone
                 GeneralFunctions.vibratePhone(requireContext())
-                mProfileDetailsViewModel.updatePostLike(
-                    mShowLoader = true,
+               /* mProfileDetailsViewModel.updatePostLike(
+                    mShowLoader = false,
                     postRef = postInfo._id,
                     liked = postLiked
                 )
@@ -354,18 +357,29 @@ class OtherUserProfileFragment : BaseRecyclerViewFragment(), LoadMoreListener, P
                     postInfo.copy(isLike = postLiked, likes = postInfo.likes + 1)
                 } else {
                     postInfo.copy(isLike = postLiked, likes = postInfo.likes - 1)
-                }
+                }*/
+                mProfileDetailsViewModel.updatePostLike(
+                    mShowLoader = false,
+                    postRef = postInfo._id,
+                    liked = cbLike.isChecked
+                )
+                // Invert the status till API hit
+                cbLike.isChecked = !cbLike.isChecked
             }
             ValueMapping.onCommentsOrRepliesClick() -> {
                 ApplicationGlobal.muteVideo = true
                 mAdapter.pauseVideo()
-                performFragTransaction(
+               /* performFragTransaction(
                     CommentsListFragment.newInstance(postInfo._id),
                     CommentsListFragment.TAG,
                     enterAnim = R.anim.slide_in_right,
                     exitAnim = R.anim.fade_out,
                     popEnterAnim = R.anim.fade_in,
-                    popExitAnim = R.anim.slide_out_right)
+                    popExitAnim = R.anim.slide_out_right)*/
+                performFragTransaction(
+                    PostDetailsFragment.newInstance(postInfo._id),
+                    PostDetailsFragment.TAG, enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
+                    popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right)
             }
             ValueMapping.onLikesClick() -> {
                 performFragTransaction(LikesFragment.newInstance(postInfo._id, true), LikesFragment.TAG,

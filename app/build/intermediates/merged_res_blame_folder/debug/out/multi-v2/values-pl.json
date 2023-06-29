@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pl/values-pl.xml",
+            "outputFile": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pl/values-pl.xml",
             "map": [
                 {
                     "source": "/home/admin123/.gradle/caches/transforms-2/files-2.1/f854950ac7fcfa61e43164336be5a969/jetified-play-services-ads-15.0.1/res/values-pl/values.xml",

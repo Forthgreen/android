@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.forthgreen.app.R
 import com.forthgreen.app.repository.models.Notification
+import com.forthgreen.app.repository.models.UserProfile
 import com.forthgreen.app.utils.GeneralFunctions
 import com.forthgreen.app.views.activities.inflate
 import com.forthgreen.app.views.interfaces.LoadMoreListener
@@ -83,6 +84,9 @@ class NotificationsAdapter(val loadMoreListener: LoadMoreListener, private val c
 
         fun bind(notification: Notification) {
             itemView.apply {
+                itemView.civUserImage.setOnClickListener {
+                    clickCallback.performUserProfileClick(notification)
+                }
                 // Assign Values
                 notification.apply {
                     tvNotification.text = notificationText
@@ -112,5 +116,6 @@ class NotificationsAdapter(val loadMoreListener: LoadMoreListener, private val c
 
     interface NotificationsClickCallback {
         fun performNotificationClick(notification: Notification)
+        fun performUserProfileClick(notification: Notification)
     }
 }

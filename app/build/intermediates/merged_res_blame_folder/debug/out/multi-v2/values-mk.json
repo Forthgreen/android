@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mk/values-mk.xml",
+            "outputFile": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mk/values-mk.xml",
             "map": [
                 {
                     "source": "/home/admin123/.gradle/caches/transforms-2/files-2.1/a1157394998460c067f710ca60c3b70c/core-1.6.0/res/values-mk/values-mk.xml",

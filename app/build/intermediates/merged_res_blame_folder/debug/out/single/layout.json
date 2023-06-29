@@ -1,562 +1,574 @@
 [
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_welcome.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_welcome.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_restaurants_listing.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_restaurants_listing.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_suggested_products_rv.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_suggested_products_rv.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_my_reviews.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_my_reviews.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_image_view.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_image_view.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_search.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_search.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_brands.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_brands.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_block_user.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/dialog_block_user.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_product_list_item2.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_product_list_item2.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_followers_following_tab.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_followers_following_tab.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_load_more.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_load_more.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_post_feed_filter_tab.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_post_feed_filter_tab.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_product_section_header.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_product_section_header.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_login_user.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/dialog_login_user.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_base_recycler_view.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_base_recycler_view.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_followed_restaurants.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_followed_restaurants.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_product_review.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_product_review.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_new_password.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_new_password.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/show_photo_video_options_bottom_sheet.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/show_photo_video_options_bottom_sheet.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_self_profile.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_self_profile.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_followers_following_tab.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_followers_following_tab.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_welcome.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_welcome.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_block_user.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/dialog_block_user.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_my_products_rv.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/shimmer_my_products_rv.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_product_list_item.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_product_list_item.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_user_likes.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/shimmer_user_likes.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_forgot_password.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_forgot_password.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_shop_categories_rv.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/shimmer_shop_categories_rv.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_invites_users_rv.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_invites_users_rv.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_restaurant_review.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_restaurant_review.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_shop_categories_rv.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_shop_categories_rv.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialogfragment_webview.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/dialogfragment_webview.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_shop_categories_new.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_shop_categories_new.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_category_filter_tab.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_category_filter_tab.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_post_feed_filter_tab.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_post_feed_filter_tab.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_products_home.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/shimmer_products_home.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_fragment_brand_detail.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/dialog_fragment_brand_detail.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_likes.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_likes.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_login_user.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/dialog_login_user.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_product_review_sent.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_product_review_sent.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/restaurant_detail_view_pager_layout.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/restaurant_detail_view_pager_layout.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_home_posts.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/shimmer_home_posts.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_fragment_brand_detail_options.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/dialog_fragment_brand_detail_options.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_suggested_products_rv.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_suggested_products_rv.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_restaurants_list.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/shimmer_restaurants_list.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_product_review.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_product_review.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_home_posts.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/shimmer_home_posts.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_home.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/activity_home.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_progress_loader.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/dialog_progress_loader.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_my_stuff.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_my_stuff.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_change_password.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_change_password.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_country.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_country.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialogfragment_video_play.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/dialogfragment_video_play.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/toolbar_dialog_fragments.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/toolbar_dialog_fragments.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/bottom_sheet_product_sort_options2.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/bottom_sheet_product_sort_options2.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_change_password.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_change_password.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_brands_list.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/shimmer_brands_list.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_tag_users_rv.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_tag_users_rv.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/show_video_options_bottom_sheet.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/show_video_options_bottom_sheet.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_play_video.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_play_video.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_home_posts_rv.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_home_posts_rv.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_my_reviews_rv.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_my_reviews_rv.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_brand_detail.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_brand_detail.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_load_more.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_load_more.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_home_users_rv.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_home_users_rv.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_product_detail.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_product_detail.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/toolbar.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/toolbar.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/bottom_sheet_product_sort_options.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/bottom_sheet_product_sort_options.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_my_products.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_my_products.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/show_picture_options_bottom_sheet.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/show_picture_options_bottom_sheet.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_notification_details.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_notification_details.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_comments_rv.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_comments_rv.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_account.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_account.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_product_review_rv.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_product_review_rv.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_static_data.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_static_data.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_restaurants_list.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/shimmer_restaurants_list.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_followers_following_listing.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_followers_following_listing.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/bottom_sheet_add_media.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/bottom_sheet_add_media.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/on_boardings_view_pager_layout.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/on_boardings_view_pager_layout.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_report_review.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_report_review.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_create_post.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_create_post.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home_search.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_home_search.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_notifications_rv.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_notifications_rv.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_login.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_login.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_search_restaurants.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/shimmer_search_restaurants.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_profile_details_rv.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_profile_details_rv.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_shop_products_rv.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_shop_products_rv.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_comments.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/shimmer_comments.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_search_users_invites_friends.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_search_users_invites_friends.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_products_shop_home.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/shimmer_products_shop_home.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_single_filter.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_single_filter.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_brand_products.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_brand_products.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_fragment_country_code.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/dialog_fragment_country_code.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_image_view.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_image_view.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_home_users.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/shimmer_home_users.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_review_report_sent.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_review_report_sent.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_restaurant.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_restaurant.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_restaurant_reviews_rv.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_restaurant_reviews_rv.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_brand_list.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_brand_list.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialogfragment_video_play.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/dialogfragment_video_play.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_products.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_products.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_restaurant_review_sent.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_restaurant_review_sent.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_edit_profile.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_edit_profile.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_notifications_rv.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_notifications_rv.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_product_detail.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_product_detail.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_followers_following_listing.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_followers_following_listing.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_notifications.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_notifications.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_textview.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_textview.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home_search.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_home_search.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_onboadings.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_onboadings.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_search.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_search.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_single_filter.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_single_filter.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_search_product.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/shimmer_search_product.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_comment_load_more.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_comment_load_more.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_search_product.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_search_product.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_product_list_item2.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_product_list_item2.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_comments_list.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_comments_list.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_delete_account.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/dialog_delete_account.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_report_sent.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_report_sent.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_single_restaurant.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_single_restaurant.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_single_brand_product.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_single_brand_product.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_replies_rv.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_replies_rv.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_comments.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/shimmer_comments.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_more_brands.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_more_brands.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_layout_create_post_gallery.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_layout_create_post_gallery.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_notification_details.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_notification_details.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_followed_restaurants.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_followed_restaurants.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_restaurant.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_restaurant.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_new_password.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_new_password.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_search_users.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_search_users.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_shop_categories.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_shop_categories.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_category_products.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_category_products.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_replies.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_replies.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_fragment_brand_detail_options.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/dialog_fragment_brand_detail_options.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_restaurant_details_map.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_restaurant_details_map.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_home_posts_rv.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_home_posts_rv.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_comments_rv.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_comments_rv.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/bottom_sheet_product_sort_options2.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/bottom_sheet_product_sort_options2.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/activity_main.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_progress_loader.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/dialog_progress_loader.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_my_reviews_rv.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_my_reviews_rv.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_delete_delete_account_user.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/dialog_delete_delete_account_user.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_replies_rv.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_replies_rv.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_search_product.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_search_product.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_restaurant_review.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_restaurant_review.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_search_product.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/shimmer_search_product.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_restaurants_listing.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_restaurants_listing.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_category_list.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_category_list.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_delete_account.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/dialog_delete_account.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_single_brand.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_single_brand.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_product_review_sent.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_product_review_sent.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_likes_rv.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_likes_rv.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_country.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_country.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_search_brand.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_search_brand.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_shop_categories_new.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_shop_categories_new.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_report_profile.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_report_profile.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_report_profile.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_report_profile.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_my_product.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_my_product.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_notifications.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_notifications.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_brand_products.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_brand_products.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_product_section_header.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_product_section_header.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/bottom_sheet_menu_options.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/bottom_sheet_menu_options.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_brand_list.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_brand_list.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_sign_up_to_review.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/dialog_sign_up_to_review.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_my_brands.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_my_brands.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_more_brands.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_more_brands.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_search_users_invites_friends.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_search_users_invites_friends.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_category_list.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_category_list.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_base_tab_layout.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_base_tab_layout.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_invites_users_section.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_invites_users_section.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_single_brand_product.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_single_brand_product.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_product_section_header2.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_product_section_header2.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_search_brand.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_search_brand.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_profile_nav_drawer.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_profile_nav_drawer.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_single_mybrand.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_single_mybrand.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_login.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_login.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_home_users.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/shimmer_home_users.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_restaurant_details.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_restaurant_details.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_settings.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_settings.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_other_user_profile.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_other_user_profile.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_restaurant_details.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_restaurant_details.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_restaurant_reviews_rv.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_restaurant_reviews_rv.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_invites_users.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_invites_users.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_posts_feed.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_posts_feed.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_filter_options.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_filter_options.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_shop_categories_rv2.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/shimmer_shop_categories_rv2.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/bottom_sheet_menu_options.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/bottom_sheet_menu_options.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_review_report_sent.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_review_report_sent.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_invites_users_section.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_invites_users_section.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_home.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/activity_home.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_posts_feed.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_posts_feed.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_base_tab_layout.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_base_tab_layout.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_comments_list.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_comments_list.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_single_mybrand.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_single_mybrand.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_picks_rv.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_picks_rv.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_single_brand.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_single_brand.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_shop_categories_rv2.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/shimmer_shop_categories_rv2.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_my_brands.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_my_brands.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_invites_users_rv.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_invites_users_rv.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_self_profile.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_self_profile.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_other_user_profile.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_other_user_profile.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home_filter.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_home_filter.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_product_list_item.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_product_list_item.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_onboadings.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_onboadings.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_image.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_image.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_picks_rv.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_picks_rv.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_report_sent.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_report_sent.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_product_review_rv.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_product_review_rv.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_notifications.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/shimmer_notifications.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_replies.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/shimmer_replies.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/toolbar.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/toolbar.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_products_home.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/shimmer_products_home.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/show_photo_video_options_bottom_sheet.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/show_photo_video_options_bottom_sheet.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_category_products.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_category_products.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/on_boardings_view_pager_layout.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/on_boardings_view_pager_layout.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_single_restaurant.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_single_restaurant.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_product_section_header2.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_product_section_header2.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_restaurant_review_sent.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_restaurant_review_sent.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_profile_nav_drawer.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_profile_nav_drawer.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_my_products_rv.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/shimmer_my_products_rv.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_review_menu.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/dialog_review_menu.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_my_reviews.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_my_reviews.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_notification_details2.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_notification_details2.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_search_users.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_search_users.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_brands_list.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/shimmer_brands_list.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_review_menu.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/dialog_review_menu.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_product_detail_menu.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/dialog_product_detail_menu.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_report_review.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_report_review.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_replies.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_replies.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_products_shop_home.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/shimmer_products_shop_home.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_post_details.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_post_details.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_user_likes.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/shimmer_user_likes.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_brand_detail.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_brand_detail.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_likes_rv.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_likes_rv.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_restaurant_details_map.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_restaurant_details_map.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_notifications.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/shimmer_notifications.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_products.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_products.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/show_picture_options_bottom_sheet.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/show_picture_options_bottom_sheet.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_static_data.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_static_data.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialogfragment_webview.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/dialogfragment_webview.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_continue_with_email_tab.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_continue_with_email_tab.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/bottom_sheet_product_sort_options.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/bottom_sheet_product_sort_options.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_shop_products_rv.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_shop_products_rv.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/bottom_sheet_add_media.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/bottom_sheet_add_media.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_sign_up.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_sign_up.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_play_video.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_play_video.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_my_product.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_my_product.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_product_detail_menu.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/dialog_product_detail_menu.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_create_post.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_create_post.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_tag_users_rv.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_tag_users_rv.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_brands.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_brands.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_textview.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_textview.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_edit_profile.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_edit_profile.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_image.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_image.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_layout_create_post_gallery.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_layout_create_post_gallery.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_shop_categories_rv.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/shimmer_shop_categories_rv.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_base_recycler_view.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_base_recycler_view.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_delete_delete_account_user.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/dialog_delete_delete_account_user.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_account.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_account.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/toolbar_dialog_fragments.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/toolbar_dialog_fragments.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_replies.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/shimmer_replies.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_filter_options.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_filter_options.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_home_users_rv.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_home_users_rv.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_likes.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_likes.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shimmer_search_restaurants.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/shimmer_search_restaurants.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_category_filter_tab.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_category_filter_tab.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_shop_categories.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_shop_categories.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_settings.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_settings.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_sign_up_to_review.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/dialog_sign_up_to_review.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_invites_users.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_invites_users.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_shop_categories_rv.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/row_shop_categories_rv.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_my_stuff.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_my_stuff.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_my_products.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_my_products.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_sign_up.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_sign_up.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_fragment_brand_detail.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/dialog_fragment_brand_detail.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_profile_details_rv.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/row_profile_details_rv.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_fragment_country_code.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/dialog_fragment_country_code.xml"
     },
     {
-        "merged": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_continue_with_email_tab.xml",
-        "source": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/res/layout/fragment_continue_with_email_tab.xml"
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_forgot_password.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_forgot_password.xml"
+    },
+    {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/show_video_options_bottom_sheet.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/show_video_options_bottom_sheet.xml"
+    },
+    {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home_filter.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/fragment_home_filter.xml"
+    },
+    {
+        "merged": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/restaurant_detail_view_pager_layout.xml",
+        "source": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/res/layout/restaurant_detail_view_pager_layout.xml"
     }
 ]

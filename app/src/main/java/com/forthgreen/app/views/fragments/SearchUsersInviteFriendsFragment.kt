@@ -1,5 +1,6 @@
 package com.forthgreen.app.views.fragments
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.core.content.ContextCompat
@@ -92,6 +93,7 @@ class SearchUsersInviteFriendsFragment : BaseRecyclerViewFragment(), SearchUsers
        // mSearchUsersViewModel.searchUsers(true, page, mResultSize, searchText)
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private fun setupListeners() {
         etSearchUsers.doOnTextChanged { text, _, _, _ ->
             if (text.isNotEmpty()) {

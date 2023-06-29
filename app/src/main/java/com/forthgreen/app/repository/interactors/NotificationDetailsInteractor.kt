@@ -37,4 +37,40 @@ class NotificationDetailsInteractor {
                     }
                 })
     }
+
+    fun fetchPostDetails(body: RequestBody, networkRequestCallbacks: NetworkRequestCallbacks): Disposable {
+        return RestClient.get().fetchPostDetails(ApplicationGlobal.accessToken, body)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeWith(object : DisposableObserver<Response<*>>() {
+                override fun onNext(response: Response<*>) {
+                    networkRequestCallbacks.onSuccess(response)
+                }
+
+                override fun onError(e: Throwable) {
+                    networkRequestCallbacks.onError(e)
+                }
+
+                override fun onComplete() {
+                }
+            })
+    }
+
+    fun fetchCommentsList(body: RequestBody, networkRequestCallbacks: NetworkRequestCallbacks): Disposable {
+        return RestClient.get().fetchComments(ApplicationGlobal.accessToken, body)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeWith(object : DisposableObserver<Response<*>>() {
+                override fun onNext(response: Response<*>) {
+                    networkRequestCallbacks.onSuccess(response)
+                }
+
+                override fun onError(t: Throwable) {
+                    networkRequestCallbacks.onError(t)
+                }
+
+                override fun onComplete() {
+                }
+            })
+    }
 }

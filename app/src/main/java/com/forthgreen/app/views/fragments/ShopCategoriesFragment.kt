@@ -224,7 +224,6 @@ class ShopCategoriesFragment : BaseRecyclerViewFragment(), LoadMoreListener,
     }
 
     private fun observeProperties() {
-        val categoriesList = arrayListOf<Filter>()
         mShopCategoriesViewModel.onCategoryFetched()
             .observe(viewLifecycleOwner, { productCategory ->
 
@@ -241,68 +240,11 @@ class ShopCategoriesFragment : BaseRecyclerViewFragment(), LoadMoreListener,
                 //  val list = getData(productCategory.data)
                 mAdapter.submitList(list!!, productCategory.hasMore!!, page)
                 llLoadMore.gone()
-                loading = false;
-
-                /* val clothingProds = productCategory.data.filter { category -> category._id == ValueMapping.onClothingCategorySelected() }
-                 val beautyProds = productCategory.data.filter { category -> category._id == ValueMapping.onBeautyCategorySelected() }
-                 val accessProds = productCategory.data.filter { category -> category._id == ValueMapping.onAccessoriesCategorySelected() }
-                 val foodProds = productCategory.data.filter { category -> category._id == ValueMapping.onFoodCategorySelected() }
-                 val drinksProds = productCategory.data.filter { category -> category._id == ValueMapping.onDrinksCategorySelected() }
-                 val healthProds = productCategory.data.filter { category -> category._id == ValueMapping.onHealthCategorySelected() }
-                 val miscProds = productCategory.data.filter { category -> category._id == ValueMapping.onMiscCategorySelected() }
-
-                 categoriesList.clear()
-                 categoriesList.add(Filter(1, "Clothing", products = clothingProds.first().products))
-                 categoriesList.add(Filter(2, "Beauty", products = beautyProds.first().products))
-                 categoriesList.add(Filter(7, "Accessories", products = accessProds.first().products))
-                 categoriesList.add(Filter(4, "Food", products = foodProds.first().products))
-                 categoriesList.add(Filter(5, "Drinks", products = drinksProds.first().products))
-                 categoriesList.add(Filter(3, "Health", products = healthProds.first().products))
-                 categoriesList.add(Filter(6, "Miscellaneous", products = miscProds.first().products))
-
-                 listOfProducts.clear()
-                 listOfProducts.addAll(productCategory.data)
-                 // Setup categories
-                 mAdapter.submitList(categoriesList, false)
-     mShopCategoriesViewModel  */
+                loading = false
             })
-
-
 
         mShopCategoriesViewModel.onBookmarkAddSuccess().observe(viewLifecycleOwner, { success ->
             if (success) {
-/*                val productsList = mutableListOf<Product>()
-                val category = listOfProducts.filter { category -> category._id == productCategory }
-                productsList.addAll(category.first().products)
-                val index = productsList.indexOfFirst { product -> product._id == bookmarkProductStatus._id }
-                val product = productsList.find { product -> product._id == bookmarkProductStatus._id }
-                product?.let { bookmarkProduct -> bookmarkProduct.isBookmark = !bookmarkProduct.isBookmark }
-                when (productCategory) {
-                    ValueMapping.onClothingCategorySelected() -> {
-                        mAdapter.updateProductBookmark(Filter(1, "Clothing", products = productsList), index)
-                    }
-                    ValueMapping.onBeautyCategorySelected() -> {
-                        mAdapter.updateProductBookmark(Filter(2, "Beauty", products = productsList), index)
-                    }
-                    ValueMapping.onAccessoriesCategorySelected() -> {
-                        mAdapter.updateProductBookmark(Filter(7, "Accessories", products = productsList), index)
-                    }
-                    ValueMapping.onFoodCategorySelected() -> {
-                        mAdapter.updateProductBookmark(Filter(4, "Food", products = productsList), index)
-                    }
-                    ValueMapping.onDrinksCategorySelected() -> {
-                        mAdapter.updateProductBookmark(Filter(5, "Drinks", products = productsList), index)
-                    }
-                    ValueMapping.onHealthCategorySelected() -> {
-                        mAdapter.updateProductBookmark(Filter(3, "Health", products = productsList), index)
-                    }
-                    ValueMapping.onMiscCategorySelected() -> {
-                        mAdapter.updateProductBookmark(Filter(6, "Miscellaneous", products = productsList), index)
-                    }
-                }
-                LocalBroadcastManager.getInstance(requireContext())
-                    .sendBroadcast(Intent(LOCAL_INTENT_PRODUCT_BOOKMARKED))*/
-
                 mAdapter.updateProduct(bookmarkProductStatus.copy(isBookmark = !bookmarkProductStatus.isBookmark))
                 LocalBroadcastManager.getInstance(requireContext())
                     .sendBroadcast(Intent(ProductDetailFragment.LOCAL_INTENT_PRODUCT_BOOKMARKED))

@@ -34,6 +34,7 @@ data class Notification(
         val message: String = "",
         val name: String = "",
         val ref: String = "",
+        val userid: String = "",
         val refType: Int = 0,
         val seen: Boolean = false,
         val username: String = "",

@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-sw720dp-land-v13/values-sw720dp-land-v13.xml",
+            "map": [
+                {
+                    "source": "/home/admin123/.gradle/caches/transforms-2/files-2.1/d996a52c729ce053f0bb0f1ca066f7c5/jetified-core-3.3.0/res/values-sw720dp-land-v13/values-sw720dp-land-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "51",
+                        "endOffsets": "102"
+                    }
+                }
+            ]
+        }
+    ]
+}

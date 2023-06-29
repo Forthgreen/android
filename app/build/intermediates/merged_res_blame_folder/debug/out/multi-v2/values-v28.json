@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml",
+            "outputFile": "/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml",
             "map": [
                 {
                     "source": "/home/admin123/.gradle/caches/transforms-2/files-2.1/4990c74ccbbb5d5c1c522551c79f0823/appcompat-1.2.0/res/values-v28/values-v28.xml",

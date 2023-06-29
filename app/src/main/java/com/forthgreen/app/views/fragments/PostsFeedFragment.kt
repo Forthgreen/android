@@ -137,9 +137,11 @@ class PostsFeedFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsFee
                 IntentFilter().apply {
                     addAction(EditProfileFragment.LOCAL_INTENT_PROFILE_UPDATED)
                     addAction(CommentsListFragment.LOCAL_INTENT_COMMENTS_ACTION)
+                    addAction(PostDetailsFragment.LOCAL_INTENT_COMMENTS_ACTION)
                     addAction(SelfProfileFragment.LOCAL_INTENT_SELF_POST_ACTION_PERFORMED)
                     addAction(OtherUserProfileFragment.LOCAL_INTENT_USER_POST_ACTION_PERFORMED)
                     addAction(NotificationDetailsFragment.LOCAL_INTENT_NOTIFICATION_POST_ACTION_PERFORMED)
+                    addAction(NotificationPostDetailsFragment.LOCAL_INTENT_NOTIFICATION_POST_ACTION_PERFORMED)
                     addAction(CreatePostWorker.LOCAL_INTENT_POST_CREATED)
                     addAction(RepliesFragment.LOCAL_INTENT_REPLY_COMMENTS_ACTION)
                     addAction(NotificationsFragment.LOCAL_INTENT_NOTIFICATION_SEEN)
@@ -402,10 +404,16 @@ class PostsFeedFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsFee
                    // performFragTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
                     callUserLoginDialog()
                 } else {
-                    performFragTransaction(
+                    // we comment code
+                    /*performFragTransaction(
                             CommentsListFragment.newInstance(postData._id),
                             CommentsListFragment.TAG, enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
-                            popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right)
+                            popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right)*/
+
+                    performFragTransaction(
+                        PostDetailsFragment.newInstance(postData._id),
+                        PostDetailsFragment.TAG, enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
+                        popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right)
                 }
             }
             ValueMapping.onLikeOrDislike() -> {
@@ -418,10 +426,15 @@ class PostsFeedFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsFee
                     LocalBroadcastManager.getInstance(requireContext()).sendBroadcast(Intent(
                         PostsFeedFollowingFragment.LOCAL_INTENT_LIKE_DISLIKE_ACTION_PERFORMED
                     ))
-                    mHomeFeedViewModel.updatePostLike(
+                   /* mHomeFeedViewModel.updatePostLike(
                             mShowLoader = true,
                             postRef = postData._id,
                             liked = postLiked
+                    )*/
+                    mHomeFeedViewModel.updatePostLike(
+                        mShowLoader = false,
+                        postRef = postData._id,
+                        liked = postLiked
                     )
                     post = if (postLiked) {
                         postData.copy(isLike = postLiked, likes = postData.likes + 1)

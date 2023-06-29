@@ -13,23 +13,25 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import androidx.recyclerview.widget.RecyclerView
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.customview.customView
 import com.forthgreen.app.R
-import com.forthgreen.app.repository.models.Brand
-import com.forthgreen.app.repository.models.PostDetails
-import com.forthgreen.app.repository.models.Restaurant
-import com.forthgreen.app.repository.models.UserProfile
+import com.forthgreen.app.repository.models.*
 import com.forthgreen.app.repository.networkrequest.WebConstants
 import com.forthgreen.app.utils.Constants
 import com.forthgreen.app.utils.GeneralFunctions
 import com.forthgreen.app.utils.ValueMapping
 import com.forthgreen.app.viewmodels.BaseViewModel
 import com.forthgreen.app.viewmodels.NotificationDetailsViewModel
+import com.forthgreen.app.views.adapters.CommentsListAdapter
 import com.forthgreen.app.views.adapters.ViewPagerAdapter
+import com.forthgreen.app.views.interfaces.LoadMoreListener
 import com.forthgreen.app.views.utils.*
 import kotlinx.android.synthetic.main.dialog_review_menu.*
+import kotlinx.android.synthetic.main.fragment_comments_list.*
 import kotlinx.android.synthetic.main.fragment_notification_details.*
+import kotlinx.android.synthetic.main.fragment_notification_details.flShimmer
 import kotlinx.android.synthetic.main.fragment_play_video.*
 import kotlinx.android.synthetic.main.fragment_posts_feed.*
 import kotlinx.android.synthetic.main.row_home_posts_rv.view.*
@@ -41,7 +43,7 @@ import kotlinx.android.synthetic.main.toolbar.tvToolbarTitle
  * @author Nandita Gandhi
  * @since 03-05-2021
  */
-class NotificationDetailsFragment : BaseFragment(), View.OnClickListener {
+class NotificationDetailsFragment : BaseFragment(), View.OnClickListener{
 
     companion object {
         const val TAG = "NotifcationDetailsFragment"
@@ -61,7 +63,6 @@ class NotificationDetailsFragment : BaseFragment(), View.OnClickListener {
         }
     }
 
-    // Variables
     private val mNotificationDetailsViewModel by lazy {
         ViewModelProvider(this).get(NotificationDetailsViewModel::class.java)
     }
@@ -122,6 +123,7 @@ class NotificationDetailsFragment : BaseFragment(), View.OnClickListener {
 
         // Fetch notification Details
         mNotificationDetailsViewModel.fetchNotificationDetails(false, notificationId)
+
     }
 
     private fun setupListeners() {
@@ -160,6 +162,7 @@ class NotificationDetailsFragment : BaseFragment(), View.OnClickListener {
     }
 
     private fun observeProperties() {
+
         mNotificationDetailsViewModel.onNotificationDetailsFetched().observe(viewLifecycleOwner, { detailsFetched ->
             // Stop shimmer
             flShimmer.stopShimmer()

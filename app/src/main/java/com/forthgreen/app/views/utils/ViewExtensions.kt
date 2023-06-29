@@ -347,33 +347,3 @@ fun ImageView.loadURL(imageURL: String, isUserImage: Boolean, cornerRadius: Int 
 /** Extension function to return the first element or an empty string instead. **/
 fun List<String>.firstOrEmpty() = this.firstOrNull() ?: ""
 
-fun RecyclerView.addOnScrollPagination(
-    loadMoreItems: () -> Unit,
-    visibleThreshold: Int = 0
-) {
-    val layoutManager = this.layoutManager as? GridLayoutManager
-        ?: throw IllegalStateException("RecyclerView must have a GridLayoutManager")
-
-    this.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-        override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-            super.onScrolled(recyclerView, dx, dy)
-
-            val totalItemCount = layoutManager.itemCount
-            val lastVisibleItemPosition = layoutManager.findLastVisibleItemPosition()
-
-            Log.d("lastVisi", lastVisibleItemPosition.toString())
-
-            if (totalItemCount <= lastVisibleItemPosition) {
-                loadMoreItems()
-            } else {
-                Log.d("lastVisiElse", lastVisibleItemPosition.toString())
-            }
-
-           /* if (totalItemCount <= (lastVisibleItemPosition + visibleThreshold)) {
-                loadMoreItems()
-            } else {
-                Log.d("lastVisiElse", lastVisibleItemPosition.toString())
-            }*/
-        }
-    })
-}

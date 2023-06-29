@@ -73,10 +73,7 @@ open class PostActionsViewModel(application: Application) : CommentActionsViewMo
         performAPICall(requestBody, mOnPostReported, REPORT_POST)
     }
 
-    private fun performAPICall(
-            body: RequestBody, mutableLiveData: MutableLiveData<Boolean>,
-            apiToCall: String,
-    ) {
+    private fun performAPICall(body: RequestBody, mutableLiveData: MutableLiveData<Boolean>, apiToCall: String, ) {
         val networkRequestCallbacks = object : NetworkRequestCallbacks {
             override fun onSuccess(response: Response<*>) {
                 try {

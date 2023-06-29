@@ -18,6 +18,7 @@ import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException
 import com.facebook.GraphRequest
+import com.facebook.internal.ImageRequest
 import com.facebook.login.LoginManager
 import com.facebook.login.LoginResult
 import com.forthgreen.app.R
@@ -29,7 +30,9 @@ import com.forthgreen.app.viewmodels.WelcomeViewModel
 import com.forthgreen.app.views.activities.BaseAppCompactActivity
 import com.forthgreen.app.views.activities.MainActivity
 import com.forthgreen.app.views.activities.doFragmentTransaction
+import com.forthgreen.app.views.utils.gone
 import com.forthgreen.app.views.utils.supportFragmentManager
+import com.forthgreen.app.views.utils.visible
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions

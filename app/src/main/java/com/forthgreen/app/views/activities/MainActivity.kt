@@ -288,10 +288,14 @@ class MainActivity : BaseAppCompactActivity(), DrawerCallbacks {
                             ValueMapping.onNotifReply(), ValueMapping.onNotifCommentLiked(),
                             ValueMapping.onNotifReplyLiked(),
                             -> {
-                                performTransaction(NotificationDetailsFragment.newInstance(
+                                /*performTransaction(NotificationDetailsFragment.newInstance(
                                     notificationId = notificationId,
                                     notificationType = notificationType),
-                                    NotificationDetailsFragment.TAG)
+                                    NotificationDetailsFragment.TAG)*/
+                                performTransaction(NotificationPostDetailsFragment.newInstance(
+                                    notificationId = notificationId,
+                                    notificationType = notificationType),
+                                    NotificationPostDetailsFragment.TAG)
                             }
                             ValueMapping.onNotifFollowingType() -> {
                                 performTransaction(OtherUserProfileFragment.newInstance(
@@ -396,15 +400,5 @@ class MainActivity : BaseAppCompactActivity(), DrawerCallbacks {
     override fun onDestroy() {
         mLocalBroadcastManager.unregisterReceiver(mLocalBroadcastReceiver)
         super.onDestroy()
-    }
-
-    private fun callUserLoginDialog() {
-        val userLoginDialog = UserLoginDialog()
-        userLoginDialog.showUserLoginDialog(this as AppCompatActivity, object :
-            LoginButtonClickInterface {
-            override fun loginButtonClick() {
-                performTransaction(WelcomeFragment.newInstance(false), WelcomeFragment.TAG)
-            }
-        })
     }
 }

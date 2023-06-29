@@ -120,6 +120,7 @@ class SelfProfileFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsA
             addAction(PostsFeedFragment.LOCAL_INTENT_ACTION_PERFORMED)
             addAction(OtherUserProfileFragment.LOCAL_INTENT_USER_POST_ACTION_PERFORMED)
             addAction(NotificationDetailsFragment.LOCAL_INTENT_NOTIFICATION_POST_ACTION_PERFORMED)
+            addAction(NotificationPostDetailsFragment.LOCAL_INTENT_NOTIFICATION_POST_ACTION_PERFORMED)
             addAction(CreatePostWorker.LOCAL_INTENT_POST_CREATED)
             addAction(RepliesFragment.LOCAL_INTENT_REPLY_COMMENTS_ACTION)
         })
@@ -228,9 +229,13 @@ class SelfProfileFragment : BaseRecyclerViewFragment(), LoadMoreListener, PostsA
             ValueMapping.onCommentsOrRepliesClick() -> {
                 ApplicationGlobal.muteVideo = true
                 mAdapter.pauseVideo()
-                performFragTransaction(
+               /* performFragTransaction(
                     CommentsListFragment.newInstance(postInfo._id), CommentsListFragment.TAG,
                     enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
+                    popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right)*/
+                performFragTransaction(
+                    PostDetailsFragment.newInstance(postInfo._id),
+                    PostDetailsFragment.TAG, enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
                     popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right)
             }
             ValueMapping.onLikeOrDislike() -> {

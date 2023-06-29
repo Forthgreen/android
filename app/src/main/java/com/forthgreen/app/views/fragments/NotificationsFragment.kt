@@ -86,7 +86,8 @@ class NotificationsFragment : BaseRecyclerViewFragment(), LoadMoreListener, Noti
         mLocalBroadcastManager.registerReceiver(
                 mLocalBroadcastReceiver,
                 IntentFilter().apply {
-                    addAction(NotificationDetailsFragment.LOCAL_INTENT_NOTIFICATION_REMOVE_ACTION)
+                  //  addAction(NotificationDetailsFragment.LOCAL_INTENT_NOTIFICATION_REMOVE_ACTION)
+                    addAction(NotificationPostDetailsFragment.LOCAL_INTENT_NOTIFICATION_REMOVE_ACTION)
                     addAction(MyFirebaseMessagingService.LOCAL_INTENT_NEW_PUSH_NOTIFICATION)
                 }
         )
@@ -153,8 +154,8 @@ class NotificationsFragment : BaseRecyclerViewFragment(), LoadMoreListener, Noti
             ValueMapping.onNotifCommentLiked(), ValueMapping.onNotifReplyLiked(), ValueMapping.onNotifTaggedComment(),
             ValueMapping.onNotifTaggedPost(),
             -> {
-                performFragTransaction(NotificationDetailsFragment.newInstance(notificationId = notification._id,
-                        notificationType = notification.refType), NotificationDetailsFragment.TAG,
+                performFragTransaction(NotificationPostDetailsFragment.newInstance(notificationId = notification._id,
+                        notificationType = notification.refType), NotificationPostDetailsFragment.TAG,
                         enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
                         popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right)
             }
@@ -165,6 +166,14 @@ class NotificationsFragment : BaseRecyclerViewFragment(), LoadMoreListener, Noti
                         popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right)
             }
         }
+    }
+
+    // notification user profile click
+    override fun performUserProfileClick(notification: Notification) {
+        performFragTransaction(OtherUserProfileFragment.newInstance(UserProfile(_id = notification.userid)),
+            OtherUserProfileFragment.TAG,
+            enterAnim = R.anim.slide_in_right, exitAnim = R.anim.fade_out,
+            popEnterAnim = R.anim.fade_in, popExitAnim = R.anim.slide_out_right)
     }
 
     override fun onDestroyView() {

@@ -343,6 +343,12 @@ interface API {
             @Body body: RequestBody,
     ): Observable<Response<PojoNotificationDetails>>
 
+    // API to fetch notifications details
+    @POST("post/detail")
+    fun fetchPostDetails(
+        @Header("Authorization") accessToken: String,
+        @Body body: RequestBody,
+    ): Observable<Response<PostDetailResponse>>
     // API to Create Post
     @Multipart
     @POST("post/add")

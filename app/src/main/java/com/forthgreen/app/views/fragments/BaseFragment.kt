@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.forthgreen.app.R
@@ -31,6 +32,16 @@ abstract class BaseFragment : androidx.fragment.app.Fragment() {
     private val mMyCustomLoader: MyCustomLoader by lazy { MyCustomLoader(context) }
 
     internal lateinit var drawerCallbacks: DrawerCallbacks
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        activity?.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        activity?.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN)
+    }
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,

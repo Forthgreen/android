@@ -1,52 +1,52 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.forthgreen.app"
-4    android:versionCode="24"
-5    android:versionName="2.9.9" >
+4    android:versionCode="25"
+5    android:versionName="2.9.10" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml
+8-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="31" />
-9-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml
+9-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:6:5-67
-11-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:6:22-64
+11-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:6:5-67
+11-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:6:22-64
 12    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-12-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:7:5-77
-12-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:7:22-74
+12-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:7:5-77
+12-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:7:22-74
 13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-13-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:8:5-81
-13-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:8:22-78
+13-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:8:5-81
+13-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:8:22-78
 14    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-14-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:9:5-79
-14-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:9:22-76
+14-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:9:5-79
+14-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:9:22-76
 15    <uses-permission android:name="android.permission.VIBRATE" />
-15-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:10:5-66
-15-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:10:22-63
+15-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:10:5-66
+15-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:10:22-63
 16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-16-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:11:5-80
-16-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:11:22-77
+16-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:11:5-80
+16-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:11:22-77
 17    <uses-permission android:name="android.permission.READ_CONTACTS" />
-17-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:12:5-72
-17-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:12:22-69
+17-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:12:5-72
+17-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:12:22-69
 18
 19    <queries>
-19-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:14:5-20:15
+19-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:14:5-20:15
 20        <intent>
-20-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:15:9-19:18
+20-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:15:9-19:18
 21            <action android:name="android.intent.action.VIEW" />
-21-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:16:13-65
-21-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:16:21-62
+21-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:16:13-65
+21-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:16:21-62
 22
 23            <category android:name="android.intent.category.BROWSABLE" />
-23-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:17:13-74
-23-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:17:23-71
+23-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:17:13-74
+23-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:17:23-71
 24
 25            <data android:scheme="https" />
-25-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:18:13-44
-25-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:18:19-41
+25-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:18:13-44
+25-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:18:19-41
 26        </intent>
 27    </queries>
 28
@@ -55,11 +55,11 @@
 29-->[com.google.android.libraries.places:places:2.4.0] /home/admin123/.gradle/caches/transforms-2/files-2.1/d04d1aad98079b3132639e6f6b8028a9/jetified-places-2.4.0/AndroidManifest.xml:10:22-73
 30
 31    <meta-data
-31-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:142:9-144:69
+31-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:142:9-144:69
 32        android:name="com.google.android.gms.version"
-32-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:143:13-58
+32-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:143:13-58
 33        android:value="@integer/google_play_services_version" />
-33-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:144:13-66
+33-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:144:13-66
 34
 35    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 35-->[com.google.firebase:firebase-auth:20.0.4] /home/admin123/.gradle/caches/transforms-2/files-2.1/44b58ea0e15c2ba07cbdbc150e5f8ddc/jetified-firebase-auth-20.0.4/AndroidManifest.xml:24:5-79
@@ -86,127 +86,127 @@
 44-->[androidx.work:work-runtime:2.7.1] /home/admin123/.gradle/caches/transforms-2/files-2.1/2f338fb9bc738bfabea3727557f999c7/work-runtime-2.7.1/AndroidManifest.xml:27:22-78
 45
 46    <application
-46-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:21:5-166:19
+46-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:21:5-166:19
 47        android:name="com.forthgreen.app.utils.ApplicationGlobal"
-47-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:22:9-48
+47-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:22:9-48
 48        android:allowBackup="false"
-48-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:23:9-36
+48-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:23:9-36
 49        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 49-->[androidx.core:core:1.6.0] /home/admin123/.gradle/caches/transforms-2/files-2.1/a1157394998460c067f710ca60c3b70c/core-1.6.0/AndroidManifest.xml:24:18-86
 50        android:debuggable="true"
 51        android:icon="@mipmap/ic_launcher"
-51-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:24:9-43
+51-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:24:9-43
 52        android:label="@string/app_name"
-52-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:25:9-41
+52-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:25:9-41
 53        android:roundIcon="@mipmap/ic_launcher_round"
-53-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:26:9-54
+53-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:26:9-54
 54        android:supportsRtl="true"
-54-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:27:9-35
+54-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:27:9-35
 55        android:testOnly="true"
 56        android:theme="@style/AppTheme"
-56-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:28:9-40
+56-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:28:9-40
 57        android:usesCleartextTraffic="true" >
-57-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:29:9-44
+57-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:29:9-44
 58        <meta-data
-58-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:30:9-32:35
+58-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:30:9-32:35
 59            android:name="design_width_in_dp"
-59-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:31:13-46
+59-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:31:13-46
 60            android:value="375" />
-60-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:32:13-32
+60-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:32:13-32
 61        <meta-data
-61-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:33:9-35:35
+61-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:33:9-35:35
 62            android:name="design_height_in_dp"
-62-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:34:13-47
+62-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:34:13-47
 63            android:value="667" />
-63-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:35:13-32
+63-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:35:13-32
 64
 65        <activity
-65-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:37:9-76:20
+65-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:37:9-76:20
 66            android:name="com.forthgreen.app.views.activities.MainActivity"
-66-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:38:13-58
+66-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:38:13-58
 67            android:configChanges="orientation|keyboardHidden|screenSize"
-67-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:39:13-74
+67-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:39:13-74
 68            android:exported="true"
-68-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:40:13-36
+68-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:40:13-36
 69            android:screenOrientation="portrait"
-69-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:41:13-49
+69-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:41:13-49
 70            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
-70-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:42:13-70
+70-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:42:13-70
 71            <intent-filter>
-71-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:44:13-48:29
+71-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:44:13-48:29
 72                <action android:name="android.intent.action.MAIN" />
-72-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:45:17-69
-72-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:45:25-66
+72-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:45:17-69
+72-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:45:25-66
 73
 74                <category android:name="android.intent.category.LAUNCHER" />
-74-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:47:17-77
-74-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:47:27-74
+74-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:47:17-77
+74-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:47:27-74
 75            </intent-filter>
 76
 77            <!-- Branch URI Scheme -->
 78            <intent-filter>
-78-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:51:13-59:29
+78-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:51:13-59:29
 79                <data
-79-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:18:13-44
+79-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:18:13-44
 80                    android:host="open"
-80-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:53:21-40
+80-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:53:21-40
 81                    android:scheme="forthgreen" />
-81-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:18:19-41
+81-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:18:19-41
 82
 83                <action android:name="android.intent.action.VIEW" />
-83-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:16:13-65
-83-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:16:21-62
+83-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:16:13-65
+83-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:16:21-62
 84
 85                <category android:name="android.intent.category.DEFAULT" />
-85-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:57:17-76
-85-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:57:27-73
+85-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:57:17-76
+85-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:57:27-73
 86                <category android:name="android.intent.category.BROWSABLE" />
-86-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:17:13-74
-86-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:17:23-71
+86-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:17:13-74
+86-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:17:23-71
 87            </intent-filter>
 88
 89            <!-- Branch App Links (optional) -->
 90            <intent-filter android:autoVerify="true" >
-90-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:62:13-75:29
-90-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:62:28-53
+90-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:62:13-75:29
+90-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:62:28-53
 91                <action android:name="android.intent.action.VIEW" />
-91-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:16:13-65
-91-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:16:21-62
+91-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:16:13-65
+91-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:16:21-62
 92
 93                <category android:name="android.intent.category.DEFAULT" />
-93-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:57:17-76
-93-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:57:27-73
+93-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:57:17-76
+93-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:57:27-73
 94                <category android:name="android.intent.category.BROWSABLE" />
-94-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:17:13-74
-94-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:17:23-71
+94-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:17:13-74
+94-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:17:23-71
 95
 96                <data
-96-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:18:13-44
+96-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:18:13-44
 97                    android:host="forth.app.link"
-97-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:53:21-40
+97-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:53:21-40
 98                    android:scheme="https" />
-98-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:18:19-41
+98-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:18:19-41
 99                <!-- example-alternate domain is required for App Links when the Journeys/Web SDK and Deepviews are used inside your website. -->
 100                <data
-100-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:18:13-44
+100-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:18:13-44
 101                    android:host="forth-alternate.app.link"
-101-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:53:21-40
+101-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:53:21-40
 102                    android:scheme="https" />
-102-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:18:19-41
+102-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:18:19-41
 103            </intent-filter>
 104        </activity>
 105        <activity
-105-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:77:9-89:20
+105-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:77:9-89:20
 106            android:name="com.forthgreen.app.views.activities.HomeActivity"
-106-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:78:13-58
+106-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:78:13-58
 107            android:configChanges="orientation|keyboardHidden|screenSize"
-107-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:79:13-74
+107-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:79:13-74
 108            android:exported="true"
-108-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:80:13-36
+108-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:80:13-36
 109            android:screenOrientation="portrait"
-109-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:81:13-49
+109-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:81:13-49
 110            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" >
-110-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:82:13-73
+110-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:82:13-73
 111
 112            <!-- <intent-filter> -->
 113            <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -219,138 +219,138 @@
 120        <!-- For Camera Intent -->
 121        <provider
 122            android:name="androidx.core.content.FileProvider"
-122-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:94:13-62
+122-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:94:13-62
 123            android:authorities="com.forthgreen.app.provider"
-123-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:95:13-60
+123-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:95:13-60
 124            android:exported="false"
-124-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:96:13-37
+124-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:96:13-37
 125            android:grantUriPermissions="true" >
-125-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:97:13-47
+125-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:97:13-47
 126            <meta-data
-126-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:98:13-100:58
+126-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:98:13-100:58
 127                android:name="android.support.FILE_PROVIDER_PATHS"
-127-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:99:17-67
+127-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:99:17-67
 128                android:resource="@xml/provider_paths" />
-128-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:100:17-55
+128-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:100:17-55
 129        </provider>
 130
 131        <!-- For Facebook Login -->
 132        <meta-data
-132-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:105:9-107:55
+132-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:105:9-107:55
 133            android:name="com.facebook.sdk.ApplicationId"
-133-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:106:13-58
+133-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:106:13-58
 134            android:value="@string/facebook_app_id" />
-134-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:107:13-52
+134-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:107:13-52
 135
 136        <activity
-136-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:109:9-112:48
+136-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:109:9-112:48
 137            android:name="com.facebook.FacebookActivity"
-137-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:110:13-57
+137-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:110:13-57
 138            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-138-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:111:13-96
+138-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:111:13-96
 139            android:label="@string/app_name"
-139-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:112:13-45
+139-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:112:13-45
 140            android:theme="@style/com_facebook_activity_theme" />
 140-->[com.facebook.android:facebook-common:11.3.0] /home/admin123/.gradle/caches/transforms-2/files-2.1/873118f556665ec74bf54af979340a19/jetified-facebook-common-11.3.0/AndroidManifest.xml:33:13-63
 141        <activity
-141-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:113:9-124:20
+141-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:113:9-124:20
 142            android:name="com.facebook.CustomTabActivity"
-142-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:114:13-58
+142-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:114:13-58
 143            android:exported="true" >
-143-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:115:13-36
+143-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:115:13-36
 144            <intent-filter>
-144-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:116:13-123:29
+144-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:116:13-123:29
 145                <action android:name="android.intent.action.VIEW" />
-145-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:16:13-65
-145-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:16:21-62
+145-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:16:13-65
+145-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:16:21-62
 146
 147                <category android:name="android.intent.category.DEFAULT" />
-147-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:57:17-76
-147-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:57:27-73
+147-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:57:17-76
+147-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:57:27-73
 148                <category android:name="android.intent.category.BROWSABLE" />
-148-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:17:13-74
-148-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:17:23-71
+148-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:17:13-74
+148-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:17:23-71
 149
 150                <data android:scheme="@string/fb_login_protocol_scheme" />
-150-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:18:13-44
-150-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:18:19-41
+150-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:18:13-44
+150-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:18:19-41
 151            </intent-filter>
 152            <intent-filter>
 152-->[com.facebook.android:facebook-common:11.3.0] /home/admin123/.gradle/caches/transforms-2/files-2.1/873118f556665ec74bf54af979340a19/jetified-facebook-common-11.3.0/AndroidManifest.xml:39:13-48:29
 153                <action android:name="android.intent.action.VIEW" />
-153-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:16:13-65
-153-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:16:21-62
+153-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:16:13-65
+153-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:16:21-62
 154
 155                <category android:name="android.intent.category.DEFAULT" />
-155-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:57:17-76
-155-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:57:27-73
+155-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:57:17-76
+155-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:57:27-73
 156                <category android:name="android.intent.category.BROWSABLE" />
-156-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:17:13-74
-156-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:17:23-71
+156-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:17:13-74
+156-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:17:23-71
 157
 158                <data
-158-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:18:13-44
+158-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:18:13-44
 159                    android:host="cct.com.forthgreen.app"
-159-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:53:21-40
+159-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:53:21-40
 160                    android:scheme="fbconnect" />
-160-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:18:19-41
+160-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:18:19-41
 161            </intent-filter>
 162        </activity>
 163
 164        <!-- Branch Init -->
 165        <meta-data
-165-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:128:9-130:73
+165-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:128:9-130:73
 166            android:name="io.branch.sdk.BranchKey"
-166-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:129:13-51
+166-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:129:13-51
 167            android:value="key_live_ffV4mMEZwyyX69Fd2RR8fffotxembuen" />
-167-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:130:13-70
+167-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:130:13-70
 168        <meta-data
-168-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:131:9-133:73
+168-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:131:9-133:73
 169            android:name="io.branch.sdk.BranchKey.test"
-169-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:132:13-56
+169-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:132:13-56
 170            android:value="key_test_mjV4eKz7DFDZ20rm4QO9ppfbuyhpnqjB" />
-170-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:133:13-70
+170-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:133:13-70
 171
 172        <!-- Set to true to use Branch_Test_Key (useful when simulating installs and/or switching between debug and production flavors) -->
 173        <meta-data
-173-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:136:9-138:37
+173-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:136:9-138:37
 174            android:name="io.branch.sdk.TestMode"
-174-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:137:13-50
+174-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:137:13-50
 175            android:value="false" />
-175-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:138:13-34
+175-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:138:13-34
 176
 177        <!-- For Google maps -->
 178        <meta-data
-178-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:142:9-144:69
+178-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:142:9-144:69
 179            android:name="com.google.android.gms.version"
-179-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:143:13-58
+179-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:143:13-58
 180            android:value="@integer/google_play_services_version" />
-180-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:144:13-66
+180-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:144:13-66
 181        <meta-data
-181-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:146:9-148:55
+181-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:146:9-148:55
 182            android:name="com.google.android.geo.API_KEY"
-182-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:147:13-58
+182-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:147:13-58
 183            android:value="@string/google_maps_key" />
-183-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:148:13-52
+183-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:148:13-52
 184        <meta-data
-184-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:149:9-151:57
+184-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:149:9-151:57
 185            android:name="preloaded_fonts"
-185-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:150:13-43
+185-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:150:13-43
 186            android:resource="@array/preloaded_fonts" />
-186-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:151:13-54
+186-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:151:13-54
 187
 188        <!-- For FCM -->
 189        <service
-189-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:155:9-161:19
+189-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:155:9-161:19
 190            android:name="com.forthgreen.app.services.MyFirebaseMessagingService"
-190-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:156:13-64
+190-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:156:13-64
 191            android:exported="true" >
-191-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:157:13-36
+191-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:157:13-36
 192            <intent-filter>
-192-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:158:13-160:29
+192-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:158:13-160:29
 193                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-193-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:159:17-78
-193-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:159:25-75
+193-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:159:17-78
+193-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:159:25-75
 194            </intent-filter>
 195        </service>
 196
@@ -555,23 +555,23 @@
 310            <intent-filter>
 310-->[com.google.firebase:firebase-auth:20.0.4] /home/admin123/.gradle/caches/transforms-2/files-2.1/44b58ea0e15c2ba07cbdbc150e5f8ddc/jetified-firebase-auth-20.0.4/AndroidManifest.xml:33:13-43:29
 311                <action android:name="android.intent.action.VIEW" />
-311-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:16:13-65
-311-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:16:21-62
+311-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:16:13-65
+311-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:16:21-62
 312
 313                <category android:name="android.intent.category.DEFAULT" />
-313-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:57:17-76
-313-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:57:27-73
+313-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:57:17-76
+313-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:57:27-73
 314                <category android:name="android.intent.category.BROWSABLE" />
-314-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:17:13-74
-314-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:17:23-71
+314-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:17:13-74
+314-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:17:23-71
 315
 316                <data
-316-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:18:13-44
+316-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:18:13-44
 317                    android:host="firebase.auth"
-317-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:53:21-40
+317-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:53:21-40
 318                    android:path="/"
 319                    android:scheme="genericidp" />
-319-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:18:19-41
+319-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:18:19-41
 320            </intent-filter>
 321        </activity>
 322        <activity
@@ -589,23 +589,23 @@
 328            <intent-filter>
 328-->[com.google.firebase:firebase-auth:20.0.4] /home/admin123/.gradle/caches/transforms-2/files-2.1/44b58ea0e15c2ba07cbdbc150e5f8ddc/jetified-firebase-auth-20.0.4/AndroidManifest.xml:51:13-61:29
 329                <action android:name="android.intent.action.VIEW" />
-329-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:16:13-65
-329-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:16:21-62
+329-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:16:13-65
+329-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:16:21-62
 330
 331                <category android:name="android.intent.category.DEFAULT" />
-331-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:57:17-76
-331-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:57:27-73
+331-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:57:17-76
+331-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:57:27-73
 332                <category android:name="android.intent.category.BROWSABLE" />
-332-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:17:13-74
-332-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:17:23-71
+332-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:17:13-74
+332-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:17:23-71
 333
 334                <data
-334-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:18:13-44
+334-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:18:13-44
 335                    android:host="firebase.auth"
-335-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:53:21-40
+335-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:53:21-40
 336                    android:path="/"
 337                    android:scheme="recaptcha" />
-337-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:18:19-41
+337-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:18:19-41
 338            </intent-filter>
 339        </activity>
 340
@@ -624,8 +624,8 @@
 346-->[com.google.firebase:firebase-auth:20.0.4] /home/admin123/.gradle/caches/transforms-2/files-2.1/44b58ea0e15c2ba07cbdbc150e5f8ddc/jetified-firebase-auth-20.0.4/AndroidManifest.xml:69:25-86
 347
 348                <category android:name="android.intent.category.DEFAULT" />
-348-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:57:17-76
-348-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:57:27-73
+348-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:57:17-76
+348-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:57:27-73
 349            </intent-filter>
 350        </service> <!-- Needs to be explicitly declared on P+ -->
 351        <uses-library
@@ -663,10 +663,10 @@
 370            android:exported="false" >
 370-->[com.google.firebase:firebase-messaging:21.1.0] /home/admin123/.gradle/caches/transforms-2/files-2.1/0df394918cb43b78861b8c45bda346e7/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:44:13-37
 371            <intent-filter android:priority="-500" >
-371-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:158:13-160:29
+371-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:158:13-160:29
 372                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-372-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:159:17-78
-372-->/home/admin123/rootandroid/rootandroidproject/clientforthgreen/app/src/main/AndroidManifest.xml:159:25-75
+372-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:159:17-78
+372-->/home/admin123/rootandroid/rootandroidproject/forthgreenandroid/app/src/main/AndroidManifest.xml:159:25-75
 373            </intent-filter>
 374        </service>
 375        <service

@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.forthgreen.app.views.utils.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".views.fragments.NotificationDetailsFragment">
+
+    <include layout="@layout/toolbar" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/flShimmer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:id="@+id/llPostDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_home_posts" />
+
+            <include layout="@layout/shimmer_comments" />
+
+            <include layout="@layout/shimmer_comments" />
+
+            <include layout="@layout/shimmer_replies" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        android:fillViewport="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.04" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.96" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civPostUserImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_placeholder_broken_img"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.14" />
+
+            <TextView
+                android:id="@+id/tvUserFullName"
+                style="@style/StyleSemiBold"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="4dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvUserName"
+                app:layout_constraintEnd_toStartOf="@+id/ivPostMenuOptions"
+                app:layout_constraintStart_toEndOf="@+id/civPostUserImage"
+                app:layout_constraintTop_toTopOf="@+id/civPostUserImage"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="Lula Obrien" />
+
+            <TextView
+                android:id="@+id/tvUserName"
+                style="@style/StyleRegular"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/civPostUserImage"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/tvUserFullName"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserFullName"
+                tools:text="\@lulaobrien" />
+
+            <View
+                android:id="@+id/viewProfile"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/civPostUserImage"
+                app:layout_constraintEnd_toEndOf="@+id/tvUserFullName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivPostMenuOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_post_menu_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/tvUserFullName"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPostDescription"
+                style="@style/StyleRegular"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/civPostUserImage"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. " />
+
+            <TextView
+                android:id="@+id/tvViewMore"
+                style="@style/StyleSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/view_more"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvPostDescription" />
+
+            <View
+                android:id="@+id/viewPictureDivider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorGrayBg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvViewMore" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/colorGrayBg"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewPictureDivider" />
+
+            <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                android:id="@+id/dotIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                app:dampingRatio="0.5"
+                app:dotsColor="@color/colorWhite"
+                app:dotsCornerRadius="8dp"
+                app:dotsSize="8dp"
+                app:dotsSpacing="2dp"
+                app:dotsStrokeColor="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+                app:layout_constraintEnd_toEndOf="@+id/viewPager"
+                app:layout_constraintStart_toStartOf="@+id/viewPager"
+                app:selectedDotColor="@color/colorWhite" />
+
+            <ImageView
+                android:id="@+id/itemVideoPlayerThumbnail"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                android:elevation="1dp"
+                app:layout_constraintEnd_toEndOf="@id/vvVideoPlay"
+                app:layout_constraintStart_toStartOf="@id/vvVideoPlay"
+                app:layout_constraintTop_toTopOf="@id/vvVideoPlay"
+                app:layout_constraintBottom_toBottomOf="@id/vvVideoPlay" />
+
+            <VideoView
+                android:id="@+id/vvVideoPlay"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:resize_mode="fit"
+                app:layout_constraintTop_toBottomOf="@id/viewPager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <View
+                android:id="@+id/vViewVideoPlayer"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:elevation="2dp"
+                app:layout_constraintBottom_toBottomOf="@id/vvVideoPlay"
+                app:layout_constraintEnd_toEndOf="@id/vvVideoPlay"
+                app:layout_constraintStart_toStartOf="@id/vvVideoPlay"
+                app:layout_constraintTop_toTopOf="@id/vvVideoPlay" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupVideoPlayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="vvVideoPlay, cbMute, vViewVideoPlayer" />
+
+            <CheckBox
+                android:id="@+id/cbMute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:button="@drawable/drawable_mute_unmute_video_selector"
+                android:padding="8dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@id/vvVideoPlay"
+                app:layout_constraintEnd_toEndOf="@id/vvVideoPlay" />
+
+            <ProgressBar
+                android:id="@+id/pbVideo"
+                style="?android:progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="@color/colorTabGreyBG"
+                android:visibility="gone"
+                android:elevation="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/vvVideoPlay"
+                app:layout_constraintEnd_toEndOf="@id/vvVideoPlay"
+                app:layout_constraintStart_toStartOf="@id/vvVideoPlay"
+                app:layout_constraintTop_toTopOf="@id/vvVideoPlay" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/flexBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                app:alignItems="flex_start"
+                app:flexDirection="row"
+                app:flexWrap="nowrap"
+                app:layout_constraintEnd_toStartOf="@id/ivMessage"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/vvVideoPlay">
+
+                <TextView
+                    android:id="@+id/tvComments"
+                    style="@style/StyleRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/comments_label"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toStartOf="@id/tvLikes"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                    app:layout_constraintTop_toBottomOf="@+id/viewPager" />
+
+                <TextView
+                    android:id="@+id/tvLikes"
+                    style="@style/StyleRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/likes_label"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvComments"
+                    app:layout_constraintEnd_toStartOf="@+id/ivMessage"
+                    app:layout_constraintStart_toEndOf="@+id/tvComments"
+                    app:layout_constraintTop_toTopOf="@+id/tvComments" />
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <CheckBox
+                android:id="@+id/cbLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/drawable_post_like_button_selector"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                app:layout_constraintBottom_toBottomOf="@+id/flexBox"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintTop_toTopOf="@+id/flexBox" />
+
+            <ImageView
+                android:id="@+id/ivMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:padding="12dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_message"
+                app:layout_constraintBottom_toBottomOf="@+id/cbLike"
+                app:layout_constraintEnd_toStartOf="@+id/cbLike"
+                app:layout_constraintTop_toTopOf="@id/cbLike" />
+
+            <View
+                android:id="@+id/viewBottomDivider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorGrayBg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/flexBox" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupMultiPicturesViews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="dotIndicator,viewPager" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civUserImageComments"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_placeholder_broken_img"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/viewBottomDivider"
+                app:layout_constraintWidth_percent="0.12" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvComment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:elevation="0dp"
+                app:cardBackgroundColor="@color/colorTabGreyBG"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp"
+                app:cardUseCompatPadding="false"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toEndOf="@+id/civUserImageComments"
+                app:layout_constraintTop_toTopOf="@+id/civUserImageComments">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineCardStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.033" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineCardEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.967" />
+
+                    <TextView
+                        android:id="@+id/tvUserFullNameComment"
+                        style="@style/StyleSemiBold"
+                        android:layout_marginEnd="4dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="4dp"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@+id/ivCommentOptions"
+                        app:layout_constraintStart_toStartOf="@id/guidelineCardStart"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Bradley Allison" />
+
+                    <TextView
+                        android:id="@+id/tvComment"
+                        style="@style/StyleRegular"
+                        android:maxLines="3"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@id/guidelineCardEnd"
+                        app:layout_constraintStart_toStartOf="@+id/tvUserFullNameComment"
+                        app:layout_constraintTop_toBottomOf="@+id/tvUserFullNameComment"
+                        tools:text="I love this place! Amazing vegan options." />
+
+                    <ImageView
+                        android:id="@+id/ivCommentOptions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_horizontal_menu"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvUserFullNameComment"
+                        app:layout_constraintEnd_toEndOf="@id/guidelineCardEnd"
+                        app:layout_constraintTop_toTopOf="@+id/tvUserFullNameComment" />
+
+                    <TextView
+                        android:id="@+id/tvViewMoreComment"
+                        style="@style/StyleSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:text="@string/view_more"
+                        android:textAllCaps="true"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@id/guidelineCardStart"
+                        app:layout_constraintTop_toBottomOf="@+id/tvComment" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/flexBoxComments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="4dp"
+                app:alignItems="flex_start"
+                app:flexDirection="row"
+                app:flexWrap="nowrap"
+                app:layout_constraintEnd_toStartOf="@+id/ivMessageComments"
+                app:layout_constraintStart_toStartOf="@id/cvComment"
+                app:layout_constraintTop_toBottomOf="@+id/cvComment">
+
+                <TextView
+                    android:id="@+id/tvReplies"
+                    style="@style/StyleRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingTop="8dp"
+                    android:visibility="gone"
+                    android:paddingBottom="8dp"
+                    android:text="0 Replies"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toStartOf="@id/tvLikes"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="@id/cvComment"
+                    app:layout_constraintTop_toBottomOf="@+id/cvComment" />
+
+                <TextView
+                    android:id="@+id/tvCommentLikes"
+                    style="@style/StyleRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/likes_label"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvReplies"
+                    app:layout_constraintEnd_toStartOf="@+id/ivMessage"
+                    app:layout_constraintStart_toEndOf="@+id/tvReplies"
+                    app:layout_constraintTop_toTopOf="@+id/tvReplies" />
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <CheckBox
+                android:id="@+id/cbCommentLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/drawable_comment_like_button_selector"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/flexBoxComments"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintTop_toTopOf="@+id/flexBoxComments" />
+
+            <ImageView
+                android:id="@+id/ivMessageComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_comment_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/cbCommentLike"
+                app:layout_constraintEnd_toStartOf="@+id/cbCommentLike"
+                app:layout_constraintTop_toTopOf="@id/cbCommentLike" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civReplyUserImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_placeholder_broken_img"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="@+id/flexBoxComments"
+                app:layout_constraintTop_toBottomOf="@+id/flexBoxComments"
+                app:layout_constraintWidth_percent="0.12" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvReply"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:cardBackgroundColor="@color/colorTabGreyBG"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp"
+                app:cardUseCompatPadding="false"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toEndOf="@+id/civReplyUserImage"
+                app:layout_constraintTop_toTopOf="@+id/civReplyUserImage">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineStartReply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.041" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineEndReply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.976" />
+
+                    <TextView
+                        android:id="@+id/tvUserFullNameReply"
+                        style="@style/StyleSemiBold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="4dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@+id/ivReplyOptions"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStartReply"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Bradley Allison" />
+
+                    <ImageView
+                        android:id="@+id/ivReplyOptions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_horizontal_menu"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvUserFullNameReply"
+                        app:layout_constraintEnd_toEndOf="@id/guidelineEndReply"
+                        app:layout_constraintTop_toTopOf="@+id/tvUserFullNameReply" />
+
+                    <TextView
+                        android:id="@+id/tvReply"
+                        style="@style/StyleRegular"
+                        android:maxLines="3"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@id/guidelineEndReply"
+                        app:layout_constraintStart_toStartOf="@+id/tvUserFullNameReply"
+                        app:layout_constraintTop_toBottomOf="@+id/tvUserFullNameReply"
+                        tools:text="I love this place! Amazing vegan options." />
+
+                    <TextView
+                        android:id="@+id/tvViewMoreReply"
+                        style="@style/StyleSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:text="@string/view_more"
+                        android:textAllCaps="true"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@id/guidelineStartReply"
+                        app:layout_constraintTop_toBottomOf="@+id/tvReply" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvReplyLikes"
+                style="@style/StyleRegular"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="0 Likes"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@id/cbReplyLike"
+                app:layout_constraintStart_toStartOf="@id/cvReply"
+                app:layout_constraintTop_toBottomOf="@+id/cvReply" />
+
+            <CheckBox
+                android:id="@+id/cbReplyLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/drawable_comment_like_button_selector"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvReplyLikes"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintTop_toTopOf="@+id/tvReplyLikes" />
+
+            <TextView
+                android:id="@+id/tvLoadMoreComments"
+                style="@style/StyleSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="@string/load_more_label"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/flexBoxComments"
+                app:layout_constraintTop_toBottomOf="@+id/tvReplyLikes" />
+
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="civUserImageComments,cvComment,flexBoxComments,cbCommentLike" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupReply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="cvReply,civReplyUserImage,cbReplyLike,tvReplyLikes" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/flShimmerComment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewBottomDivider">
+
+                <LinearLayout
+                    android:id="@+id/llComments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <include layout="@layout/shimmer_comments" />
+
+                    <include layout="@layout/shimmer_comments" />
+
+                    <include layout="@layout/shimmer_comments" />
+
+                    <include layout="@layout/shimmer_comments" />
+
+                    <include layout="@layout/shimmer_comments" />
+
+                    <include layout="@layout/shimmer_comments" />
+
+                    <include layout="@layout/shimmer_comments" />
+
+                    <include layout="@layout/shimmer_comments" />
+
+                    <include layout="@layout/shimmer_comments" />
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/viewBottomDivider"
+                android:paddingEnd="16dp" />
+
+            <TextView
+                android:id="@+id/tv_transparent"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:id="@+id/viewBottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewCommentTop" />
+
+    <EditText
+        android:id="@+id/etComment"
+        style="@style/StyleInputEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/drawable_post_comment_edit_text_background"
+        android:backgroundTint="#F2F3F4"
+        android:hint="@string/write_comment_hint_label"
+        android:imeOptions="actionDone"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
+        android:minHeight="40dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:scrollbars="vertical"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/viewBottom"
+        app:layout_constraintEnd_toStartOf="@+id/tvSendComment"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/viewCommentTop"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="12dp"
+        android:background="#ECEDED"
+        app:layout_constraintBottom_toTopOf="@id/etComment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSendComment"
+        style="@style/StyleSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="18dp"
+        android:gravity="center"
+        android:text="SEND"
+        android:textAllCaps="true"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/etComment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/etComment"
+        app:layout_constraintTop_toTopOf="@+id/etComment" />
+
+
+</com.forthgreen.app.views.utils.SlidingConstraintLayout>
